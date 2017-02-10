@@ -1,0 +1,4 @@
+sudo chown -R :www-data /var/www/dwatravel
+sudo chgrp -R www-data /var/www/dwatravel/storage
+sudo chgrp -R www-data /var/www/dwatravel/bootstrap/cache
+sudo chmod -R 775 /var/www/laravel/app/storage
