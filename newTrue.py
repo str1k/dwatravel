@@ -1,20 +1,18 @@
 # -*- coding: utf-8 -*-
+"""
+Spyder Editor
+
+This is a temporary script file.
+"""
+
 import requests
 from bs4 import BeautifulSoup
 import re
-import time
-import MySQLdb
 
-conn = MySQLdb.connect(host= "localhost",
-                  user="dwatravel",
-                  passwd="ni00065996",
-                  db="trueworld_DB")
-x = conn.cursor()
 s = requests.Session()
 login_url = "http://www.trueworldagency.com/member/login_ok.asp"
 login_data = {'upw': '07092519', 'uid': '07092519'}
 s.post(login_url, login_data)
-
 trip_bookingID = []
 trip_period = []
 trip_programDN = []
@@ -32,9 +30,6 @@ for tag in soup.findAll('tr'):
 		#Get booking ID
 		regRet = re.search("(?<=\()(.*)(?=\))",str(allTd[0])) 	
 		bookingItem = regRet.group().split(',')
-		bookingItem[1] = bookingItem[1].replace(" ","")
-		bookingItem[2] = bookingItem[2].replace("\'","")
-		bookingItem[2] = bookingItem[2].replace(" ","")
 		trip_bookingID.append(bookingItem)
 
 		#Get Trip period
@@ -72,15 +67,11 @@ for tag in soup.findAll('tr'):
 		#Get Available seat
 		trip_seatAvailable.append(re.search("\d+",str(allTd[5])).group())
 
-	#Get Flight code
-	'''
-	if "Agency com." in str(tag):
-		print(tag)
-	'''
-'''
-for i in range(0,len(trip_bookingID)):
-	print("Program Name : "+ str(trip_programName[i]))
-	print("Booking ID :"+ str(trip_bookingID[i][0]) + ": :" + str(trip_bookingID[i][1]) + ": :" + str(trip_bookingID[i][2]))
+
+
+
+for i in xrange(0,len(trip_bookingID)):
+	print("Program Name : "+trip_programName[i])
 	print("From " + trip_period[i][0] + " To " + trip_period[i][1])
 	print("Period : " + trip_programDN[i])
 	if trip_HasDC[i]:
@@ -89,50 +80,29 @@ for i in range(0,len(trip_bookingID)):
 		print("Price : " + trip_price[i])
 	print("Available Seat : " + trip_seatAvailable[i])
 	print("\n\n")
-'''
 tour_desNum = "0"
 
 for tag in soup.findAll('p'):
     if "onclick" in str(tag):
         regRet = re.search("\d+",str(tag))
         tour_desNum = regRet.group()
-print(tour_desNum)
+print tour_desNum
 
 result = s.get("http://www.trueworldagency.com/viewer/program_tour.asp?seq="+tour_desNum).text
 tourDes = BeautifulSoup(result, "lxml")
+def assist(unicode_string):
+    utf8 = unicode_string.encode('utf-8')
+    read = utf8.decode('string_escape')
 
+    return read   ## UTF-8 encoded string
+#print tourDes
 for tag in tourDes.findAll('p'):
     if "program" in str(tag):
-        print (str(tag.text))
-
-
-x.execute("SELECT * FROM trip_trueworld")
-queryRet = x.fetchall()
-
-for i in range(0,len(trip_bookingID)):
-	booking_key = str(trip_bookingID[i][0]) +  "gnb" + str(trip_bookingID[i][1])
-	trip_desc = str(trip_bookingID[i][0]) +  "gnb"
-	existed = 0
-	for row in queryRet:
-		if booking_key == row[0]:
-			existed = 1
-	if existed == 1:
-		print("how?")
-		#UPDATE seat
-	else:
-		#INSERT row
-		dep = time.strptime(trip_period[i][0], "%d/%b/%Y")
-		ret = time.strptime(trip_period[i][0], "%d/%b/%Y")
-		if trip_HasDC[i]:
-			x.execute("""INSERT INTO trip_trueworld VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)""",\
-			(booking_key,str(trip_bookingID[i][0]),str(trip_bookingID[i][1]),str(trip_bookingID[i][2]),"gnb",trip_seatAvailable[i], \
-			time.strftime('%Y-%m-%d %H:%M:%S', dep),time.strftime('%Y-%m-%d %H:%M:%S', ret),trip_price[i][0].replace(",",""),trip_price[i][1].replace(",",""),trip_price[i][0].replace(",",""),trip_price[i][1].replace(",",""), \
-			4900,8900,6900,900,300,trip_desc))
-		else:
-			x.execute("""INSERT INTO trip_trueworld VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)""",\
-			(booking_key,str(trip_bookingID[i][0]),str(trip_bookingID[i][1]),str(trip_bookingID[i][2]),"gnb",trip_seatAvailable[i], \
-			time.strftime('%Y-%m-%d %H:%M:%S', dep),time.strftime('%Y-%m-%d %H:%M:%S', ret),trip_price[i].replace(",",""),trip_price[i].replace(",",""),trip_price[i].replace(",",""),trip_price[i].replace(",",""), \
-			4900,8900,6900,900,300,trip_desc))
-		conn.commit()
-
-		
+        print tag.text
+import io
+encoding = 'utf-8'
+for tag in tourDes.findAll('tr'):
+    if "scope=\"row\"" in str(tag):
+        testsave = assist(tag.text)
+        with io.open("myfile.txt", 'w', encoding=encoding) as f:
+        	f.write(unicode(testsave,'utf-8')
