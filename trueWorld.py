@@ -15,6 +15,7 @@ login_url = "http://www.trueworldagency.com/member/login_ok.asp"
 login_data = {'upw': '07092519', 'uid': '07092519'}
 s.post(login_url, login_data)
 
+
 trip_bookingID = []
 trip_period = []
 trip_programDN = []
@@ -113,12 +114,24 @@ for i in range(0,len(trip_bookingID)):
 	booking_key = str(trip_bookingID[i][0]) +  "gnb" + str(trip_bookingID[i][1])
 	trip_desc = str(trip_bookingID[i][0]) +  "gnb"
 	existed = 0
+	foundMatchedSeat = 0
 	for row in queryRet:
 		if booking_key == row[0]:
 			existed = 1
+			foundMatchedSeat = row[5]
+
 	if existed == 1:
-		print("how?")
 		#UPDATE seat
+		print(foundMatchedSeat + " "+ trip_seatAvailable[i])
+		if foundMatchedSeat != trip_seatAvailable[i]:
+			x.execute ("UPDATE trip_trueworld SET seat_available=%s WHERE booking_key=%s",\
+		 	(trip_seatAvailable[i], booking_key))
+		 	#x.execute ("UPDATE trip_trueworld SET seat_available=%s WHERE booking_key=%s",(1232,'1gnb1900'))
+			print(trip_seatAvailable[i]+" Successfully update row : "+booking_key)
+		else:
+			print(trip_seatAvailable[i]+" Everything is up-to-date : "+booking_key )
+		conn.commit()
+		time.sleep(0.1)
 	else:
 		#INSERT row
 		dep = time.strptime(trip_period[i][0], "%d/%b/%Y")
@@ -134,5 +147,6 @@ for i in range(0,len(trip_bookingID)):
 			time.strftime('%Y-%m-%d %H:%M:%S', dep),time.strftime('%Y-%m-%d %H:%M:%S', ret),trip_price[i].replace(",",""),trip_price[i].replace(",",""),trip_price[i].replace(",",""),trip_price[i].replace(",",""), \
 			4900,8900,6900,900,300,trip_desc))
 		conn.commit()
-
+		time.sleep(0.1)
+conn.close()
 		
