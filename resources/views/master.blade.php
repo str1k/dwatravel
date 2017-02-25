@@ -32,6 +32,7 @@
     <body id="page-top" class="index">
         @include('layouts.partials._contact')
         @include('layouts.partials._header')
+        @include('layouts.partials._cover')
         
     <script type="text/javascript" src="js/jquery.min.js"></script><!-- jQuery -->
     <script type="text/javascript" src="js/bootstrap.min.js"></script><!-- Bootstrap -->
