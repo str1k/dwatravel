@@ -41,8 +41,8 @@
 		margin-right: 13px;
 	}
 	.ct-navbar ul li a{
-		margin-left: 8px;
-		margin-right: 8px;
+		margin-left: -2px;
+		margin-right: -2px;
 	}
 	#home-carousel  .item {
 		height: 500px;
