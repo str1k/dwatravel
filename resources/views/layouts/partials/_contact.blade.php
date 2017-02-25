@@ -5,7 +5,7 @@
     </div>
   </div>
   <!-- /PRELOADER -->
-  
+
 <!-- CONTACT -->
   <header id="header">
     <nav class="contact ct-navbar">
@@ -20,7 +20,7 @@
               <a>ใบอนุญาติ 11/07318</a> 
         </div>
 
-        <div class="collapse navbar-collapse" id="ct-navbar-collapse">
+        <div class="collapse navbar-collapse collapse show" id="ct-navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
               <li>
                 <a><span class="glyphicon glyphicon-earphone"> 0909686520</span></a>
