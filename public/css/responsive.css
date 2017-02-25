@@ -41,6 +41,11 @@
 		margin-right: 13px;
 	}
 
+	.ct-navbar ul li a{
+		margin-left: 13px;
+		margin-right: 13px;
+	}
+
 	#home-carousel  .item {
 		height: 500px;
 	}
@@ -106,6 +111,10 @@
 	}
 
 	.st-navbar .navbar-collapse ul{
+		margin-top: 18px;
+	}
+
+	.ct-navbar .navbar-collapse ul{
 		margin-top: 18px;
 	}
 
