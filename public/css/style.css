@@ -271,6 +271,11 @@
 		color:#888888;
 		margin: 12px;
 	}
+	.ct-navbar span{
+		font-weight: 600;
+		padding: 0;
+		color:#888888;
+	}
 
 	.ct-navbar ul li a:hover,
 	.ct-navbar ul li a:focus {
