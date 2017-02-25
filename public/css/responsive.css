@@ -40,15 +40,20 @@
 		margin-left: 13px;
 		margin-right: 13px;
 	}
-
 	.ct-navbar ul li a{
 		margin-left: 13px;
 		margin-right: 13px;
 	}
-
 	#home-carousel  .item {
 		height: 500px;
 	}
+
+	#contact-bar {
+    	display: none;
+  	}
+  	#ct-navbar-collapse.collapse {
+    	display: none;
+  	}
 
 	.carousel-caption h1 {
 		font-size:26px;
@@ -114,13 +119,13 @@
 		margin-top: 18px;
 	}
 
-	.ct-navbar .navbar-collapse ul{
-		margin-top: 18px;
-	}
-
 	#home-carousel  .item {
 		height: 300px;
 	}
+	.ct-navbar .navbar-collapse ul{
+		margin-top: 10px;
+	}
+	
 
 	.carousel-caption h1 {
 		font-size:16px;

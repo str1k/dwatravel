@@ -263,9 +263,7 @@
 		margin-top: 3px;
 	}
 
-	.ct-navbar span{
-		padding-top: 15px;
-	}
+	
 
 	.ct-navbar ul li a {
 		font-weight: 600;
@@ -290,11 +288,11 @@
 	}
 
 
-	.ct-navbar .ctnavbar-toggle .icon-bar {
+	.ct-navbar .navbar-toggle .icon-bar {
 		background-color: #000;
 	}
 
-	.ct-navbar .ctnavbar-toggle{
+	.ct-navbar .navbar-toggle{
 		margin-top: 7px;
 		margin-right: 20px;
 		padding: 0;
