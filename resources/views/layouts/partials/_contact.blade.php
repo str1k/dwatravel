@@ -9,7 +9,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
           </button>
-              <a>ใบอนุญาติ 11/07318</a> 
+              <a id="certID">ใบอนุญาติ 11/07318</a> 
         </div>
 
         <div class="collapse navbar-collapse" id="ct-navbar-collapse">
