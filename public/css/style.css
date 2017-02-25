@@ -263,6 +263,10 @@
 		margin-top: 3px;
 	}
 
+	.ct-navbar span{
+		padding-top: 15px;
+	}
+
 	.ct-navbar ul li a {
 		font-weight: 600;
 		padding: 0;
