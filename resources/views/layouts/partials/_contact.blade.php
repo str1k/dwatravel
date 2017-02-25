@@ -14,7 +14,6 @@
 
         <div class="collapse navbar-collapse" id="ct-navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
-              <li><a> </a></li>
               <li>
                 <a><span class="glyphicon glyphicon-earphone"> 0909686520</span></a>
               </li>
