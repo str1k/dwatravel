@@ -250,6 +250,15 @@
     margin: 4px;
     float: left;
 	}
+
+	.ct-inline_item {
+    height: : 20px;
+    min-width: : 20px;
+    max-width: : auto;
+    margin: -1px;
+    margin-right: 5px;
+    float: left;
+	}
 	.ct-navbar ul{
 		margin-top: 3px;
 	}
