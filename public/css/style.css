@@ -281,8 +281,14 @@
 	}
 
 	.ct-navbar .navbar-header{
-		margin-top: 25px;
+		margin-top: 12px;
 	}
+	.navbar-header a{
+		background-color: transparent;
+		font-weight: 600;
+		color:#888888;
+	}
+
 
 	.ct-navbar .ctnavbar-toggle .icon-bar {
 		background-color: #000;
