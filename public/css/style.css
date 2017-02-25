@@ -121,8 +121,10 @@
 	}
 
 	.st-border{
-		width: 34px;
-		height: 1px;
+		width: 1000px;
+		height: 3px;
+		margin-left: auto;
+    	margin-right: auto;
 		display: block;
 		background-color: #000;
 	}
@@ -202,13 +204,25 @@
 		font-weight: 600;
 		padding: 0;
 		margin: 14px;
-		color: #595555;
+		color:#888888;
 	}
 
 	.st-navbar ul li a:hover,
 	.st-navbar ul li a:focus {
 		background-color: transparent;
 		color: #000;
+	}
+	.st-navbar img {
+    max-height: 40px;
+    width: auto;
+	}
+
+	.st-item {
+    height: : 40px;
+    min-width: : 20px;
+    max-width: : auto;
+    margin: -8px;
+    float: left;
 	}
 
 	.st-navbar .navbar-header{
@@ -239,7 +253,7 @@
 		border-bottom: 3px solid #63636363;
 	}
 
-	img {
+	.ct-navbar img {
     max-height: 20px;
     width: auto;
 	}
@@ -457,11 +471,13 @@
 	}
 
 	.section-title{
-		margin-bottom: 50px;
+		margin-bottom: 15px;
 	}
 
 	.section-title h1{
 		margin-top: 0;
+		text-align: center;
+		color: #888888;
 	}
 
 	.st-service{
@@ -619,8 +635,9 @@
 	}
 
 	.st-pricing .st-border{
-		width: 100%;
-		margin-bottom: 15px;
+		width: 30px;
+		margin-left: auto;
+    	margin-right: auto;
 		background-color: #ccc;
 	}
 
@@ -711,7 +728,7 @@
 /* 10. OUR TEAM */
 
 	#our-team{
-		padding-top: 130px;
+		padding-top: 40px;
 		padding-bottom: 120px;
 	}
 
@@ -731,6 +748,8 @@
 	.member-info h4{
 		margin-top: 0;
 		margin-bottom: 6px;
+		color: #888888;
+		text-align: center;
 	}
 
 	.member-info span{

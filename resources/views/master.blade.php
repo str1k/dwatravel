@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
 
-    <title>Cluster - Creative Portfolio HTML Template</title>
+    <title>Dwatravel</title>
     
     <!-- Main CSS file -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -33,6 +33,7 @@
         @include('layouts.partials._contact')
         @include('layouts.partials._header')
         @include('layouts.partials._cover')
+        @yield('content')
         
     <script type="text/javascript" src="js/jquery.min.js"></script><!-- jQuery -->
     <script type="text/javascript" src="js/bootstrap.min.js"></script><!-- Bootstrap -->

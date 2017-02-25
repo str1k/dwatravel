@@ -1,3 +1,11 @@
+<!-- PRELOADER -->
+  <div id="st-preloader">
+    <div id="pre-status">
+      <div class="preload-placeholder"></div>
+    </div>
+  </div>
+  <!-- /PRELOADER -->
+  
 <!-- CONTACT -->
   <header id="header">
     <nav class="contact ct-navbar">
