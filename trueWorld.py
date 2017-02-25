@@ -21,6 +21,8 @@ result = s.get("http://www.trueworldagency.com/index.asp?area=1#gnb").text
 soup = BeautifulSoup(result, "lxml")
 while(True):
 	counter = counter + 1
+	if counter = 50000:
+		counter = 0
 	if counter%50 == 0:
 		s.post(login_url, login_data)	
 	conn = MySQLdb.connect(host= "localhost",
