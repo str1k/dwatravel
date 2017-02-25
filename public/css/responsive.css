@@ -45,6 +45,13 @@
 		height: 500px;
 	}
 
+	.st-navbar .navbar-collapse ul{
+		margin-top: 18px;
+	}
+	.ct-navbar .navbar-collapse ul{
+		margin-top: 10px;
+	}
+
 	.carousel-caption h1 {
 		font-size:26px;
 		margin-bottom:0;
