@@ -3,7 +3,7 @@
     <nav class="contact ct-navbar">
       <div class="container">
         <div class="collapse navbar-collapse" id="ct-navbar-collapse">
-          <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav">
               <li><a> <span class="glyphicon glyphicon-earphone"></span> 0909686520</a></li>
               <li><a><span class="glyphicon glyphicon-envelope"></span> y.thanasit@gmail.com</a></li>
               <li><div class = "ct-item">
