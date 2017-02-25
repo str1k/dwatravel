@@ -9,16 +9,13 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
           </button>
-              <a id="certID">ใบอนุญาติ 11/07318</a> 
+              <a>ใบอนุญาติ 11/07318</a> 
         </div>
 
         <div class="collapse navbar-collapse" id="ct-navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
               <li>
                 <a><span class="glyphicon glyphicon-earphone"> 0909686520</span></a>
-              </li>
-              <li>
-                <a><span class="glyphicon glyphicon-envelope"> y.thanasit@gmail.com</span></a>
               </li>
               <li>
                 <a target="_blank" href="https://line.me/ti/p/~justkung1"> LINE: blackroa <div class = "ct-inline_item"><img src="images/home/addfriends_en.png" alt=""></div></a> </li>
