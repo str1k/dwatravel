@@ -117,9 +117,7 @@
 	}
 
 	#home-carousel  .item {
-		max-width: 100%;
-    	height: auto;
-    	width: auto\9;
+		height: 500px;
 	}
 	.ct-navbar .navbar-collapse ul{
 		margin-top: 10px;
