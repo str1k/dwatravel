@@ -11,7 +11,7 @@
 						<h1>โปรแกรมทัวร์ประเทศต่างๆ</h1>
 					</div>
 				</div>
-				<div class="col-md-2 col-sm-12">
+				<div class="col-md-2 col-sm-4">
 					<div class="flag-container">
 						<div class="flag-image">
 							<img src="images/flags/flag1.png" alt="">
@@ -21,7 +21,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-2 col-sm-12">
+				<div class="col-md-2 col-sm-4">
 					<div class="flag-container">
 						<div class="flag-image">
 							<img  src="images/flags/flag2.png" alt="">
@@ -31,7 +31,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-2 col-sm-12">
+				<div class="col-md-2 col-sm-4">
 					<div class="flag-container">
 						<div class="flag-image">
 							<img  src="images/flags/flag3.png" alt="">
@@ -41,7 +41,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-2 col-sm-12">
+				<div class="col-md-2 col-sm-4">
 					<div class="flag-container">
 						<div class="flag-image">
 							<img  src="images/flags/flag4.png" alt="">
@@ -51,7 +51,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-2 col-sm-12">
+				<div class="col-md-2 col-sm-4">
 					<div class="flag-container">
 						<div class="flag-image">
 							<img  src="images/flags/flag5.png" alt="">
@@ -61,7 +61,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-2 col-sm-12">
+				<div class="col-md-2 col-sm-4">
 					<div class="flag-container">
 						<div class="flag-image">
 							<img  src="images/flags/flag6.png" alt="">
@@ -71,7 +71,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-2 col-sm-12">
+				<div class="col-md-2 col-sm-4">
 					<div class="flag-container">
 						<div class="flag-image">
 							<img  src="images/flags/flag7.jpg" alt="">
@@ -81,7 +81,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-2 col-sm-12">
+				<div class="col-md-2 col-sm-4">
 					<div class="flag-container">
 						<div class="flag-image">
 							<img  src="images/flags/flag8.png" alt="">
