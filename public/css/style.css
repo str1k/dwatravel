@@ -329,6 +329,11 @@
 		margin-top: 0px;
 	}
 
+	#home-carousel  img {
+    max-height: 450px;
+    width: auto;
+	}
+
 	#home-carousel  .item {
 		background-position: center top;
 		background-size:cover;
