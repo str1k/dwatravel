@@ -4,7 +4,7 @@
 		<div id="home-carousel" class="carousel slide" data-ride="carousel">			
 			<div class="carousel-inner">
 				<div class="item active" >
-					<img src="images/cover/cover_1.jpg" alt="">
+					<img src="images/cover/cover_1.PNG" alt="">
 					<div class="carousel-caption container">
 						<div class="row">
 							<div class="col-sm-7">
@@ -13,7 +13,7 @@
 					</div>					
 				</div>
 				<div class="item">
-					<img src="images/cover/cover_2.jpg" alt="">
+					<img src="images/cover/cover_2.PNG" alt="">
 					<div class="carousel-caption container">
 						<div class="row">
 							<div class="col-sm-7">
@@ -22,7 +22,7 @@
 					</div>					
 				</div>
 				<div class="item" >
-					<img src="images/cover/cover_3.jpg" alt="">
+					<img src="images/cover/cover_3.PNG" alt="">
 					<div class="carousel-caption container">
 						<div class="row">
 							<div class="col-sm-7">
