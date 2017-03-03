@@ -80,8 +80,8 @@
 	}
 
 	#our-team, #pricing, #our-works, #services, #contact{
-		padding-top: -20px;
-		padding-bottom: 20px;
+		/*padding-top: -20px;*/
+		padding-bottom: 50px;
 	}
 
 	#fun-facts .col-md-3:nth-child(2) .fun-fact{
