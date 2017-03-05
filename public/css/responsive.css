@@ -7,7 +7,7 @@
 @media (min-width: 992px) and (max-width: 1199px) {
 
 	#home-carousel  .item {
-		height: 500px;
+		height: 250px;
 	}
 
 	.carousel-caption h1 {
@@ -41,8 +41,8 @@
 		margin-right: 13px;
 	}
 
-	#home-carousel  .item {
-		height: 500px;
+	#home-carousel .item {
+		height: 250px;
 	}
 
 	.st-navbar .navbar-collapse ul{
@@ -79,7 +79,7 @@
 		display: none !important;
 	}
 
-	#our-team, #pricing, #our-works, #services, #contact{
+	#our-team, #flaging, #pricing, #our-works, #services, #contact{
 		/*padding-top: -20px;*/
 		padding-bottom: 50px;
 	}
@@ -117,7 +117,7 @@
 	}
 
 	#home-carousel  .item {
-		height: 500px;
+		height: 250px;
 	}
 	.ct-navbar .navbar-collapse ul{
 		margin-top: 10px;

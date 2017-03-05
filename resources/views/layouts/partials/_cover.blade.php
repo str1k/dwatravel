@@ -4,34 +4,13 @@
 		<div id="home-carousel" class="carousel slide" data-ride="carousel">			
 			<div class="carousel-inner">
 				<div class="item active" >
-					<img src="images/cover/cover_1.PNG" alt="">
-					<div class="carousel-caption container">
-						<div class="row">
-							<div class="col-sm-7">
-							</div>
-						</div>
-					</div>					
+					<img src="images/cover/cover_1.PNG" alt="">					
 				</div>
 				<div class="item">
-					<img src="images/cover/cover_2.PNG" alt="">
-					<div class="carousel-caption container">
-						<div class="row">
-							<div class="col-sm-7">
-							</div>
-						</div>
-					</div>					
+					<img src="images/cover/cover_2.PNG" alt="">				
 				</div>
 				<div class="item" >
-					<img src="images/cover/cover_3.PNG" alt="">
-					<div class="carousel-caption container">
-						<div class="row">
-							<div class="col-sm-7">
-								<!--<h1>You are entire </h1>-->
-								<!--<h2>creative world</h2>-->
-								<!--<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor. Aenean sollicitudin, lorem quis bibendum auctor.</p>-->
-							</div>
-						</div>
-					</div>					
+					<img src="images/cover/cover_3.PNG" alt="">				
 				</div>
 				<!--<div class="item" style="background-image: url(images/cover/cover_3.jpg)">
 					<div class="carousel-caption container">
