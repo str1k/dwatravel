@@ -1197,6 +1197,11 @@
 
 	.flag-container{
 		margin-top: 10px;
+		background-color: #e6e9ef;
+	}
+
+	.flag-bg{
+
 	}
 
 	.flag-image img {
@@ -1237,6 +1242,9 @@
 		margin-bottom: 12;
 		color: #888888;
 		text-align: center;
+	}
+	div.flag-hov:hover{
+		background-color: #c5d7f9;
 	}
 
 	.flag-container .member-social{
