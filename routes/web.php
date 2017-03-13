@@ -14,3 +14,19 @@
 Route::get('/', function () {
     return view('pages.home');
 });
+Route::get('/admin',function () {
+	return view('pages.admin_new_tour');
+});
+Route::get('/admin_new_tour',function () {
+	return view('pages.admin_new_tour');
+});
+
+Route::get('/admin_all_tour',function () {
+	return view('pages.admin_all_tour');
+});
+Route::get('/admin_test',function () {
+	return view('pages.test');
+});
+Route::get('insert','mysqlInsertController@insertform');
+Route::post('create','mysqlInsertController@insert');
+
