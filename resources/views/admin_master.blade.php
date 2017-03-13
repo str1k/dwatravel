@@ -58,7 +58,15 @@
         });
       });
     </script>
-
+    <script type="text/javascript">
+      $(document).ready(function() {
+      $('#taging').multiselect({
+        enableFiltering: true,
+        filterBehavior: 'value',
+        maxHeight: 200
+        });
+      });
+    </script>
 
 
     <script type="text/javascript" src="js/tinymce/tinymce.min.js"></script>
