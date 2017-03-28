@@ -12,7 +12,7 @@
                         </h1>
                         <ol class="breadcrumb">
                             <li>
-                                <i class="fa fa-dashboard"></i>  <a href="index.html">หน้าแรก</a>
+                                <i class="fa fa-dashboard"></i>  <a href="/">หน้าแรก</a>
                             </li>
                             <li class="active">
                                 <i class="fa fa-edit"></i> สร้างโปรแกรมทัวร์ใหม่
@@ -30,7 +30,7 @@
 
                             <div class="form-group">
                                 <label>ชื่อโปรแกรมทัวร์</label>
-                                <input class="form-control" placeholder="ใส่ชื่อโปรแกรมทัวร์ที่นี่">
+                                <input class="form-control" placeholder="ใส่ชื่อโปรแกรมทัวร์ที่นี่" name=''>
                             </div>
 
                             
@@ -69,17 +69,22 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group">
-                            <label class="control-label" for="new_country">เพิ่มประเทศใหม่</label>
-                                <div class="row">
-                                    <div class="col-lg-8">
-                                        <input type="text" class="form-control" id="new_country">
+                            <div class="row">
+                                    <div class="col-lg-4">
+                                        <label>จำนวนวัน</label>
                                     </div>
                                     <div class="col-lg-4">
-                                        <button type="submit" class="btn btn-primary">เพิ่ม</button>            
+                                        <label>จำนวนคืน</label>
                                     </div>
                                 </div>
-                            </div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <input class="form-control" placeholder="วัน">
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <input class="form-control" placeholder="คืน">
+                                    </div>
+                                </div>
                         </form>
                         <h1>สายการบิน</h1>
                         <form role="form">
@@ -111,18 +116,6 @@
                                 </div>
                             </div>
 
-                            <div class="form-group">
-                            <label class="control-label" for="new_tag">เพิ่มป้ายกำกับใหม่</label>
-                                <div class="row">
-                                    <div class="col-lg-8">
-                                        <input type="text" class="form-control" id="new_tag">
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <button type="submit" class="btn btn-primary">เพิ่ม</button>            
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
 
                     </div>
                 </div>

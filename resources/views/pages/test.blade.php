@@ -1,54 +1,31 @@
-@extends('admin_master')
-@section('content')
-<div id="page-wrapper">
+<!DOCTYPE html>
+<html lang="en">
 
-            <div class="container-fluid">
+<head>
+<script type="text/javascript" src="docs/js/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="js/moment.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
 
-                <!-- Page Heading -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1 class="page-header">
-                            Test
-                        </h1>
-                        <ol class="breadcrumb">
-                            <li>
-                                <i class="fa fa-dashboard"></i>  <a href="index.html">หน้าแรก</a>
-                            </li>
-                            <li class="active">
-                                <i class="fa fa-edit"></i> Testing
-                            </li>
-                        </ol>
-                    </div>
-                </div>
-          	<div class="row">
-          	<div class="example">
-                                        <div class="btn-group">
-                                            <script type="text/javascript">
-                                                $(document).ready(function() {
-                                                    $('#example-select').multiselect();
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<script type="text/javascript" src="js/daterangepicker.js"></script>
+<link rel="stylesheet" href="css/daterangepicker.css" type="text/css">
+</head>
+<body>
 
-                                                    $('#example-select-button').on('click', function() {
-                                                        $('#example-select').multiselect('select', ['1', '2', '4']);
-
-                                                        alert('Selected 1, 2 and 4.');
-                                                    });
-                                                });
-                                            </script>
-                                            <div class="btn-group">
-                                                <select id="example-select" multiple="multiple">
-                                                    <option value="1">Option 1</option>
-                                                    <option value="2">Option 2</option>
-                                                    <option value="3">Option 3</option>
-                                                    <option value="4">Option 4</option>
-                                                    <option value="5">Option 5</option>
-                                                    <option value="6">Option 6</option>
-                                                </select>
-                                                <button id="example-select-button" class="btn btn-default">Select some options...</button>
-                                            </div>
-                                        </div>
-                                    </div>
-          	</div>
-
-          </div>
-</div>
-@stop
+    <div class="row">
+        <div class="col-md-4 col-md-offset-2 demo">
+            <input type="text" id="demo" class="form-control">
+        </div>
+        <script type="text/javascript">
+            $('#demo').daterangepicker({
+    "autoApply": true,
+    "alwaysShowCalendars": true,
+    "startDate": "03/08/2017",
+    "endDate": "03/14/2017"
+}, function(start, end, label) {
+  console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
+});
+        </script>
+    </div>
+</body>
+</html>

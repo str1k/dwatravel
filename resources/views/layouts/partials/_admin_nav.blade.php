@@ -132,11 +132,14 @@
                             <li>
                                 <a href="/admin_all_tour">โปรแกรมท่องเที่ยวทั้งหมด</a>
                             </li>
-                            <li >
-                                <a href="#">เพิ่มโปรแกรมท่องเที่ยวตามช่วงเวลา</a>
-                            </li>
                             <li>
                                 <a href="/admin_new_tour">สร้างโปรแกรมทัวร์ใหม่</a>
+                            </li>
+                            <li >
+                                <a href="/admin_all_schedule">โปรแกรมท่องเที่ยวตามช่วงเวลาทั้งหมด</a>
+                            </li>
+                            <li >
+                                <a href="/admin_add_schedule">เพิ่มโปรแกรมท่องเที่ยวตามช่วงเวลา</a>
                             </li>
                             <li>
                                 <a href="/admin_test">test</a>

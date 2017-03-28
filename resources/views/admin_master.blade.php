@@ -16,7 +16,7 @@
 
     <!-- Custom CSS -->
     <link href="css/sb-admin.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.css" type="text/css">
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
@@ -26,18 +26,19 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <!--<script src="js/jquery.js"></script>-->
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
+    <script type="text/javascript" src="docs/js/jquery-2.1.3.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/moment-with-locales.js"></script>
+    <script type="text/javascript" src="js/transition.min.js"></script>
 
     <!--<link rel="stylesheet" href="docs/css/bootstrap-3.3.2.min.css" type="text/css">-->
 
     <link rel="stylesheet" href="docs/css/bootstrap-example.css" type="text/css">
     <link rel="stylesheet" href="docs/css/prettify.css" type="text/css">
 
-    <script type="text/javascript" src="docs/js/jquery-2.1.3.min.js"></script>
-    <script type="text/javascript" src="docs/js/bootstrap-3.3.2.min.js"></script>
+
+    <script src="js/bootstrap-datetimepicker.js"></script>
     <script type="text/javascript" src="docs/js/prettify.js"></script>
 
     <link rel="stylesheet" href="dist/css/bootstrap-multiselect.css" type="text/css">
@@ -66,6 +67,14 @@
         maxHeight: 200
         });
       });
+    </script>
+    <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datetimepicker({
+                    format: 'DD MMMM YYYY',
+                    locale: 'th'
+                });
+            });
     </script>
 
 
