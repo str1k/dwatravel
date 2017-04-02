@@ -24,20 +24,19 @@
 
                 <div class="row">
                     <div class="col-lg-12">
-                        <form role="form">
+                        <!--<form action = "/admin_add_schedule" method = "post">
+                            <input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>">-->
+                        {!! Form::open(array('url'=>'/admin_add_schedule','method'=>'POST', 'files'=>true)) !!}
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <label>เลือกชื่อโปรแกรมทัวร์</label>
                                     </div>
                                     <div class="col-lg-12">  
-                                        <select id="country" multiple class="form-control" >
-                                            <option value="ทัวร์เกาหลี">ทัวร์เกาหลี</option>
-                                            <option value="ทัวร์ญี่ปุ่น">ทัวร์ญี่ปุ่น</option>
-                                            <option value="ทัวร์จีน">ทัวร์จีน</option>
-                                            <option value="ทัวร์ฮ่องกง">ทัวร์ฮ่องกง</option>
-                                            <option value="ทัวร์ยุโรป">ทัวร์ยุโรป</option>
-                                            <option value="ทัวร์เยอรมัน">ทัวร์เยอรมัน</option>
+                                        <select id="country" multiple class="form-control" name="program" >
+                                            @foreach($programs as $program)
+                                            <option value="{{$program->id}}">{{$program->name}}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>
@@ -48,7 +47,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-3">
-                                        <input class="form-control" placeholder="คน">
+                                        <input class="form-control" placeholder="คน" name="seat">
                                     </div>
                                 </div>
                                 <div class="row">
@@ -60,18 +59,28 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-lg-3">
-                                        <input class="form-control" placeholder="ไป">
+                                    <div class="col-lg-3">        
+                                        <div class='input-group date' id='departure' >
+                                            <input type='text' class="form-control" placeholder="ไป" name="departure"/>
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                                        </div>
                                     </div>
-                                    <div class="col-lg-3">
-                                        <input class="form-control" placeholder="กลับ">
+                                    <div class="col-lg-3">        
+                                        <div class='input-group date' id='arrival' >
+                                            <input type='text' class="form-control" placeholder="กลับ" name="arrival"/>
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" value=""> มีลดราคา
+                                        <input type="checkbox" name="is_discount"> ลดราคา
                                     </label>
                                 </div>
                                 <div class="row">
@@ -79,15 +88,15 @@
                                         <label>ราคาผู้ใหญ่</label>
                                     </div>
                                     <div class="col-lg-3">
-                                        <label>ราคาผู้ใหญ่ลดราคา</label>
+                                        <label>ลดราคา</label>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-3">
-                                        <input class="form-control" placeholder="จำนวน">
+                                        <input class="form-control" placeholder="จำนวน" name="adult_price">
                                     </div>
                                     <div class="col-lg-3">
-                                        <input class="form-control" placeholder="จำนวน">
+                                        <input class="form-control" placeholder="จำนวน" name="adult_discount">
                                     </div>
                                 </div>
                                 <div class="row">
@@ -95,15 +104,15 @@
                                         <label>ราคาเด็ก</label>
                                     </div>
                                     <div class="col-lg-3">
-                                        <label>ราคาเด็กลดราคา</label>
+                                        <label>ลดราคา</label>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-3">
-                                        <input class="form-control" placeholder="จำนวน">
+                                        <input class="form-control" placeholder="จำนวน" name="child_price">
                                     </div>
                                     <div class="col-lg-3">
-                                        <input class="form-control" placeholder="จำนวน">
+                                        <input class="form-control" placeholder="จำนวน" name="child_discount">
                                     </div>
                                 </div>
                                 <div class="row">
@@ -113,7 +122,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-3">
-                                        <input class="form-control" placeholder="จำนวน">
+                                        <input class="form-control" placeholder="จำนวน" name="infant_price">
                                     </div>
                                 </div>
                                 
@@ -126,8 +135,8 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-3">        
-                                        <div class='input-group date' id='datetimepicker1'>
-                                            <input type='text' class="form-control" />
+                                        <div class='input-group date' id='datetimepicker1' >
+                                            <input type='text' class="form-control" name="show_until"/>
                                                 <span class="input-group-addon">
                                                     <span class="glyphicon glyphicon-calendar"></span>
                                                 </span>
@@ -138,14 +147,16 @@
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-lg-1">
-                                        <button type="submit" class="btn btn-primary">เพิ่ม</button>
+                                        {!! Form::submit('เพิ่ม', array('class'=>'btn btn-primary')) !!}
                                     </div>
                                     <div class="col-lg-1">
                                         <a href="/admin_all_schedule" class="btn btn-default" role="button">ยกเลิก</a>
                                     </div>
                                 </div>
                             </div>
-                        </form>
+
+                        {!! Form::close() !!}
+                        <!--</form>-->
                     </div>
                 </div>
                 <!-- /.row -->

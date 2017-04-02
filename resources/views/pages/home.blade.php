@@ -11,87 +11,19 @@
 						<h1>โปรแกรมทัวร์ประเทศต่างๆ</h1>
 					</div>
 				</div>
+				@foreach($countries as $country)
 				<div class="col-md-2 col-sm-4">
 					<div class="flag-container flag-hov">
 						<div class="flag-image">
-							<img src="images/flags/flag1.png" alt="">
+							<img src="{{$country->pic_url}}" alt="">
 						</div>
 						<div class="flag-bg"></div>
 						<div class="flag-text2">
-						<a >เกาหลีใต้</a>
+						<a >{{$country->country}}</a>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-2 col-sm-4">
-					<div class="flag-container flag-hov">
-						<div class="flag-image">
-							<img  src="images/flags/flag2.png" alt="">
-						</div>
-						<div class="flag-text2">
-							<a >ญี่ปุ่น</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-2 col-sm-4">
-					<div class="flag-container flag-hov">
-						<div class="flag-image">
-							<img  src="images/flags/flag3.png" alt="">
-						</div>
-						<div class="flag-text2">
-							<a >สิงคโปร์</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-2 col-sm-4">
-					<div class="flag-container flag-hov">
-						<div class="flag-image">
-							<img  src="images/flags/flag4.png" alt="">
-						</div>
-						<div class="flag-text2">
-							<a >ฮ่องกง</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-2 col-sm-4">
-					<div class="flag-container flag-hov">
-						<div class="flag-image">
-							<img  src="images/flags/flag5.png" alt="">
-						</div>
-						<div class="flag-text2">
-							<a >เวียดนาม</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-2 col-sm-4">
-					<div class="flag-container flag-hov">
-						<div class="flag-image">
-							<img  src="images/flags/flag6.png" alt="">
-						</div>
-						<div class="flag-text2">
-							<a >อินโดนีเซีย</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-2 col-sm-4">
-					<div class="flag-container flag-hov">
-						<div class="flag-image">
-							<img  src="images/flags/flag7.jpg" alt="">
-						</div>
-						<div class="flag-text2">
-							<a >อินเดีย</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-2 col-sm-4">
-					<div class="flag-container flag-hov">
-						<div class="flag-image">
-							<img  src="images/flags/flag8.png" alt="">
-						</div>
-						<div class="flag-text2">
-							<a >มองโกเลีย</a>
-						</div>
-					</div>
-				</div>
+				@endforeach
 			</div>
 		</div>
 </section>

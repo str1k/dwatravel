@@ -70,8 +70,24 @@
     </script>
     <script type="text/javascript">
             $(function () {
+                $('#departure').datetimepicker({
+                    format: 'YYYY-MM-DD',
+                    locale: 'th'
+                });
+            });
+    </script>
+    <script type="text/javascript">
+            $(function () {
+                $('#arrival').datetimepicker({
+                    format: 'YYYY-MM-DD',
+                    locale: 'th'
+                });
+            });
+    </script>
+    <script type="text/javascript">
+            $(function () {
                 $('#datetimepicker1').datetimepicker({
-                    format: 'DD MMMM YYYY',
+                    format: 'YYYY-MM-DD',
                     locale: 'th'
                 });
             });

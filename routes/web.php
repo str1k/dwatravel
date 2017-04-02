@@ -11,18 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('pages.home');
-});
+Route::get('/', 'homePageController@show');
 
 Route::get('/admin','programInsertController@insertform');
 Route::get('/admin_new_tour','programInsertController@insertform');
-Route::post('/admin_new_tour','programInsertController@insert');
+Route::post('/admin_new_tour','programInsertController@index');
 
 
-Route::get('/admin_add_schedule',function () {
-	return view('pages.admin_add_schedule');
-});
+Route::get('/admin_add_schedule','scheduleInsertController@insertform');
+Route::post('/admin_add_schedule','scheduleInsertController@index');
 
 Route::get('/admin_all_schedule',function () {
 	return view('pages.admin_all_schedule');
@@ -41,4 +38,10 @@ Route::resource('tagging', 'taggingController');
 
 Route::get('insert','mysqlInsertController@insertform');
 Route::post('create','mysqlInsertController@insert');
+
+
+Route::get('upload', function() {
+  return View::make('test_upload');
+});
+Route::post('apply/upload', 'testUploadController@upload');
 

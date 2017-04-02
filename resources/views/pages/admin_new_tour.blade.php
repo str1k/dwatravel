@@ -21,31 +21,47 @@
                     </div>
                 </div>
                 <!-- /.row -->
-                <form action = "/admin_new_tour" method = "post">
-                <input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>">
+                <!--<form action = "/admin_new_tour" method = "post">
+                <input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>">-->
+                {!! Form::open(array('url'=>'/admin_new_tour','method'=>'POST', 'files'=>true)) !!}
                 <div class="row">
                     <div class="col-lg-8">
 
                         <!--<form role="form">-->
-
-
+                            @if ($errors->any())
+                            <?php echo implode('', $errors->all('<div class="form-group"><span  class="label label-danger">:message</span></div>')) ?>
+                            @endif
+                            @if(Session::has('success'))
+                            <div class="alert-box success">
+                            <span  class="label label-success">{!! Session::get('success') !!}</span>
+                            </div>
+                            @endif
+                            @if(Session::has('error'))
+                            <p class="errors">{!! Session::get('error') !!}</p>
+                            @endif
                             <div class="form-group">
                                 <label>ชื่อโปรแกรมทัวร์</label>
-                                <input class="form-control" placeholder="ใส่ชื่อโปรแกรมทัวร์ที่นี่" name='program_name'>
+                                <input class="form-control" placeholder="ใส่ชื่อโปรแกรมทัวร์ที่นี่" name='program_name' value="{{ old('program_name') }}">
                             </div>
 
                             
 
                             <div class="form-group">
                                 <label>รายละเอียดโปรแกรม</label>
-                                <textarea class="form-control" rows="3" name='program_content'></textarea>
+                                <textarea class="form-control" rows="3" name='program_content' >{{ old('program_content') }}</textarea>
                             </div>
-
+                            <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="pdf_mode"> แสดงจาก PDF
+                                    </label>
+                                </div>
                             <div class="form-group">
                                 <label>อัพโหลด PDF</label>
-                                <input type="file">
+                                {!! Form::file('pdf_file') !!}
+                                <p class="errors">{!!$errors->first('pdf_file')!!}</p>
                             </div>
-                            <button type="submit" class="btn btn-success">เพิ่มโปรแกรมทัวร์</button>
+                            <!--<button type="submit" class="btn btn-success">เพิ่มโปรแกรมทัวร์</button>-->
+                            {!! Form::submit('เพิ่มโปรแกรมทัวร์', array('class'=>'btn btn-success')) !!}
 
                         <!--</form>-->
 
@@ -59,13 +75,10 @@
                                         <label>เลือกประเทศ</label>
                                     </div>
                                     <div class="col-lg-12">  
-                                        <select id="country" multiple class="form-control" name="country" >
-                                            <option value="เกาหลี">เกาหลี</option>
-                                            <option value="ญี่ปุ่น">ญี่ปุ่น</option>
-                                            <option value="ทัวร์จีน">ทัวร์จีน</option>
-                                            <option value="ทัวร์ฮ่องกง">ทัวร์ฮ่องกง</option>
-                                            <option value="ทัวร์ยุโรป">ทัวร์ยุโรป</option>
-                                            <option value="ทัวร์เยอรมัน">ทัวร์เยอรมัน</option>
+                                        <select id="country" multiple class="form-control" name="country" value="{{ old('country') }}" >
+                                            @foreach($countries as $country)
+                                            <option value="{{$country->country}}">{{$country->country}}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>
@@ -80,20 +93,32 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-4">
-                                        <input class="form-control" placeholder="วัน" name='day_count'>
+                                        <input class="form-control" placeholder="วัน" name='day_count' value="{{ old('day_count') }}">
                                     </div>
                                     <div class="col-lg-4">
-                                        <input class="form-control" placeholder="คืน" name='night_count'>
+                                        <input class="form-control" placeholder="คืน" name='night_count' value="{{ old('night_count') }}">
                                     </div>
                                 </div>
+
+                        <h1>รูปทัวร์</h1>
+                        <!--<form role="form">-->
+                            <div class="form-group">
+                                <label>อัพโหลด รูปทัวร์</label>
+                                {!! Form::file('tour_image') !!}
+                                <p class="errors">{!!$errors->first('tour_image')!!}</p>
+                            </div>
+
                         <!--</form>-->
                         <h1>สายการบิน</h1>
                         <!--<form role="form">-->
                             <div class="form-group">
                                 <label>อัพโหลด รูปสายการบิน</label>
-                                <input type="file">
+                                {!! Form::file('airline_image') !!}
+                                <p class="errors">{!!$errors->first('airline_image')!!}</p>
                             </div>
                         <!--</form>-->
+
+
 
                         <h1>Tags</h1>
 
@@ -106,10 +131,10 @@
                                     <div class="col-lg-12">  
                                         <form action="#" method="post">
                                         <select id="taging" multiple class="form-control" name='tag_list[]' >
-                                            @foreach ($db_tag as $tag)
-                                            <option value="{{$tag}}" {{$tag}}</option>
+                                            @foreach ($tags as $tag)
+                                            <option value="{{ $tag->tag }}"> {{ $tag->tag }}</option>
                                             
-                                            @endforeach
+                                            @endforeach 
                                         </select>
 
                                         </form>
@@ -120,7 +145,8 @@
                     </div>
                 </div>
                 <!-- /.row -->
-                </form>
+                {!! Form::close() !!}
+                <!--</form>-->
             </div>
             <!-- /.container-fluid -->
 
