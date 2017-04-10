@@ -4,6 +4,7 @@
 /storage/*.key
 /vendor
 /public/phpmyadmin
+/public/uploads
 /.idea
 Homestead.json
 Homestead.yaml

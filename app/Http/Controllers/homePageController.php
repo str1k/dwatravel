@@ -10,7 +10,7 @@ class homePageController extends Controller
 {
     public function show(){
     $countries = country::all();
-    $programs = programs::orderBy('id', 'DESC')->take(10)->get();
+    $programs = programs::orderBy('id', 'DESC')->take(20)->get();
     return view('pages.home',array('countries'=>$countries,'programs'=>$programs));
     }
 }

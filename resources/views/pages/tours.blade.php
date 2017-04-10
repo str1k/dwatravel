@@ -12,14 +12,18 @@
 		padding-right: 5%;
 		padding-top: 2%;padding-bottom: 2%;">
 						<h3 style="background-color :#edeaea; color:red;">{{$program->name}}</h3>
-						<a><img src="{{$program->tour_pic}}" alt=""></a>
+						<div class="row">
+							<div class="col-lg-10">
+								<a><img class="img-responsive" src="{{$program->tour_pic}}" alt=""></a>
+							</div>
+						</div>
 						<?php echo $program->content ?>
 						<div class="row">
 							<div class="col-lg-6 text-right">
 							<a href="" class="btn btn-success">จองทัวร์ที่นี่</a>
 							</div>
 							<div class="col-lg-6 text-left">
-							<a href="/detail?query=&program_id={{$program->id}}" target="_blank" class="btn btn-primary">ดูลายระเอียดโปรแกรมทัวร์</a>
+							<a href="/detail?query=&program_id={{$program->id}}" target="_blank" class="btn btn-primary">ดูรายละเอียดโปรแกรมทัวร์</a>
 							</div>
 						</div>
 					</div>	

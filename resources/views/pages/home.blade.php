@@ -128,62 +128,7 @@
 						</div>
 						@endforeach
 
-						<!--
-						<div class="col-md-4 col-sm-6 work-grid html php bootstrap">
-							<div class="portfolio-content">
-								<img class="img-responsive" src="images/works/portfolio-2.jpg" alt="">
-								<div class="portfolio-overlay">
-									<a href="images/works/portfolio-2.jpg"><i class="fa fa-camera-retro"></i></a>
-									<h5>Web Development</h5>
-									<p>Design, Develop</p>
-								</div>
-							</div>	
-						</div>
 						
-						<div class="col-md-4 col-sm-6 work-grid wordpress graphic">
-							<div class="portfolio-content">
-								<img class="img-responsive" src="images/works/portfolio-3.jpg" alt="">
-								<div class="portfolio-overlay">
-									<a href="images/works/portfolio-3.jpg"><i class="fa fa-camera-retro"></i></a>
-									<h5>Web Development</h5>
-									<p>Design, Develop</p>
-								</div>
-							</div>	
-						</div>
-						
-						<div class="col-md-4 col-sm-6 work-grid html php bootstrap">
-							<div class="portfolio-content">
-								<img class="img-responsive" src="images/works/portfolio-4.jpg" alt="">
-								<div class="portfolio-overlay">
-									<a href="images/works/portfolio-4.jpg"><i class="fa fa-camera-retro"></i></a>
-									<h5>Web Development</h5>
-									<p>Design, Develop</p>
-								</div>
-							</div>	
-						</div>
-						
-						<div class="col-md-4 col-sm-6 work-grid wordpress graphic php">
-							<div class="portfolio-content">
-								<img class="img-responsive" src="images/works/portfolio-5.jpg" alt="">
-								<div class="portfolio-overlay">
-									<a href="images/works/portfolio-5.jpg"><i class="fa fa-camera-retro"></i></a>
-									<h5>Web Development</h5>
-									<p>Design, Develop</p>
-								</div>
-							</div>	
-						</div>
-						
-						<div class="col-md-4 col-sm-6 work-grid html bootstrap graphic">
-							<div class="portfolio-content">
-								<img class="img-responsive" src="images/works/portfolio-6.jpg" alt="">
-								<div class="portfolio-overlay">
-									<a href="images/works/portfolio-6.jpg"><i class="fa fa-camera-retro"></i></a>
-									<h5>Web Development</h5>
-									<p>Design, Develop</p>
-								</div>
-							</div>	
-						</div>
-						-->
 					</div>				
 				</div>
 
@@ -191,7 +136,9 @@
 		</div>
 	</section>
 	<!-- /OUR WORKS -->
+
 	<!-- DISCOUNT -->
+	<!--
 	<section id="about-us">
 		<div class="container-fluid">
 			<div class="row">
@@ -218,10 +165,11 @@
 							<a class="office-carousel-left" href="#office-carousel" data-slide="prev"><i class="fa fa-angle-left"></i></a>
 							<a class="office-carousel-right" href="#office-carousel" data-slide="next"><i class="fa fa-angle-right"></i></a>
 						</div>		
-					</div> <!--/#office-carousel--> 
+					</div>  
 				</div>
 			</div>
 		</div>
 	</section>
+	-->
 	<!-- /DISCOUNT -->
 @stop
