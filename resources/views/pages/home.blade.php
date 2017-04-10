@@ -1,5 +1,6 @@
 @extends('master')
 @section('content')
+@include('layouts.partials._cover')
 <!-- FLAGS -->
 
 <!-- /FLAGS-->
@@ -13,13 +14,13 @@
 				</div>
 				@foreach($countries as $country)
 				<div class="col-md-2 col-sm-4">
-					<div class="flag-container flag-hov">
+					<div  class="flag-container flag-hov">
 						<div class="flag-image">
-							<img src="{{$country->pic_url}}" alt="">
+							<a href="/program?query=&country={{$country->country}}"><img src="{{$country->pic_url}}" alt=""></a>
 						</div>
 						<div class="flag-bg"></div>
 						<div class="flag-text2">
-						<a >{{$country->country}}</a>
+						<a style="padding-top: 20px; padding-bottom: 20px;" href="/program?query=&country={{$country->country}}">{{$country->country}}</a>
 						</div>
 					</div>
 				</div>

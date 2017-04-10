@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin - Bootstrap Admin Template</title>
+    <title>Dwatravel Admin Page</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -97,7 +97,7 @@
     <script type="text/javascript" src="js/tinymce/tinymce.min.js"></script>
     <script>tinymce.init({
   selector: 'textarea',
-  height: 300,
+  height: 600,
   theme: 'modern',
   plugins: [
     'advlist autolink lists link image charmap print preview hr anchor pagebreak',
@@ -106,7 +106,8 @@
     'emoticons template paste textcolor colorpicker textpattern imagetools codesample toc responsivefilemanager'
   ],
   toolbar1: 'undo redo | insert | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link',
-  toolbar2: 'responsivefilemanager | print preview media | forecolor backcolor emoticons | codesample',
+  toolbar2: 'responsivefilemanager | print preview media | forecolor backcolor emoticons | sizeselect | fontselect |  fontsizeselect' ,
+  toolbar3: '',
   external_filemanager_path:"/pic_upload/",
    filemanager_title:"Responsive Filemanager" ,
    external_plugins: { "filemanager" : "plugins/responsivefilemanager/plugin.min.js"},

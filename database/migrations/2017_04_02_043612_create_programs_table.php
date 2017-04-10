@@ -16,6 +16,7 @@ class CreateProgramsTable extends Migration
         Schema::create('programs', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name', 90);
+            $table->integer('starting_price');
             $table->integer('day_count');
             $table->integer('night_count');
             $table->longText('content');
@@ -25,6 +26,10 @@ class CreateProgramsTable extends Migration
             $table->string('tour_pic', 90)->nullable();
             $table->string('pdf', 90)->nullable();
             $table->boolean('pdf_mode');
+            $table->timestamp('show_until')->default(\DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('program_start')->default(\DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('program_end')->default(\DB::raw('CURRENT_TIMESTAMP'));
+            $table->longText('description')->nullable();
             $table->timestamps();
         });
     }

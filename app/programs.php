@@ -11,6 +11,7 @@ class programs extends Model
   protected $table = 'programs';
   protected $fillable = array(
         'name',
+        'starting_price',
         'day_count',
         'night_count',
         'content',
@@ -19,7 +20,11 @@ class programs extends Model
         'airline_pic',
         'tour_pic',
         'pdf',
-        'pdf_mode'
+        'pdf_mode',
+        'show_until',
+        'program_start',
+        'program_end',
+        'description'
   );
 
   public $timestamps = true;

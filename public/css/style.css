@@ -662,7 +662,9 @@
 		padding: 10px 25px;
 	}
 
-
+	#progcontent{
+		background-color: #b5b6b7;
+	}
 /* 9. ABOUT US */
 	
 	#about-us{

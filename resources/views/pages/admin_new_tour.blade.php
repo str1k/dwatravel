@@ -25,7 +25,7 @@
                 <input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>">-->
                 {!! Form::open(array('url'=>'/admin_new_tour','method'=>'POST', 'files'=>true)) !!}
                 <div class="row">
-                    <div class="col-lg-8">
+                    <div class="col-lg-9">
 
                         <!--<form role="form">-->
                             @if ($errors->any())
@@ -43,16 +43,50 @@
                                 <label>ชื่อโปรแกรมทัวร์</label>
                                 <input class="form-control" placeholder="ใส่ชื่อโปรแกรมทัวร์ที่นี่" name='program_name' value="{{ old('program_name') }}">
                             </div>
-
-                            
+                            <div class="form-group">
+                                <label>ราคาทัวร์เริ่มต้น</label>
+                                <input class="form-control" placeholder="ใส่ราคาเริ่มต้น" name='starting_price' value="{{ old('starting_price') }}">
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <label>เวลาเริ่มต้นโปรแกรม</label>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <label>เวลาโปรแกรมสุดท้าย</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-3">        
+                                        <div class='input-group date' id='departure' >
+                                            <input type='text' class="form-control" name="program_start" value="{{ old('program_start') }}" />
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">        
+                                        <div class='input-group date' id='arrival' >
+                                            <input type='text' class="form-control" name="program_end" value="{{ old('program_end') }}"/>
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
                             <div class="form-group">
-                                <label>รายละเอียดโปรแกรม</label>
+                                <label>รายละเอียดโปรแกรมแบบย่อ(แสดงบนหน้าค้นหา)</label>
                                 <textarea class="form-control" rows="3" name='program_content' >{{ old('program_content') }}</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>คำอธิบายโปรแกรม(หน้าแสดงรายละเอียดโปรแกรม)</label>
+                                <textarea class="form-control" rows="3" name='description' >{{ old('description') }}</textarea>
                             </div>
                             <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" name="pdf_mode"> แสดงจาก PDF
+                                        <input type="checkbox" name="pdf_mode"> แสดงคำอธิบายโปรแกรมจาก PDF
                                     </label>
                                 </div>
                             <div class="form-group">
@@ -60,13 +94,31 @@
                                 {!! Form::file('pdf_file') !!}
                                 <p class="errors">{!!$errors->first('pdf_file')!!}</p>
                             </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <label>แสดงจนถึง</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-3">        
+                                        <div class='input-group date' id='datetimepicker1' >
+                                            <input type='text' class="form-control" name="show_until" value="{{ old('show_until') }}"/>
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <!--<button type="submit" class="btn btn-success">เพิ่มโปรแกรมทัวร์</button>-->
                             {!! Form::submit('เพิ่มโปรแกรมทัวร์', array('class'=>'btn btn-success')) !!}
 
                         <!--</form>-->
 
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
                         <h1>ทัวร์ประเทศ</h1>
                         <!--<form role="form">-->
                             <div class="form-group">

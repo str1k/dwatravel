@@ -22,7 +22,7 @@
                                         <img class="media-object" src="http://placehold.it/50x50" alt="">
                                     </span>
                                     <div class="media-body">
-                                        <h5 class="media-heading"><strong>John Smith</strong>
+                                        <h5 class="media-heading"><strong>Dwatravel</strong>
                                         </h5>
                                         <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
                                         <p>Lorem ipsum dolor sit amet, consectetur...</p>
@@ -135,7 +135,7 @@
                             <li>
                                 <a href="/admin_new_tour">สร้างโปรแกรมทัวร์ใหม่</a>
                             </li>
-                            <li >
+                            <!--<li >
                                 <a href="/admin_all_schedule">โปรแกรมท่องเที่ยวตามช่วงเวลาทั้งหมด</a>
                             </li>
                             <li >
@@ -143,7 +143,7 @@
                             </li>
                             <li>
                                 <a href="/admin_test">test</a>
-                            </li>
+                            </li>-->
                         </ul>
                     </li>
                     

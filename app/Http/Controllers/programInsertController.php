@@ -26,11 +26,15 @@ class programInsertController extends Controller
 
       $rules = array('program_name' => 'bail|required',
          'day_count' =>'required',
+         'starting_price' => 'required',
          'night_count' =>'required',
          'country' => 'required',
          'airline_image' => 'nullable|mimes:jpg,jpeg,png,bmp|max:20000',
          'tour_image' => 'required|mimes:jpg,jpeg,png,bmp|max:20000',
-         'pdf_file' => 'nullable|mimes:pdf',);
+         'pdf_file' => 'nullable|mimes:pdf',
+         'program_start' => 'required',
+         'program_end' => 'required',
+         'show_until' => 'required');
       $data  =  Input::except(array('_token')) ;
       $messages = [
     'program_name.required' => 'กรุณาใส่ชื่อโปรแกรมทัวร์',
@@ -149,6 +153,11 @@ class programInsertController extends Controller
             $pdf_on = false;
          }
          $program->pdf_mode = $pdf_on;
+         $program->show_until = $request->input('show_until');
+         $program->program_start = $request->input('program_start');
+         $program->starting_price = $request->input('starting_price');
+         $program->program_end = $request->input('program_end');
+         $program->description = $request->input('description');
          $program->save();
 
 

@@ -17,7 +17,6 @@ Route::get('/admin','programInsertController@insertform');
 Route::get('/admin_new_tour','programInsertController@insertform');
 Route::post('/admin_new_tour','programInsertController@index');
 
-
 Route::get('/admin_add_schedule','scheduleInsertController@insertform');
 Route::post('/admin_add_schedule','scheduleInsertController@index');
 
@@ -34,14 +33,6 @@ Route::get('/admin_test',function () {
 Route::get('/sb',function () {
 	return view('pages.sb');
 });
-Route::resource('tagging', 'taggingController');
 
-Route::get('insert','mysqlInsertController@insertform');
-Route::post('create','mysqlInsertController@insert');
-
-
-Route::get('upload', function() {
-  return View::make('test_upload');
-});
-Route::post('apply/upload', 'testUploadController@upload');
-
+Route::get('/program','displayTourController@filter');
+Route::get('/detail','tourDescriptionController@filter');
