@@ -23,12 +23,8 @@
 						<!--<object data="{{$program->pdf}}" type="application/pdf" width="100%" height="800">
 						alt : <a href="{{$program->pdf}}">Download</a>
 						</object>-->
-						<iframe id="theFrame" src="{{$program->pdf}}" style="height:1000px; width:100%;"></iframe>
-<script>
-document.getElementById("theFrame").contentWindow.onload = function() {
-    this.document.getElementsByTagName("img")[0].style.width="100%";
-};
-</script>
+						http://www.dwatravels.com/uploads/
+						<iframe src="http://docs.google.com/gview?url=http://www.dwatravels.com/{{$program->pdf}}&embedded=true" style="width:100%; height:800px;" frameborder="0"></iframe>
 					</div>
 				</div> 
 			@else
