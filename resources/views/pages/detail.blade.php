@@ -13,6 +13,11 @@
 					padding-right: 5%;
 					padding-top: 2%;padding-bottom: 2%; ">
 						<h3 style="background-color :#edeaea; color:red;">{{$program->name}}</h3>
+						<div class="row">
+							<div class="col-lg-10">
+								<a><img class="img-responsive" src="{{$program->tour_pic}}" alt=""></a>
+							</div>
+						</div>
 						<?php echo $program->content ?>
 						<br></br>
 						<object data="{{$program->pdf}}" type="application/pdf" width="100%" height="800">
@@ -27,6 +32,11 @@
 						padding-right: 5%;
 						padding-top: 2%;padding-bottom: 2%;">
 							<h3 style="background-color :#edeaea; color:red;">{{$program->name}}</h3>
+							<div class="row">
+							<div class="col-lg-10">
+								<a><img class="img-responsive" src="{{$program->tour_pic}}" alt=""></a>
+							</div>
+						</div>
 							<?php echo $program->content ?>
 							<br></br>
     						<?php echo $program->description ?>
