@@ -20,9 +20,15 @@
 						</div>
 						<?php echo $program->content ?>
 						<br></br>
-						<object data="{{$program->pdf}}" type="application/pdf" width="100%" height="800">
+						<!--<object data="{{$program->pdf}}" type="application/pdf" width="100%" height="800">
 						alt : <a href="{{$program->pdf}}">Download</a>
-						</object>
+						</object>-->
+						<iframe id="theFrame" src="{{$program->pdf}}" style="height:1000px; width:100%;"></iframe>
+<script>
+document.getElementById("theFrame").contentWindow.onload = function() {
+    this.document.getElementsByTagName("img")[0].style.width="100%";
+};
+</script>
 					</div>
 				</div> 
 			@else
