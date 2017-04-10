@@ -104,27 +104,31 @@
 					<div class="col-md-12">
 						<ul class="filter">  			
 							<li><a class="active" href="#" data-filter="*">ทั้งหมด</a></li>	
-							<li><a href="#" data-filter=".wordpress">เกาหลี</a></li>
-							<li><a href="#" data-filter=".html">ญี่ปุ่น</a></li>
-							<li><a href="#" data-filter=".graphic">ฮ่องกง</a></li>
-							<li><a href="#" data-filter=".php">จีน</a></li>
-							<li><a href="#" data-filter=".bootstrap">ยุโรป</a></li>
+							<li><a href="#" data-filter=".เกาหลี">เกาหลี</a></li>
+							<li><a href="#" data-filter=".ญี่ปุ่น">ญี่ปุ่น</a></li>
+							<li><a href="#" data-filter=".ฮ่องกง">ฮ่องกง</a></li>
+							<li><a href="#" data-filter=".จีน">จีน</a></li>
+							<li><a href="#" data-filter=".ยุโรป">ยุโรป</a></li>
 						</ul><!--/#portfolio-filter-->
 					</div>
 					
 					<div class="portfolio-items">
-						
-						<div class="col-md-4 col-sm-6 work-grid wordpress graphic">
+						@foreach($programs as $program)
+						<div class="col-md-4 col-sm-6 work-grid {{$program->country}}">
 							<div class="portfolio-content">
-								<img class="img-responsive" src="images/works/portfolio-1.jpg" alt="">
+								<a href="detail?query=&program_id={{$program->id}}" target="_blank"><img class="img-responsive" src="{{$program->tour_pic}}" alt=""></a>
+
 								<div class="portfolio-overlay">
-									<a href="images/works/portfolio-1.jpg"><i class="fa fa-camera-retro"></i></a>
-									<h5>Web Development</h5>
-									<p>Design, Develop</p>
+									
+									<a href="detail?query=&program_id={{$program->id}}" target="_blank"><h5>{{$program->name}}</h5></a>
+									<a href="detail?query=&program_id={{$program->id}}" target="_blank"><h5>ราคาเริ่มต้น: {{$program->starting_price}} บาท</h5></a>
+									<a href="detail?query=&program_id={{$program->id}}" target="_blank"><i class="fa fa-camera-retro"></i> รายละเอียด คลิก</a>
 								</div>
 							</div>	
 						</div>
-						
+						@endforeach
+
+						<!--
 						<div class="col-md-4 col-sm-6 work-grid html php bootstrap">
 							<div class="portfolio-content">
 								<img class="img-responsive" src="images/works/portfolio-2.jpg" alt="">
@@ -179,7 +183,7 @@
 								</div>
 							</div>	
 						</div>
-						
+						-->
 					</div>				
 				</div>
 

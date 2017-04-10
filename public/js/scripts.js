@@ -21,7 +21,7 @@
     // ----------------------------------------------
 	(function () {
 
-		$('.portfolio-items').magnificPopup({ 
+		$('.portfolio-items2').magnificPopup({ 
 			delegate: 'a',
 			type: 'image',
 			// other options
