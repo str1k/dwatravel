@@ -121,7 +121,7 @@
                         <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> จองทัวร์และชำระเงิน</a>
                     </li>
                     <li>
-                        <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> เกี่ยวกับเรา</a>
+                        <a href="/admin_about-us"><i class="fa fa-fw fa-file"></i> เกี่ยวกับเรา</a>
                     </li>
                     <li>
                         <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> ติดต่อเรา</a>

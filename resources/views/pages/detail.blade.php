@@ -18,7 +18,11 @@
 								<a><img class="img-responsive" src="{{$program->tour_pic}}" alt=""></a>
 							</div>
 						</div>
+						<br></br>
+						
 						<?php echo $program->content ?>
+						<br></br>
+						<h2 style="color:red; text-align: center;">ราคาเริ่มต้นที่ {{$program->starting_price}} บาท</h2>
 						<br></br>
 						<!--<object data="{{$program->pdf}}" type="application/pdf" width="100%" height="800">
 						alt : <a href="{{$program->pdf}}">Download</a>
@@ -38,7 +42,10 @@
 								<a><img class="img-responsive" src="{{$program->tour_pic}}" alt=""></a>
 							</div>
 						</div>
+							<br></br>
 							<?php echo $program->content ?>
+							<br></br>
+								<h2 style="color:red">ราคาเริ่มต้นที่ {{$program->starting_price}}</h2>
 							<br></br>
     						<?php echo $program->description ?>
     					</div>

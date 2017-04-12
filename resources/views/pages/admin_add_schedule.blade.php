@@ -12,7 +12,7 @@
                         </h1>
                         <ol class="breadcrumb">
                             <li>
-                                <i class="fa fa-dashboard"></i>  <a href="/">หน้าแรก</a>
+                                <i class="fa fa-dashboard"></i>  <a href="/admin">หน้าแรก</a>
                             </li>
                             <li class="active">
                                 <i class="fa fa-edit"></i> เพิ่มโปรแกรมท่องเที่ยวตามช่วงเวลา

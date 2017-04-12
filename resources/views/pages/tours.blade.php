@@ -17,11 +17,12 @@
 								<a><img class="img-responsive" src="{{$program->tour_pic}}" alt=""></a>
 							</div>
 						</div>
+						<br></br>
 						<?php echo $program->content ?>
 						<br></br>
 						<div class="row">
 							<div class="col-lg-3">
-							<a href="" class="btn btn-success">จองทัวร์ที่นี่</a>
+							<a href="" class="btn btn-success">จองทัวร์คลิก</a>
 							</div>
 							<div class="col-lg-3">
 							<a href="/detail?query=&program_id={{$program->id}}" target="_blank" class="btn btn-primary">ดูรายละเอียดโปรแกรมทัวร์</a>

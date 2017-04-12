@@ -21,8 +21,6 @@
                     </div>
                 </div>
                 <!-- /.row -->
-                <!--<form action = "/admin_new_tour" method = "post">
-                <input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>">-->
                 {!! Form::open(array('url'=>'/admin_new_tour','method'=>'POST', 'files'=>true)) !!}
                 <div class="row">
                     <div class="col-lg-9">

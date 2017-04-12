@@ -27,12 +27,10 @@ Route::get('/admin_all_schedule',function () {
 Route::get('/admin_all_tour',function () {
 	return view('pages.admin_all_tour');
 });
-Route::get('/admin_test',function () {
-	return view('pages.test');
-});
-Route::get('/sb',function () {
-	return view('pages.sb');
-});
 
 Route::get('/program','displayTourController@filter');
 Route::get('/detail','tourDescriptionController@filter');
+
+Route::get('/about-us','aboutUsController@show');
+Route::get('/admin_about-us','aboutUsController@form');
+Route::post('/admin_about-us','aboutUsController@updateForm');

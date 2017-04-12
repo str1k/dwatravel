@@ -64,9 +64,9 @@
 	            </ul>
 	        </li>
 				    	<li><a href="#our-works">สถานที่ยอดนิยม</a></li>
-				    	<li><a href="#pricing">บทความ</a></li>
-				    	<li><a href="#our-team">เกี่ยวกับ</a></li>
-				    	<li><a href="#contact">ติดต่อ</a></li>
+				    	<li><a href="#pricing">จองทัวร์และชำระเงิน</a></li>
+				    	<li><a href="/about-us">เกี่ยวกับเรา</a></li>
+				    	<li><a href="#contact">ติดต่อเรา</a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container -->

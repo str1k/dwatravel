@@ -35,7 +35,7 @@ class programInsertController extends Controller
          'program_start' => 'required',
          'program_end' => 'required',
          'show_until' => 'required');
-      $data  =  Input::except(array('_token')) ;
+      $data  =  Input::except(array('_token'));
       $messages = [
     'program_name.required' => 'กรุณาใส่ชื่อโปรแกรมทัวร์',
     'tour_image.required' => 'กรุณาใส่รูปโปรแกรมทัวร์',
