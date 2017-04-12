@@ -1,4 +1,5 @@
 <!-- HEADER -->
+	
 	<section id="header">
 		<nav class="navbar st-navbar navbar-fixed-top" >
 			<div class="container">
@@ -63,7 +64,7 @@
 		            
 	            </ul>
 	        </li>
-				    	<li><a href="#our-works">สถานที่ยอดนิยม</a></li>
+				    	<li><a href="#our-works">ทัวร์แนะนำ</a></li>
 				    	<li><a href="#pricing">จองทัวร์และชำระเงิน</a></li>
 				    	<li><a href="/about-us">เกี่ยวกับเรา</a></li>
 				    	<li><a href="#contact">ติดต่อเรา</a></li>
