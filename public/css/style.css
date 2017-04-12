@@ -557,6 +557,10 @@
 	}
 
 	.portfolio-wrapper .portfolio-items{
+		display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
 		clear: both;
 	}
 
@@ -1295,13 +1299,13 @@
 	min-width: 200px;
 }
 .dropdown-menu.columns-2 {
-	min-width: 400px;
+	min-width: 500px;
 }
 .dropdown-menu.columns-3 {
 	min-width: 600px;
 }
 .dropdown-menu li a {
-	font-weight: 100;
+	font-weight: 60;
 }
 .multi-column-dropdown {
 	list-style: none;
