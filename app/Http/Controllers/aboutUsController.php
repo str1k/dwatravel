@@ -29,6 +29,7 @@ class aboutUsController extends Controller
     	$rules = array('content'=> 'bail|required','ceo_name'=>'required');
     	$data  =  Input::except(array('_token'));
     	$validator = Validator::make($data, $rules);
+		$aboutUs = new aboutUs;
 		if ($validator->fails()){
         	return Redirect::back()->withInput(Input::all())->withErrors($validator);
       	}
@@ -57,7 +58,7 @@ class aboutUsController extends Controller
          		}
          	$aboutUs->ceo_pic = $destinationPath.'/'.$ceo_fileName;
          	}
-         	$aboutUs = new aboutUs;
+         	
          	$aboutUs->content = $request->input('content');
          	$aboutUs->ceo_name =$request->input('ceo_name');
          	
