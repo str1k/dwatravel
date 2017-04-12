@@ -18,11 +18,12 @@
 							</div>
 						</div>
 						<?php echo $program->content ?>
+						<br></br>
 						<div class="row">
-							<div class="col-lg-6 text-right">
+							<div class="col-lg-3">
 							<a href="" class="btn btn-success">จองทัวร์ที่นี่</a>
 							</div>
-							<div class="col-lg-6 text-left">
+							<div class="col-lg-3">
 							<a href="/detail?query=&program_id={{$program->id}}" target="_blank" class="btn btn-primary">ดูรายละเอียดโปรแกรมทัวร์</a>
 							</div>
 						</div>

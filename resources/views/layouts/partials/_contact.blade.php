@@ -8,7 +8,7 @@
 
 <!-- CONTACT -->
   <header id="header">
-    <nav class="contact ct-navbar">
+    <nav class="contact ct-navbar" style="padding-top: 60px;">
       <div class="container">
         <div class="navbar-header">
         <button type="button" id="contact-bar" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#ct-navbar-collapse">
