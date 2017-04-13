@@ -22,7 +22,7 @@
 						<br></br>
 						<div class="row">
 							<div class="col-lg-3">
-							<a href="" class="btn btn-success">จองทัวร์คลิก</a>
+							<a href="detail?query=&program_id={{$program->id}}#book" target="_blank" class="btn btn-success">จองทัวร์คลิก</a>
 							</div>
 							<div class="col-lg-3">
 							<a href="/detail?query=&program_id={{$program->id}}" target="_blank" class="btn btn-primary">ดูรายละเอียดโปรแกรมทัวร์</a>

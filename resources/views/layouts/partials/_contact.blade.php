@@ -23,13 +23,14 @@
         <div class="collapse navbar-collapse collapse show" id="ct-navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
               <li>
-                <a><span class="glyphicon glyphicon-earphone"> 0908077720</span></a>
+                <a href="tel:0908077720"><span class="glyphicon glyphicon-earphone"> 0908077720</span></a>
               </li>
               <li>
                 <a><span class="glyphicon glyphicon-envelope"> dwatravel02@gmail.com</span></a>
               </li>
               <li>
-                <a target="_blank" href="https://line.me/ti/p/~0908077720"> LINE: 0908077720 <div class = "ct-inline_item"><img src="images/home/addfriends_en.png" alt=""></div></a> </li>
+                <a target="_blank" href="https://line.me/ti/p/@dwatravel.com"> LINE: @dwatravel.com <div class = "ct-inline_item"><img src="images/home/addfriends_en.png" alt=""></div></a> 
+              </li>
         </div>
 
           </ul>

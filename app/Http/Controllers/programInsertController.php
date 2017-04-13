@@ -29,7 +29,7 @@ class programInsertController extends Controller
          'starting_price' => 'required',
          'night_count' =>'required',
          'country' => 'required',
-         'airline_image' => 'nullable|mimes:jpg,jpeg,png,bmp|max:20000',
+         'airline_image' => 'nullable',
          'tour_image' => 'required|mimes:jpg,jpeg,png,bmp|max:20000',
          'pdf_file' => 'nullable|mimes:pdf',
          'program_start' => 'required',
@@ -48,19 +48,18 @@ class programInsertController extends Controller
       else {
       // checking file is valid.
          $tour_image = array('tour_image'=> Input::file('tour_image'));
-         $airline_image = array('airline_image'=> Input::file('airline_image'));
          
          if (Input::file('tour_image')->isValid()) {
          $destinationPath = 'uploads'; // upload path
          $extension = Input::file('tour_image')->getClientOriginalExtension(); // getting image extension
          $actual_name = rand(0,999999);
             $original_name = $actual_name;
-            $tour_fileName = 'airline'.$actual_name.".".$extension;
+            $tour_fileName = 'tour'.$actual_name.".".$extension;
             $i = 1;
-            while(file_exists($destinationPath.'/'.'airline'.$actual_name.".".$extension))
+            while(file_exists($destinationPath.'/'.'tour'.$actual_name.".".$extension))
             {           
             $actual_name = (string)$original_name.$i;
-            $tour_fileName = 'airline'.$actual_name.".".$extension;
+            $tour_fileName = 'tour'.$actual_name.".".$extension;
             $i++;
             }
          Input::file('tour_image')->move($destinationPath, $tour_fileName); // uploading file to given path
@@ -70,32 +69,6 @@ class programInsertController extends Controller
          // sending back with error message.
          Session::flash('error', 'tour image uploaded file is not valid');
          return Redirect::back()->withInput(Input::all());
-         }
-         if (!empty(Input::file('airline_image'))){
-
-            if(Input::file('airline_image')->isValid()){
-            $destinationPath = 'uploads'; // upload path
-            $extension = Input::file('airline_image')->getClientOriginalExtension(); // getting image extension
-            
-            $actual_name = rand(0,999999);
-            $original_name = $actual_name;
-            $airline_fileName = 'airline'.$actual_name.".".$extension;
-            $i = 1;
-            while(file_exists($destinationPath.'/'.'airline'.$actual_name.".".$extension))
-            {           
-            $actual_name = (string)$original_name.$i;
-            $airline_fileName = 'airline'.$actual_name.".".$extension;
-            $i++;
-            }
-
-            Input::file('airline_image')->move($destinationPath, $airline_fileName); // uploading file to given path
-            // sending back with message
-            }
-            else {
-            // sending back with error message.
-            Session::flash('error', 'airline image uploaded file is not valid');
-            return Redirect::back()->withInput(Input::all());
-            }
          }
          if (!empty(Input::file('pdf_file'))){
 
@@ -121,7 +94,7 @@ class programInsertController extends Controller
             }
             else {
             // sending back with error message.
-            Session::flash('error', 'airline image uploaded file is not valid');
+            Session::flash('error', 'pdf uploaded file is not valid');
             return Redirect::back()->withInput(Input::all());
             }
          }
@@ -138,9 +111,7 @@ class programInsertController extends Controller
             $program->tag_list = implode(',', $tagarray);
          }
          $program->tour_pic = $destinationPath.'/'.$tour_fileName;
-         if (!empty(Input::file('airline_image'))){
-            $program->airline_pic = $destinationPath.'/'.$airline_fileName;
-         }
+
          if (!empty(Input::file('pdf_file'))){
             $program->pdf = $destinationPath.'/'.$pdf_fileName;
          }
@@ -152,6 +123,7 @@ class programInsertController extends Controller
          else{
             $pdf_on = false;
          }
+         $program->airline_pic = $request->input('airline_image');
          $program->pdf_mode = $pdf_on;
          $program->show_until = $request->input('show_until');
          $program->program_start = $request->input('program_start');

@@ -162,9 +162,8 @@
                         <h1>สายการบิน</h1>
                         <!--<form role="form">-->
                             <div class="form-group">
-                                <label>อัพโหลด รูปสายการบิน</label>
-                                {!! Form::file('airline_image') !!}
-                                <p class="errors">{!!$errors->first('airline_image')!!}</p>
+                                <label>ชื่อสายการบิน</label>
+                                <input class="form-control" placeholder="ชื่อสายการบิน" name='airline_image' value="{{ old('airline_image') }}">
                             </div>
                         <!--</form>-->
 

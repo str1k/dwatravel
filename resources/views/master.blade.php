@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="css/font-awesome.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
-
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.css" type="text/css">
     
     <!-- Favicon -->
     <link rel="shortcut icon" href="images/icon/favicon.png">
@@ -52,6 +52,20 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     
+    <script type="text/javascript" src="docs/js/jquery-2.1.3.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/moment-with-locales.js"></script>
+    <script type="text/javascript" src="js/transition.min.js"></script>
+
+    <script src="js/bootstrap-datetimepicker.js"></script>
+    <script type="text/javascript">
+            $(function () {
+                $('#departure').datetimepicker({
+                    format: 'YYYY-MM-DD',
+                    locale: 'th'
+                });
+            });
+    </script>
     </head>
     <body id="page-top" class="index">
 
@@ -61,8 +75,8 @@
         
         @yield('content')
         
-    <script type="text/javascript" src="js/jquery.min.js"></script><!-- jQuery -->
-    <script type="text/javascript" src="js/bootstrap.min.js"></script><!-- Bootstrap -->
+
+
     <script type="text/javascript" src="js/jquery.parallax.js"></script><!-- Parallax -->
     <script type="text/javascript" src="js/smoothscroll.js"></script><!-- Smooth Scroll -->
     <script type="text/javascript" src="js/masonry.pkgd.min.js"></script><!-- masonry -->

@@ -24,9 +24,80 @@
 						<br></br>
 						<h2 style="color:red; text-align: center;">ราคาเริ่มต้นที่ {{$program->starting_price}} บาท</h2>
 						<br></br>
-						<!--<object data="{{$program->pdf}}" type="application/pdf" width="100%" height="800">
-						alt : <a href="{{$program->pdf}}">Download</a>
-						</object>-->
+						<section id="book">
+							<div class="row">
+								<div class="col-lg-12">
+									<br></br>
+									<h2 >จองทัวร์</h2>
+								</div>
+								<div class="col-lg-12">
+									<div class="row">
+										<div class="col-lg-3">
+											<h4 style="color: #e0881d;" for="disabledSelect">รหัสโปรแกรมทัวร์</h4>
+										</div>
+										<div class="col-lg-3">
+											<input class="form-control" id="disabledInput" type="text" value="{{$program->id}}" name="program_ID" disabled>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-12">
+									<div class="row">
+										<div class="col-lg-3">
+											<h4 style="color: #e0881d;" for="disabledSelect">ชื่อโปรแกรมทัวร์</h4>
+										</div>
+										<div class="col-lg-9">
+											<input class="form-control" id="disabledInput" type="text" value="{{$program->name}}" name="program_name" disabled>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-12">
+									<div class="row">
+										<div class="col-lg-3">
+											<h4 style="color: #e0881d;" for="disabledSelect">สายการบิน</h4>
+										</div>
+										<div class="col-lg-9">
+											<input class="form-control" id="disabledInput" type="text" value="{{$program->airline_image}}" name="program_name" disabled>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-12">
+									<div class="row">
+										<div class="col-lg-3">
+											<h4 for="disabledSelect">วันเดินทาง</h4>
+										</div>
+										<div class="col-lg-3">
+											<div class='input-group date' id='departure' >
+                                            	<input type='text' class="form-control" name="departure"/>
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                                        	</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-12">
+									
+									<div class="col-lg-1">
+										<h4 for="disabledSelect">ผู้ใหญ่</h4>
+									</div>
+									<div class="col-lg-2">
+										<select class="form-control">
+  											<option value="1">1</option>
+										</select>
+									</div>
+									<div class="col-lg-1">
+										<h4 for="disabledSelect">เด็ก</h4>
+									</div>
+									<div class="col-lg-2">
+										<select class="form-control">
+  											<option value="1">1</option>
+										</select>
+									</div>
+								</div>
+								
+                        	</div>
+                        </section>
+                        <br></br>
 						<iframe src="http://docs.google.com/gview?url=http://www.dwatravels.com/{{$program->pdf}}&embedded=true" style="width:100%; height:800px;" frameborder="0"></iframe>
 					</div>
 				</div> 
@@ -47,6 +118,12 @@
 							<br></br>
 								<h2 style="color:red">ราคาเริ่มต้นที่ {{$program->starting_price}}</h2>
 							<br></br>
+							<section id="book">
+							<h2 >จองทัวร์</h2>
+							<label for="disabledSelect">Disabled input</label>
+                                    <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input" disabled>
+							</section>
+
     						<?php echo $program->description ?>
     					</div>
     				</div>
@@ -63,12 +140,12 @@
 						เวลาทำการ 
 						วันจันทร์-วันเสาร์ 10.00 - 17.30 น. </h5>
 						<h5 class="text-left" style="padding-left: 10px;">Hotline:</h5>
-						<p><a href="tel:090-807-7720"><span class="glyphicon glyphicon-phone" style="color: #03c129;"">
+						<p><a href="tel:0908077720"><span class="glyphicon glyphicon-phone" style="color: #03c129;"">
 						</span>090-807-7720</a></p>
-						<p><a href="tel:090-807-7730"><span class="glyphicon glyphicon-phone" style="color: #03c129;">
+						<p><a href="tel:0908077730"><span class="glyphicon glyphicon-phone" style="color: #03c129;">
 						</span>090-807-7730</a></p>
-						<p><a href="tel:02-1071333" style="color: #f9b804; font-size:25px;"><span class="glyphicon glyphicon-earphone" style="color: #03c129; font-size:25px;"></span> 02-1071333 </a></p>
-						<p><a target="_blank" href="https://line.me/ti/p/~0908077720" style="font-size:20px"> LINE: 0908077720 </a></p>
+						<p><a href="tel:021071333" style="color: #f9b804; font-size:25px;"><span class="glyphicon glyphicon-earphone" style="color: #03c129; font-size:25px;"></span> 02-1071333 </a></p>
+						<p><a target="_blank" href="https://line.me/ti/p/@dwatravel.com" style="font-size:20px"> LINE: @dwatravel.com </a></p>
 					</div>
 					<div class="row text-center" style="background-color:white; margin-left: 10px;" >
 						<h4> แพคเกจทัวร์ล่าสุด</h4>
