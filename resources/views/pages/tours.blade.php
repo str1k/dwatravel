@@ -25,7 +25,7 @@
 							<a href="detail?query=&program_id={{$program->id}}#book" target="_blank" class="btn btn-success">จองทัวร์คลิก</a>
 							</div>
 							<div class="col-lg-3">
-							<a href="/detail?query=&program_id={{$program->id}}" target="_blank" class="btn btn-primary">ดูรายละเอียดโปรแกรมทัวร์</a>
+							<a href="/detail?query=&program_id={{$program->id}}#description" target="_blank" class="btn btn-primary">ดูรายละเอียดโปรแกรมทัวร์</a>
 							</div>
 						</div>
 					</div>	
