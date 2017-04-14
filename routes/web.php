@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\DB;
 use App\country;
 use App\Task;
 use App\programs;
+use App\locate;
 
 Route::get('/', 'homePageController@show');
 
@@ -98,7 +99,7 @@ Route::delete('/programs/{program_id?}',function($program_id){
 });
 
 
-
+//Country routing
 Route::get('/admin_country','countryController@insertform');
 Route::post('/upload_image','countryController@uploadPicture');
 Route::get('/countries/{country_id?}',function($country_id){
@@ -129,4 +130,31 @@ Route::put('/countries/{country_id?}',function(Request $request,$country_id){
     $country->save();
 
     return Response::json($country);
+});
+
+//locate routing
+Route::get('/admin_locate','locateController@insertform');
+Route::get('/locates/{locate_id?}',function($locate_id){
+    $locate = locate::find($locate_id);
+    return Response::json($locate);
+});
+Route::post('/locates',function(Request $request){
+    $locate = locate::create([
+            'country' => $request->input('country'),
+            'locate' => $request->input('locate'),
+            'pic_url' => $request->input('pic_url'),
+            ]);
+    return Response::json($locate);
+})
+;
+Route::put('/locates/{locate_id?}',function(Request $request,$locate_id){
+    $locate = locate::find($locate_id);
+
+    $locate->locate = $request->locate;
+    $country->country = $request->country;
+    $country->pic_url = $request->pic_url;
+
+    $locate->save();
+
+    return Response::json($locate);
 });

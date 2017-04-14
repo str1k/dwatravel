@@ -133,7 +133,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="section-title">
-						<h1>แพ็คเกจทัวร์ลดราคา</h1>
+						<h1>แพ็คเกจทัวร์ล่าสุด</h1>
 					</div>
 				</div>
 

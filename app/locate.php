@@ -16,3 +16,4 @@ class locate extends Model
   );
 
   public $timestamps = true;
+}

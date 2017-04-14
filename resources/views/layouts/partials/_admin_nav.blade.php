@@ -152,6 +152,9 @@
                             <li>
                                 <a href="/admin_country">แก้ไขประเทศ</a>
                             </li>
+                            <li>
+                                <a href="/admin_locate">แก้ไขสถานที่</a>
+                            </li>
                         </ul>
                     </li>
                     
