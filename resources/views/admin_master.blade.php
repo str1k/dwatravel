@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta name="_token" content="{{ csrf_token() }}" />
 
     <title>Dwatravel Admin Page</title>
 
@@ -29,6 +30,7 @@
     <!-- Bootstrap Core JavaScript -->
     <script type="text/javascript" src="docs/js/jquery-2.1.3.min.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/admin.js"></script>
     <script src="js/moment-with-locales.js"></script>
     <script type="text/javascript" src="js/transition.min.js"></script>
 

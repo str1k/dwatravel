@@ -23,5 +23,8 @@ class TourDescriptionController extends Controller
    return view('pages.detail',array('countries'=>$countries,'programs'=>$programs));
 
    }
+   public function book(Request $request){
+    
+   }
 }
 #test
