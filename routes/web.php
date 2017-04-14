@@ -33,8 +33,8 @@ Route::get('/admin_all_schedule',function () {
 
 
 Route::get('/program','displayTourController@filter');
-Route::get('/detail','tourDescriptionController@filter');
-Route::post('/detail','tourDescriptionController@book');
+Route::get('/detail','TourDescriptionController@filter');
+Route::post('/detail','TourDescriptionController@book');
 
 Route::get('/about-us','aboutUsController@show');
 Route::get('/admin_about-us','aboutUsController@form');
