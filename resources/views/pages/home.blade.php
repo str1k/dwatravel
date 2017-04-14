@@ -10,9 +10,16 @@
 				<div class="col-md-12">
 					<div class="section-title">
 						<h1>โปรแกรมทัวร์ประเทศต่างๆ</h1>
+						<br></br>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="section-title">
+						<h1>โปรแกรมทัวร์เอเชีย</h1>
 					</div>
 				</div>
 				@foreach($countries as $country)
+				@if ($country->region === "ทัวร์เอเชีย")
 				<div class="col-md-2 col-sm-4">
 					<div  class="flag-container flag-hov">
 						<div class="flag-image">
@@ -24,10 +31,40 @@
 						</div>
 					</div>
 				</div>
+				@endif
 				@endforeach
 			</div>
 		</div>
 </section>
+
+<section id="flaging2">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="section-title">
+						<h1>โปรแกรมทัวร์ยุโรป , อเมริกา , แอฟริกาใต้</h1>
+					</div>
+				</div>
+				@foreach($countries as $country)
+				@if ($country->region === "ทัวร์ยุโรป , อเมริกา , แอฟริกาใต้")
+				<div class="col-md-2 col-sm-4">
+					<div  class="flag-container flag-hov">
+						<div class="flag-image">
+							<a href="/program?query=&country={{$country->country}}"><img src="{{$country->pic_url}}" alt=""></a>
+						</div>
+						<div class="flag-bg"></div>
+						<div class="flag-text2">
+						<a style="padding-top: 20px; padding-bottom: 20px;" href="/program?query=&country={{$country->country}}">{{$country->country}}</a>
+						</div>
+					</div>
+				</div>
+				@endif
+				@endforeach
+			</div>
+		</div>
+</section>
+
+
 
 <!-- HOLIDAYS -->
 	<section id="our-team">
