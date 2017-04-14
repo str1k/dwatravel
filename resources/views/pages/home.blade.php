@@ -115,9 +115,12 @@
 						@foreach($programs as $program)
 						<div class="col-md-4 col-sm-6 work-grid {{$program->country}}" style="flex: 1;">
 							<div class="portfolio-content">
+								<div class="fixed-name">
 								<a href="detail?query=&program_id={{$program->id}}" target="_blank"><h5>{{$program->name}}</h5></a>
+								</div>
+								<div class="fixed-pic">
 								<a href="detail?query=&program_id={{$program->id}}" target="_blank"><img class="img-responsive" src="{{$program->tour_pic}}" alt=""></a>
-
+								</div>
 								<div class="portfolio-overlay">
 									
 									<a href="detail?query=&program_id={{$program->id}}" target="_blank"><h5>{{$program->name}}</h5></a>

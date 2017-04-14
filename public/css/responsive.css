@@ -1,5 +1,16 @@
 /* lg */ 
 @media (min-width: 1200px) {
+	.portfolio-items .fixed-name {
+		height: 60px;
+	}
+	.portfolio-items .fixed-pic {
+		height: 200px;
+	}
+
+	.portfolio-items .img-responsive {
+		height: 200px;
+		width: 360px;
+	}
 
 }
 
