@@ -100,8 +100,33 @@ Route::delete('/programs/{program_id?}',function($program_id){
 
 
 Route::get('/admin_country','countryController@insertform');
+Route::post('/upload_image','countryController@uploadPicture');
 Route::get('/countries/{country_id?}',function($country_id){
     $country = country::find($country_id);
+
+    return Response::json($country);
+});
+Route::delete('/countries/{country_id?}',function($country_id){
+   $country = country::destroy($country_id);
+    return Response::json($country);
+});
+Route::post('/countries',function(Request $request){
+    $country = country::create([
+            'country' => $request->input('country'),
+            'region' => $request->input('region'),
+            'pic_url' => $request->input('pic_url'),
+            ]);
+    return Response::json($country);
+})
+;
+Route::put('/countries/{country_id?}',function(Request $request,$country_id){
+    $country = country::find($country_id);
+
+    $country->country = $request->country;
+    $country->region = $request->region;
+    $country->pic_url = $request->pic_url;
+
+    $country->save();
 
     return Response::json($country);
 });

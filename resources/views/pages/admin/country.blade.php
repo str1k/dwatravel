@@ -14,7 +14,6 @@
                         <th>รูป</th>
                         <th>ภูมิภาค</th>
                         <th>Date Created</th>
-
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -53,12 +52,30 @@
                                 </div>
 
                                 <div class="form-group error">
-                                    <label for="inputTask" class="col-sm-3 control-label">รูป</label>
+                                    <label for="inputTask" class="col-sm-3 control-label">ลิ้งรูปภาพ</label>
                                     <div class="col-sm-9">
-                                        <img style="width: 40px;" id="country-img" src="" alt="">
+                                        <input type="text" class="form-control has-error" id="country-img-input" name="country-img-input" placeholder="ลิ้งรูปภาพ" value="" disabled="">
                                     </div>
                                 </div>
 
+                                <div class="form-group error">
+                                    <label for="inputTask" class="col-sm-3 control-label">รูป</label>
+                                    <div class="col-sm-2">
+                                        <img style="width: 40px;" id="country-img" src="" alt="">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <form enctype="multipart/form-data">
+                                        <input class="pic-country" id="pic-country" name="pic-country" type="file" />
+                                    </div>
+                                    <div class="col-sm-3">
+                                        
+                                        <input class="upload-pic" type="button" value="Upload" />
+                                        </form>
+                                    </div>
+                                    <div class="col-sm-9" align="center">
+                                        <progress></progress>
+                                    </div>
+                                </div>
 
                                 <div class="form-group">
                                     <label for="inputEmail3" class="col-sm-3 control-label">ภูมิภาค</label>
@@ -68,11 +85,13 @@
                                         </select>
                                     </div>
                                 </div>
+
+
                             </form>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-primary" id="btn-save" value="add">Save changes</button>
-                            <input type="hidden" id="task_id" name="task_id" value="0">
+                            <input type="hidden" id="country_id" name="country_id" value="0">
                         </div>
                     </div>
                 </div>

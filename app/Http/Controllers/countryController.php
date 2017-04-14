@@ -24,4 +24,39 @@ class countryController extends Controller
    	$countries = country::where($clauses)->get();
    	return  $countries;
    }
+   public function uploadPicture(Request $request){
+      if (!empty(Input::file('pic-country'))){
+
+            if(Input::file('pic-country')->isValid()){
+            $destinationPath = 'uploads/picture'; // upload path
+            $extension = Input::file('pic-country')->getClientOriginalExtension(); // getting image extension
+            
+            $actual_name = rand(0,999999);
+            $original_name = $actual_name;
+            $fileName = $actual_name.".".$extension;
+            $i = 1;
+            while(file_exists($destinationPath.'/'.$actual_name.".".$extension))
+            {           
+            $actual_name = (string)$original_name.$i;
+            $fileName = $actual_name.".".$extension;
+            $i++;
+            }
+
+
+
+            Input::file('pic-country')->move($destinationPath, $fileName); // uploading file to given path
+            // sending back with message
+            }
+            else {
+            // sending back with error message.
+            Session::flash('error', 'uploaded file is not valid');
+            return Redirect::back()->withInput(Input::all());
+            }
+         }
+
+         if (!empty(Input::file('pic-country'))){
+            return $destinationPath.'/'.$fileName;
+         }
+
+   }
 }
