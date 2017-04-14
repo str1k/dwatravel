@@ -19,7 +19,7 @@ use App\programs;
 
 Route::get('/', 'homePageController@show');
 
-Route::get('/admin','programInsertController@insertform');
+Route::get('/admin','adminAllTourController@index');
 Route::get('/admin_new_tour','programInsertController@insertform');
 Route::post('/admin_new_tour','programInsertController@index');
 
