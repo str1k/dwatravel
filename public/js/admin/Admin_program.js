@@ -26,4 +26,21 @@ $(document).ready(function(){
             }
         });
     });
+
+    $('#country').on('change', function() {
+        console.log($('#country').val());
+        var selected = $('#country').val();
+        
+        $('#locate > option').each(function() {
+            $this = $(this)
+            //var value = $this.find("td.td_country").html();
+            console.log(this.text + ' ' + this.value);
+            if (this.value.indexOf(selected) >= 0) {
+                $('select[name*="locate_list[]"] > option[value="' + this.value +'"]').show();
+            }
+            else {
+            $('select[name*="locate_list[]"] > option[value="' + this.value +'"]').hide();
+            }
+        });
+    });
 });

@@ -63,7 +63,7 @@
     </script>
     <script type="text/javascript">
       $(document).ready(function() {
-      $('#taging').multiselect({
+      $('#locate').multiselect({
         enableFiltering: true,
         filterBehavior: 'value',
         maxHeight: 200

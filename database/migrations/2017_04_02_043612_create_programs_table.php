@@ -26,6 +26,7 @@ class CreateProgramsTable extends Migration
             $table->string('tour_pic', 90)->nullable();
             $table->string('pdf', 90)->nullable();
             $table->boolean('pdf_mode');
+            $table->mediumText('locate_list')->nullable();
             $table->timestamp('show_until')->default(\DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('program_start')->default(\DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('program_end')->default(\DB::raw('CURRENT_TIMESTAMP'));

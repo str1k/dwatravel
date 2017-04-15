@@ -12,13 +12,14 @@ use Session;
 use App\tagging;
 use App\country;
 use App\programs;
+use App\locate;
 
 class programInsertController extends Controller
 {
    public function insertform(){
-      $tags = tagging::all();
+      $locates = locate::all();
       $countries = country::all();
-      return view('pages.admin_new_tour',array('tags' => $tags,'countries'=>$countries));      
+      return view('pages.admin_new_tour',array('locates' => $locates,'countries'=>$countries));      
    }
 
    public function index(Request $request)
@@ -106,9 +107,9 @@ class programInsertController extends Controller
          $program->night_count = $request->input('night_count');
          $program->content = $request->input('program_content');
          $program->country = $request->input('country');
-         $tagarray = $request->input('tag_list');
-         if (count($tagarray) > 0 ){
-            $program->tag_list = implode(',', $tagarray);
+         $locatearray = $request->input('locate_list');
+         if (count($locatearray) > 0 ){
+            $program->locate_list = implode(',', $locatearray);
          }
          $program->tour_pic = $destinationPath.'/'.$tour_fileName;
 

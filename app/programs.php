@@ -22,6 +22,7 @@ class programs extends Model
         'pdf',
         'pdf_mode',
         'show_until',
+        'locate_list',
         'program_start',
         'program_end',
         'description'

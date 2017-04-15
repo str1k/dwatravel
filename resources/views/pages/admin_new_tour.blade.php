@@ -125,11 +125,32 @@
                                         <label>เลือกประเทศ</label>
                                     </div>
                                     <div class="col-lg-12">  
-                                        <select id="country" multiple class="form-control" name="country" value="{{ old('country') }}" >
+                                        <select id="country" name="country" value="{{ old('country') }}" >
                                             @foreach($countries as $country)
                                             <option value="{{$country->country}}">{{$country->country}}</option>
                                             @endforeach
                                         </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <h1>Locates</h1>
+
+                        <!--<form role="form">-->
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <label>เลือกสถานที่กำกับ</label>
+                                    </div>
+                                    <div class="col-lg-12">  
+                                        <form action="#" method="post">
+                                        <select id="locate" multiple class="form-control" name='locate_list[]' >
+                                            @foreach ($locates as $locate)
+                                            <option  value="{{ $locate->locate }},{{ $locate->country }}"> {{ $locate->locate }}</option>
+                                            
+                                            @endforeach 
+                                        </select>
+
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -169,27 +190,7 @@
 
 
 
-                        <h1>Tags</h1>
-
-                        <!--<form role="form">-->
-                            <div class="form-group">
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <label>เลือกป้ายกำกับ</label>
-                                    </div>
-                                    <div class="col-lg-12">  
-                                        <form action="#" method="post">
-                                        <select id="taging" multiple class="form-control" name='tag_list[]' >
-                                            @foreach ($tags as $tag)
-                                            <option value="{{ $tag->tag }}"> {{ $tag->tag }}</option>
-                                            
-                                            @endforeach 
-                                        </select>
-
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
+                        
 
                     </div>
                 </div>
@@ -201,4 +202,5 @@
 
         </div>
         <!-- /#page-wrapper -->
+        <script src="{{asset('js/admin/Admin_program.js')}}"></script>
 @stop
