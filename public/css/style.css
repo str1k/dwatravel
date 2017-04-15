@@ -32,9 +32,9 @@
 /* 1. IMPORT SECTION */
 
 /*	@import url("http://fonts.googleapis.com/css?family=Raleway:200,300,600,700&subset=latin,latin-ext");
-
+&subset=thai
 */
-@import url("https://fonts.googleapis.com/css?family=Taviraj&subset=thai");
+@import url("https://fonts.googleapis.com/css?family=Kanit");
 
 /* 2. BASIC STYLES */
 
@@ -43,7 +43,7 @@
 	}
 
 	body {
-		font-family: "Taviraj",Helvetica, Arial, sans-serif;
+		font-family: "Kanit",Helvetica, Arial, sans-serif;
 		font-size: 14px;
 		font-weight: 200;
 		line-height: 1.7857;
@@ -86,7 +86,7 @@
 	}
 
 	h1, h2, h3, h4, h5, h6{
-		font-family: 'Raleway', sans-serif;
+		font-family: 'Kanit', sans-serif;
 		font-weight: 700;
 		text-transform: uppercase;
 	}
