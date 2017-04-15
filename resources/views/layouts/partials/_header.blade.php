@@ -17,7 +17,7 @@
 					<ul class="nav navbar-nav navbar-right">
 				    	<li><a href="/">หน้าหลัก</a></li>
 				    	<li class="dropdown">
-	            <a href="#" class="dropdown-toggle" data-toggle="dropdown">แพ็คเกจทัวร์<b class="caret"></b></a>
+	            <a href="#" class="dropdown-toggle" data-toggle="dropdown">ทัวร์ต่างประเทศ<b class="caret"></b></a>
 	            <ul class="dropdown-menu multi-column columns-2">
 	            	
 		            <div class="row">
@@ -64,7 +64,7 @@
 		            
 	            </ul>
 	        </li>
-				    	<li><a href="#our-works">ทัวร์แนะนำ</a></li>
+				    	<li><a href="#our-works">ล่องเรือสำราญ</a></li>
 				    	<li><a href="#pricing">จองทัวร์และชำระเงิน</a></li>
 				    	<li><a href="/about-us">เกี่ยวกับเรา</a></li>
 				    	<li><a href="#contact">ติดต่อเรา</a></li>
