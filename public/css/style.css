@@ -39,7 +39,7 @@
 /* 2. BASIC STYLES */
 	html *
 	{
-   		font-family: "Sukhumvit Set","Taviraj",Helvetica, Arial, sans-serif !important;
+   		font-family: arial, helvetica, sans-serif !important;
 	}
 
 	html, body {
