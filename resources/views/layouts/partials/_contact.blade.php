@@ -13,9 +13,7 @@
         <div class="navbar-header">
         <button type="button" id="contact-bar" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#ct-navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
+              
           </button>
               <a style="margin-left: 10px">ใบอนุญาตกรมการท่องเที่ยว เลขที่ 11/07318</a> 
         </div>
