@@ -5,9 +5,21 @@ $(document).ready(function(){
     $('#selected-country').on('change', function() {
         console.log($('#selected-country').val());
         var img_url = $('#countryImage' + $('#selected-country').val()).val(); 
-        console.log(img_url);
+        var selected = $('#countryName' + $('#selected-country').val()).val();
+        console.log(selected);
         $('#country-img').attr('src', img_url);
-        $('#locates-list').empty();
+        var row_count = $('#locates-list tr').length;
+        $('.table > tbody  > tr').each(function() {
+            $this = $(this)
+            var value = $this.find("td.td_country").html();
+            console.log(value);
+            if (value == selected) {
+                $this.show();
+            }
+            else {
+            $this.hide();
+            }
+        });
     });
     $('.pic-country').on('change', function() {
     var file = this.files[0];

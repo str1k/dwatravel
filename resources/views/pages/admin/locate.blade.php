@@ -45,7 +45,7 @@
                         <td>{{$locate->id}}</td>
                         <td>{{$locate->locate}}</td>
                         <td><img style="width: 40px;" src="{{$locate->pic_url}}" alt=""></td>
-                        <td>{{$locate->country}}</td>
+                        <td class="td_country">{{$locate->country}}</td>
                         <td>{{$locate->created_at}}</td>
                         <td>
                             <button class="btn btn-warning btn-xs btn-detail open-modal-locates" value="{{$locate->id}}">Edit</button>

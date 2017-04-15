@@ -158,3 +158,7 @@ Route::put('/locates/{locate_id?}',function(Request $request,$locate_id){
 
     return Response::json($locate);
 });
+Route::delete('/locates/{locate_id?}',function($locate_id){
+   $locate = locate::destroy($locate_id);
+    return Response::json($locate);
+});
