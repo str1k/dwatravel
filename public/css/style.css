@@ -1332,4 +1332,12 @@
 	color: #262626;
 	background-color: #f5f5f5;
 }
- 
+.tour-display {
+	padding-left: 2%;
+	padding-right: 5%;
+	padding-top: 2%;padding-bottom: 2%;
+}
+.tour-display h3{
+	background-color :#edeaea; 
+	color:red;
+}
