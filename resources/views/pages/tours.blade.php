@@ -32,12 +32,13 @@
 						<?php echo $program->content ?>
 						<br></br>
 						<div class="row">
-							<div class="col-lg-3 col-xs-3">
-							<a href="detail?query=&program_id={{$program->id}}#book" target="_blank" class="btn btn-success">จองทัวร์คลิก</a>
-							</div>
-							<div class="col-lg-3 col-xs-3">
+							<div class="col-lg-3 col-xs-12" align="center">
 							<a href="/detail?query=&program_id={{$program->id}}#description" target="_blank" class="btn btn-primary">ดูรายละเอียดโปรแกรมทัวร์</a>
 							</div>
+							<div class="col-lg-3 col-xs-12" align="center">
+							<a href="detail?query=&program_id={{$program->id}}#book" target="_blank" class="btn btn-success">จองทัวร์คลิก</a>
+							</div>
+							
 						</div>
 					</div>	
 				
