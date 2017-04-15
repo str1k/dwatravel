@@ -5,15 +5,17 @@
 		<div class="col-lg-1 col-xs-1">
 		</div>	
 		<div class="col-lg-8 col-xs-8">
+			<div class="row" style="margin-top: 20px; margin-bottom: 20px;">
 			@foreach($locates as $locate)
-				<div class="row" style="margin-top: 20px; margin-bottom: 20px;">
+				
 					<div class="col-lg-2 col-xs-3" >
 						<div class="flag-image2">
 						<a href="/program?query=&locate_query={{$locate->locate}}" ><img class="img-responsive" src="{{$locate->pic_url}}"></a>
 						</div>
 					</div>
-				</div>
+				
 			@endforeach
+			</div>
 			@foreach($programs as $program)
 			<div class="row" style="border: 1px solid black; background-color:white; margin-bottom: 20px; ">
 			 	<div class="col-lg-12">
