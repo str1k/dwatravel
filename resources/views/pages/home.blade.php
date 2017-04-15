@@ -148,15 +148,15 @@
 								<a href="detail?query=&program_id={{$program->id}}" ><h5>{{$program->name}}</h5></a>
 								</div>
 								<div class="fixed-pic">
-								<a href="detail?query=&program_id={{$program->id}}" target="_blank"><img class="img-responsive" src="{{$program->tour_pic}}" alt=""></a>
+								<a href="detail?query=&program_id={{$program->id}}" ><img class="img-responsive" src="{{$program->tour_pic}}" alt=""></a>
 								</div>
 								<div class="portfolio-overlay">
 									
-									<a href="detail?query=&program_id={{$program->id}}" target="_blank"><h5>{{$program->name}}</h5></a>
-									<a href="detail?query=&program_id={{$program->id}}" target="_blank"><h5>ราคาเริ่มต้น: {{$program->starting_price}} บาท</h5></a>
-									<a href="detail?query=&program_id={{$program->id}}" target="_blank"><i class="fa fa-camera-retro"></i> รายละเอียด คลิก</a>
+									<a href="detail?query=&program_id={{$program->id}}" ><h5>{{$program->name}}</h5></a>
+									<a href="detail?query=&program_id={{$program->id}}" ><h5>ราคาเริ่มต้น: {{$program->starting_price}} บาท</h5></a>
+									<a href="detail?query=&program_id={{$program->id}}" ><i class="fa fa-camera-retro"></i> รายละเอียด คลิก</a>
 								</div>
-								<a href="detail?query=&program_id={{$program->id}}" style="color: red;text-align: right;" target="_blank"><h3>เริ่มต้น {{$program->starting_price}} บาท</h3></a>
+								<a href="detail?query=&program_id={{$program->id}}" style="color: red;text-align: right;" ><h3>เริ่มต้น {{$program->starting_price}} บาท</h3></a>
 
 							</div>	
 						</div>
