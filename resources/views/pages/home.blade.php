@@ -9,12 +9,6 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="section-title">
-						<h1>โปรแกรมทัวร์ประเทศต่างๆ</h1>
-						<br></br>
-					</div>
-				</div>
-				<div class="col-md-12">
-					<div class="section-title">
 						<h1>โปรแกรมทัวร์เอเชีย</h1>
 					</div>
 				</div>
