@@ -1217,7 +1217,7 @@
 
 	.flag-image2 img {
     height: 60px;
-    width: 80px;
+    width: 120px;
 	}
 
 
@@ -1305,7 +1305,7 @@
 	max-height: 400px;
 }
 .dropdown-menu.columns-2 {
-	min-width: 500px;
+	min-width: 800px;
 }
 .dropdown-menu.columns-3 {
 	min-width: 600px;
