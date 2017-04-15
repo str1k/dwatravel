@@ -1206,9 +1206,6 @@
 		background-color: #e6e9ef;
 	}
 
-	.flag-bg{
-
-	}
 
 	.flag-image img {
     max-height: 40px;
@@ -1253,6 +1250,8 @@
 		margin-bottom: 12;
 		color: #888888;
 		text-align: center;
+		padding-top: 20px; 
+		padding-bottom: 20px;
 	}
 	div.flag-hov:hover{
 		background-color: #c5d7f9;
@@ -1341,3 +1340,7 @@
 	background-color :#edeaea; 
 	color:red;
 }
+.flag-container2{
+	margin-top: 10px ;
+	background-color: #e6e9ef;
+	}

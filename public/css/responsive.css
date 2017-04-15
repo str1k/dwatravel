@@ -120,6 +120,7 @@
 	}
 	.flag-image{
     	width: 100px;
+    	margin-left: 10px;
 	}
 	.flag-container{
 		width: 110px;
@@ -214,6 +215,10 @@
 	font-weight: 500;
 	}
 
+	
+	.flag-text2 {
+		text-align: center;
+	}
 
 
 }
