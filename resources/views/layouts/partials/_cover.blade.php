@@ -3,14 +3,12 @@
 	<section id="slider">
 		<div id="home-carousel" class="carousel slide" data-ride="carousel">			
 			<div class="carousel-inner">
-				<div class="item active" >
-					<img src="images/cover/cover_1.PNG" alt="">					
+				<div class="item active" style="background-image: url(images/cover/cover_1.PNG)" >
+										
 				</div>
-				<div class="item">
-					<img src="images/cover/cover_2.PNG" alt="">				
+				<div class="item" style="background-image: url(images/cover/cover_2.PNG)">				
 				</div>
-				<div class="item" >
-					<img  src="images/cover/add-line1600.JPG" alt="">				
+				<div class="item" style="background-image: url(images/cover/add-line1600.JPG)">				
 				</div>
 				<!--<div class="item" style="background-image: url(images/cover/cover_3.jpg)">
 					<div class="carousel-caption container">
