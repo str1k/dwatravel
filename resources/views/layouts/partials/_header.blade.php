@@ -18,12 +18,12 @@
 				    	<li><a href="/">หน้าหลัก</a></li>
 				    	<li class="dropdown">
 	            <a href="#" class="dropdown-toggle" data-toggle="dropdown">ทัวร์ต่างประเทศ<b class="caret"></b></a>
-	            <ul class="dropdown-menu multi-column columns-2">
+	            <ul class="dropdown-menu multi-column columns-2 scrollable-menu">
 	            	
 		            <div class="row">
 
 			            <div class="col-lg-6">
-				            <ul class="multi-column-dropdown">	@foreach($countries as $country)
+				            <ul class="multi-column-dropdown ">	@foreach($countries as $country)
 					            @if ($country->id%2 === 1)
 					            <li>
 					            	<div class="row" style="height: 40px;">
