@@ -17,7 +17,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
           </button>
-              <a>ใบอนุญาติ 11/07318</a> 
+              <a style="margin-left: 10px">ใบอนุญาตกรมการท่องเที่ยว เลขที่ 11/07318</a> 
         </div>
 
         <div class="collapse navbar-collapse collapse show" id="ct-navbar-collapse">
