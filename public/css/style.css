@@ -43,7 +43,7 @@
 	}
 
 	body {
-		font-family: "Taviraj","Sukhumvit Set",Helvetica, Arial, sans-serif;
+		font-family: "Sukhumvit Set","Taviraj",Helvetica, Arial, sans-serif;
 		font-size: 14px;
 		font-weight: 200;
 		line-height: 1.7857;
@@ -86,7 +86,7 @@
 	}
 
 	h1, h2, h3, h4, h5, h6{
-		font-family: 'Taviraj',"Sukhumvit Set",Helvetica, sans-serif;
+		font-family: "Sukhumvit Set",'Taviraj',Helvetica, sans-serif;
 		font-weight: 700;
 		text-transform: uppercase;
 	}
