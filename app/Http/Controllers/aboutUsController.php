@@ -18,7 +18,8 @@ class aboutUsController extends Controller
     public function show(){
     $countries = country::all();
     $aboutUs = aboutUs::all();
-    return view('pages.about-us',array('aboutUs'=>$aboutUs,'countries'=>$countries));
+    $contact_bar = contact_bar::where('id','=','1')->get()->first();
+    return view('pages.about-us',array('aboutUs'=>$aboutUs,'countries'=>$countries,'contact_bar'=>$contact_bar));
     }
     public function form(){
     $aboutUs = aboutUs::all();
