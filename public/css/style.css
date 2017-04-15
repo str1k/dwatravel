@@ -37,6 +37,10 @@
 @import url("https://fonts.googleapis.com/css?family=Taviraj");
 
 /* 2. BASIC STYLES */
+	html *
+	{
+   		font-family: "Sukhumvit Set","Taviraj",Helvetica, Arial, sans-serif !important;
+	}
 
 	html, body {
 		height: 100%;
@@ -84,7 +88,7 @@
 	p {
 		line-height: 1.5;
 	}
-	a{
+	span {
 	font-family: "Sukhumvit Set",'Taviraj',Helvetica, sans-serif;	
 	}
 	h1, h2, h3, h4, h5, h6{
