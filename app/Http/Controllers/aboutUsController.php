@@ -12,6 +12,7 @@ use Session;
 use App\country;
 use App\programs;
 use App\aboutUs;
+use App\contact_bar;
 
 class aboutUsController extends Controller
 {
