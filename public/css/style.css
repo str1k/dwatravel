@@ -33,8 +33,8 @@
 
 /*	@import url("http://fonts.googleapis.com/css?family=Raleway:200,300,600,700&subset=latin,latin-ext");
 &subset=thai <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
-*/
-@import url("https://fonts.googleapis.com/css?family=Kanit");
+*/ 
+@import url("https://fonts.googleapis.com/css?family=Taviraj");
 
 /* 2. BASIC STYLES */
 
@@ -43,7 +43,7 @@
 	}
 
 	body {
-		font-family: "Kanit",Helvetica, Arial, sans-serif;
+		font-family: "Taviraj",Helvetica, Arial, sans-serif;
 		font-size: 14px;
 		font-weight: 200;
 		line-height: 1.7857;
@@ -86,7 +86,7 @@
 	}
 
 	h1, h2, h3, h4, h5, h6{
-		font-family: 'Kanit', sans-serif;
+		font-family: 'Taviraj',Helvetica, sans-serif;
 		font-weight: 700;
 		text-transform: uppercase;
 	}
