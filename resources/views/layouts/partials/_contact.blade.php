@@ -15,7 +15,7 @@
             <span class="sr-only">Toggle navigation</span>
               
           </button>
-              <a style="margin-left: 10px; font-family: "Sukhumvit Set","Taviraj",Helvetica, Arial, sans-serif;"><p>{{$contact_bar->autorize}}</p></a> 
+              <span style="font-family: arial, helvetica, sans-serif;"><a style="margin-left: 10px;">{{$contact_bar->autorize}}</a> </span>
         </div>
 
         <div class="collapse navbar-collapse collapse show" id="ct-navbar-collapse">
