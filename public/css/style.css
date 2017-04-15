@@ -330,7 +330,7 @@
 	}
 
 	#home-carousel  img {
-    max-height: 450px;
+    max-height: 500px;
     width: auto;
 	}
 
@@ -338,7 +338,7 @@
 		background-position: center top;
 		background-size:cover;
 		width:100%;
-		height: 450px;
+		height: 500px;
 	}
 
 	#home-carousel .item:before{
