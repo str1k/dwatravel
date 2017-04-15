@@ -10,7 +10,7 @@
 				    	<span class="icon-bar"></span>
 				    	<span class="icon-bar"></span>
 					</button>
-					<a class="st-item logo" href="/"><img src="images/home/logo.png" alt=""></a>
+					<a class="st-item logo" href="/"><img src="images/home/LOGO-DwaTravel.jpg" alt=""></a>
 				</div>
 
 				<div class="collapse navbar-collapse" id="st-navbar-collapse">

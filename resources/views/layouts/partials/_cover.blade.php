@@ -10,7 +10,7 @@
 					<img src="images/cover/cover_2.PNG" alt="">				
 				</div>
 				<div class="item" >
-					<img src="images/cover/cover_3.PNG" alt="">				
+					<img  src="images/cover/add-line1600.JPG" alt="">				
 				</div>
 				<!--<div class="item" style="background-image: url(images/cover/cover_3.jpg)">
 					<div class="carousel-caption container">
