@@ -118,6 +118,9 @@
 	.logo{
 		margin-left: 15px;
 	}
+	.flag-container{
+		width: 90px;
+	}
 	.navbar-nav{
 		background-color: #f5f5f5;
 	}

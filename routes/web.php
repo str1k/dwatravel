@@ -151,8 +151,8 @@ Route::put('/locates/{locate_id?}',function(Request $request,$locate_id){
     $locate = locate::find($locate_id);
 
     $locate->locate = $request->locate;
-    $country->country = $request->country;
-    $country->pic_url = $request->pic_url;
+    $locate->country = $request->country;
+    $locate->pic_url = $request->pic_url;
 
     $locate->save();
 
