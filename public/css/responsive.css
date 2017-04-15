@@ -118,6 +118,9 @@
 	.logo{
 		margin-left: 15px;
 	}
+	.flag-image{
+    	width: 100px;
+	}
 	.flag-container{
 		width: 110px;
 	}
