@@ -7,6 +7,7 @@ use App\schedule;
 use App\programs;
 use App\country;
 use App\locate;
+use App\contact_bar;
 
 class displayTourController extends Controller
 {
@@ -32,10 +33,10 @@ class displayTourController extends Controller
       $locates = locate::where($locate_clause)->get(); 
     }
    $programs = programs::where($clauses)->whereDate('show_until', '>=', \Carbon\Carbon::now())->get();
-   
+   $contact_bar = contact_bar::where('id','=','1')->get()->first();
    //print_r($clauses);
    //echo $schedules;
-   return view('pages.tours',array('locates'=>$locates,'countries'=>$countries,'programs'=>$programs));
+   return view('pages.tours',array('locates'=>$locates,'countries'=>$countries,'programs'=>$programs,'contact_bar'=>$contact_bar));
 
    }
 }

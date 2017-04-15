@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\schedule;
 use App\programs;
 use App\country;
+use App\contact_bar;
 
 class TourDescriptionController extends Controller
 {
@@ -20,7 +21,8 @@ class TourDescriptionController extends Controller
    $programs = programs::where($clauses)->get();
    //print_r($clauses);
    //echo $schedules;
-   return view('pages.detail',array('countries'=>$countries,'programs'=>$programs));
+   $contact_bar = contact_bar::where('id','=','1')->get()->first();
+   return view('pages.detail',array('countries'=>$countries,'programs'=>$programs,'contact_bar'=>$contact_bar));
 
    }
    public function book(Request $request){

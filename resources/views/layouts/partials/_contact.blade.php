@@ -15,19 +15,19 @@
             <span class="sr-only">Toggle navigation</span>
               
           </button>
-              <a style="margin-left: 10px">ใบอนุญาตกรมการท่องเที่ยว เลขที่ 11/07318</a> 
+              <a style="margin-left: 10px">{{$contact_bar->autorize}}</a> 
         </div>
 
         <div class="collapse navbar-collapse collapse show" id="ct-navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
               <li>
-                <a style="font-weight: 1000;" href="tel:021071333"><span class="glyphicon glyphicon-earphone"> </span> 02-107-1333</a>
+                <a style="font-weight: 1000;" href="tel:{{$contact_bar->telphone}}"><span class="glyphicon glyphicon-earphone"> </span> {{$contact_bar->telphone}} </a>
               </li>
               <li>
-                <a style="font-weight: 1000;"><span  class="glyphicon glyphicon-envelope"> </span> dwatravel02@gmail.com</a>
+                <a style="font-weight: 1000;"><span  class="glyphicon glyphicon-envelope"> </span> {{$contact_bar->email}}</a>
               </li>
               <li>
-                <a style="font-weight: 1000;"  target="_blank" href="https://line.me/ti/p/@dwatravel.com"> LINE: @dwatravel.com <div class = "ct-inline_item"><img src="images/home/addfriends_en.png" alt=""></div></a> 
+                <a style="font-weight: 1000;"  target="_blank" href="{{$contact_bar->line_link}}"> LINE: {{$contact_bar->line}} <div class = "ct-inline_item"><img src="{{$contact_bar->line_url}}" alt=""></div></a> 
               </li>
         </div>
 
