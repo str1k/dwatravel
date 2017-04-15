@@ -12,6 +12,11 @@
 		width: 360px;
 	}
 
+	#home-carousel  .item {
+		height: 700px;
+		width: 100%;
+	}
+
 }
 
 /* md */
