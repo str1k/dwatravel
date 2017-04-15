@@ -118,7 +118,7 @@
 /* xs */
 @media (max-width: 767px) {
 	#home-carousel .item {
-		height: 80px;
+		height: 110px;
 	}
 
 	.logo{
@@ -140,9 +140,6 @@
 		margin-top: 18px;
 	}
 
-	#home-carousel  .item {
-		height: 200px;
-	}
 	.ct-navbar .navbar-collapse ul{
 		margin-top: 10px;
 	}
