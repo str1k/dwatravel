@@ -48,12 +48,11 @@
 				@if ($country->region === "ทัวร์ยุโรป , อเมริกา , แอฟริกาใต้")
 				<div class="col-sm-4 col-md-3 col-xs-4">
 					<div  class="flag-container flag-hov">
-						<div class="flag-image">
+						<div class="flag-image col-lg-4 col-xs-12">
 							<a href="/program?query=&country={{$country->country}}"><img src="{{$country->pic_url}}" alt=""></a>
 						</div>
-						<div class="flag-bg"></div>
 						<div class="flag-text2">
-						<a style="padding-top: 20px; padding-bottom: 20px;" href="/program?query=&country={{$country->country}}">{{$country->country}}</a>
+						<a href="/program?query=&country={{$country->country}}">{{$country->country}}</a>
 						</div>
 					</div>
 				</div>
