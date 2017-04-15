@@ -32,7 +32,7 @@
 /* 1. IMPORT SECTION */
 
 /*	@import url("http://fonts.googleapis.com/css?family=Raleway:200,300,600,700&subset=latin,latin-ext");
-&subset=thai
+&subset=thai <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
 */
 @import url("https://fonts.googleapis.com/css?family=Kanit");
 
