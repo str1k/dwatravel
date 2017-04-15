@@ -8,7 +8,7 @@
 			<div class="row" style="margin-top: 20px; margin-bottom: 20px; background: white;">
 			@foreach($locates as $locate)
 				
-					<div class="col-lg-2 col-xs-3" style="margin-bottom: 10px;" >
+					<div class="col-lg-2 col-xs-4" style="margin-bottom: 10px;" >
 						<div class="flag-image2">
 						<a href="/program?query=&locate_query={{$locate->locate}}" ><img class="img-responsive" src="{{$locate->pic_url}}"></a>
 						</div>
