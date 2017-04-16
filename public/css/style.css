@@ -216,7 +216,7 @@
 	.st-navbar ul li a:hover,
 	.st-navbar ul li a:focus {
 		background-color: transparent;
-		color: #000;
+		color: #0896D6;
 	}
 	.st-navbar img {
     max-height: 50px;
@@ -255,7 +255,7 @@
 	}
 
 	.ct-navbar{
-		background-color: #F5F5F5;
+		background-color: #DDDEE5;
 		border-bottom: 3px solid #63636363;
 	}
 
@@ -290,19 +290,19 @@
 	.ct-navbar ul li a {
 		font-weight: 600;
 		padding: 0;
-		color:#888888;
+		color:#313638;
 		margin: 12px;
 	}
 	.ct-navbar span{
 		font-weight: 600;
 		padding: 0;
-		color:#888888;
+		color:##0896D6;
 	}
 
 	.ct-navbar ul li a:hover,
 	.ct-navbar ul li a:focus {
 		background-color: transparent;
-		color: #888888;
+		color: #3CABC7;
 	}
 
 	.ct-navbar .navbar-header{
