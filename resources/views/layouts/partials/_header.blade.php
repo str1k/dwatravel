@@ -23,7 +23,7 @@
 	            	
 		            <div class="row" align="center">
 
-			            <div class="col-lg-2 col-xs-12">
+			            <div class="col-lg-2 col-xs-6">
 				            <ul class="multi-column-dropdown ">
 				            	@foreach($countries as $country)
 					            @if ($country->country === "ญี่ปุ่น")
@@ -43,7 +43,7 @@
 					            		
 					            			<a href="/program?query=&locate={{$locate_bar->locate}}" style="overflow: hidden;
     										white-space: nowrap;" >
-					            				<img style="width: 40px;" src="{{$locate_bar->pic_url}}" alt=""> {{$locate_bar->locate}}
+					            				<img style="width: 40px;" src="{{$locate_bar->pic_url}}" alt=""> ทัวร์{{$locate_bar->locate}}
 					            			</a>
 					            		
 					            </li>
@@ -53,7 +53,7 @@
 				            </ul>
 			            </div>
 			           
-			            <div class="col-lg-2 col-xs-12">
+			            <div class="col-lg-2 col-xs-6">
 				            <ul class="multi-column-dropdown " >	@foreach($countries as $country)
 					            @if ($country->country === "เกาหลี")
 					            <li style="margin-left: -40px; text-align: left;">
@@ -80,7 +80,7 @@
 				            </ul>
 			            </div>
 		            	
-		            	<div class="col-lg-2 col-xs-12">
+		            	<div class="col-lg-2 col-xs-6">
 				            <ul class="multi-column-dropdown " >	@foreach($countries as $country)
 					            @if ($country->country === "จีน")
 					            <li style="margin-left: -40px; text-align: left;">
@@ -106,7 +106,7 @@
 					            <li class="divider" style="margin-left: -40px; text-align: left;"></li>
 				            </ul>
 			            </div>
-			            <div class="col-lg-2 col-xs-12">
+			            <div class="col-lg-2 col-xs-6">
 				            <ul class="multi-column-dropdown " >	
 					            <li style="margin-left: -40px; text-align: left;">
 					            			<a href="" style="overflow: hidden;
@@ -127,7 +127,7 @@
 					            <li class="divider" style="margin-left: -40px; text-align: left;"></li>
 				            </ul>
 			            </div>
-			            <div class="col-lg-2 col-xs-12">
+			            <div class="col-lg-2 col-xs-6">
 				            <ul class="multi-column-dropdown " >	
 					            <li style="margin-left: -40px; text-align: left;">
 					            			<a href="" style="overflow: hidden;
@@ -182,7 +182,7 @@
 					        	<li class="divider" style="margin-left: -40px; text-align: left;"></li>
 				            </ul>
 			            </div>
-			            <div class="col-lg-2 col-xs-12">
+			            <div class="col-lg-2 col-xs-6">
 				            <ul class="multi-column-dropdown " >	
 					            <li style="margin-left: -40px; text-align: left;">
 					            			<a href="" style="overflow: hidden;
