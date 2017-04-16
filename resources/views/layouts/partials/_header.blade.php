@@ -27,7 +27,7 @@
 				            <ul class="multi-column-dropdown ">
 				            	@foreach($countries as $country)
 					            @if ($country->country === "ญี่ปุ่น")
-					            <li style="margin-left: -40px; text-align: left;">
+					            <li ">
 					            		
 					            			<a href="/program?query=&country={{$country->country}}" style="overflow: hidden;
     										white-space: nowrap;" >
@@ -39,7 +39,7 @@
 					        @endforeach
 					        @foreach($locate_bars as $locate_bar)
 					        	@if ($locate_bar->country === "ญี่ปุ่น")
-					            <li style="margin-left: -40px; text-align: left;">
+					            <li ">
 					            		
 					            			<a href="/program?query=&locate={{$locate_bar->locate}}" style="overflow: hidden;
     										white-space: nowrap;" >
@@ -49,14 +49,14 @@
 					            </li>
 					            @endif
 					        @endforeach
-					            <li class="divider" style="margin-left: -40px; text-align: left;"></li>
+					            <li class="divider" "></li>
 				            </ul>
 			            </div>
 			           
 			            <div class="col-lg-2 col-xs-6">
 				            <ul class="multi-column-dropdown " >	@foreach($countries as $country)
 					            @if ($country->country === "เกาหลี")
-					            <li style="margin-left: -40px; text-align: left;">
+					            <li ">
 					            		
 					            			<a href="/program?query=&country={{$country->country}}" style="overflow: hidden;
     										white-space: nowrap;" >
@@ -68,7 +68,7 @@
 					        @endforeach
 					        @foreach($locate_bars as $locate_bar)
 					        	@if ($locate_bar->country === "เกาหลี")
-					            <li style="margin-left: -40px; text-align: left;">
+					            <li ">
 					            			<a href="/program?query=&locate={{$locate_bar->locate}}" style="overflow: hidden;
     										white-space: nowrap;" >
 					            				<img style="width: 40px;" src="{{$locate_bar->pic_url}}" alt=""> {{$locate_bar->locate}}
@@ -76,14 +76,14 @@
 					            </li>
 					            @endif
 					        @endforeach
-					            <li class="divider" style="margin-left: -40px; text-align: left;"></li>
+					            <li class="divider" "></li>
 				            </ul>
 			            </div>
 		            	
 		            	<div class="col-lg-2 col-xs-6">
 				            <ul class="multi-column-dropdown " >	@foreach($countries as $country)
 					            @if ($country->country === "จีน")
-					            <li style="margin-left: -40px; text-align: left;">
+					            <li ">
 					            		
 					            			<a href="/program?query=&country={{$country->country}}" style="overflow: hidden;
     										white-space: nowrap;" >
@@ -95,7 +95,7 @@
 					        @endforeach
 					        @foreach($locate_bars as $locate_bar)
 					        	@if ($locate_bar->country === "จีน")
-					            <li style="margin-left: -40px; text-align: left;">
+					            <li ">
 					            			<a href="/program?query=&locate={{$locate_bar->locate}}" style="overflow: hidden;
     										white-space: nowrap;" >
 					            				<img style="width: 40px;" src="{{$locate_bar->pic_url}}" alt=""> {{$locate_bar->locate}}
@@ -103,12 +103,12 @@
 					            </li>
 					            @endif
 					        @endforeach
-					            <li class="divider" style="margin-left: -40px; text-align: left;"></li>
+					            <li class="divider" "></li>
 				            </ul>
 			            </div>
 			            <div class="col-lg-2 col-xs-6">
 				            <ul class="multi-column-dropdown " >	
-					            <li style="margin-left: -40px; text-align: left;">
+					            <li ">
 					            			<a href="" style="overflow: hidden;
     										white-space: nowrap;" >
 					            				 เที่ยวโซนยุโรป
@@ -116,7 +116,7 @@
 					            </li>
 					        @foreach($countries as $country)
 					        	@if ($country->region === "ยุโรป")
-					            <li style="margin-left: -40px; text-align: left;">
+					            <li ">
 					            			<a href="/program?query=&country={{$country->country}}" style="overflow: hidden;
     										white-space: nowrap;" >
 					            				<img style="width: 40px;" src="{{$country->pic_url}}" alt=""> ทัวร์{{$country->country}}
@@ -124,12 +124,12 @@
 					            </li>
 					            @endif
 					        @endforeach
-					            <li class="divider" style="margin-left: -40px; text-align: left;"></li>
+					            <li class="divider" "></li>
 				            </ul>
 			            </div>
 			            <div class="col-lg-2 col-xs-6">
 				            <ul class="multi-column-dropdown " >	
-					            <li style="margin-left: -40px; text-align: left;">
+					            <li ">
 					            			<a href="" style="overflow: hidden;
     										white-space: nowrap;" >
 					            				เที่ยวโซนอเมริกา
@@ -137,7 +137,7 @@
 					            </li>
 					        @foreach($countries as $country)
 					        	@if ($country->region === "ยุโรป")
-					            <li style="margin-left: -40px; text-align: left;">
+					            <li ">
 					            			<a href="/program?query=&country={{$country->country}}" style="overflow: hidden;
     										white-space: nowrap;" >
 					            				<img style="width: 40px;" src="{{$country->pic_url}}" alt=""> ทัวร์{{$country->country}}
@@ -145,8 +145,8 @@
 					            </li>
 					            @endif
 					        @endforeach
-					            <li class="divider" style="margin-left: -40px; text-align: left;"></li>
-					            <li style="margin-left: -40px; text-align: left;">
+					            <li class="divider" "></li>
+					            <li ">
 					            			<a href="" style="overflow: hidden;
     										white-space: nowrap;" >
 					            				เที่ยวโซนแอฟริกา
@@ -154,7 +154,7 @@
 					            </li>
 					            @foreach($countries as $country)
 					        	@if ($country->region === "แอฟริกา")
-					            <li style="margin-left: -40px; text-align: left;">
+					            <li ">
 					            			<a href="/program?query=&country={{$country->country}}" style="overflow: hidden;
     										white-space: nowrap;" >
 					            				<img style="width: 40px;" src="{{$country->pic_url}}" alt=""> ทัวร์{{$country->country}}
@@ -162,8 +162,8 @@
 					            </li>
 					            @endif
 					        @endforeach
-					        	<li class="divider" style="margin-left: -40px; text-align: left;"></li>
-					            <li style="margin-left: -40px; text-align: left;">
+					        	<li class="divider" "></li>
+					            <li ">
 					            			<a href="" style="overflow: hidden;
     										white-space: nowrap;" >
 					            				เที่ยวโซนออสเตรเลีย
@@ -171,7 +171,7 @@
 					            </li>
 					        @foreach($countries as $country)
 					        	@if ($country->region === "ออสเตรเลีย")
-					            <li style="margin-left: -40px; text-align: left;">
+					            <li ">
 					            			<a href="/program?query=&country={{$country->country}}" style="overflow: hidden;
     										white-space: nowrap;" >
 					            				<img style="width: 40px;" src="{{$country->pic_url}}" alt=""> ทัวร์{{$country->country}}
@@ -179,12 +179,12 @@
 					            </li>
 					            @endif
 					        @endforeach
-					        	<li class="divider" style="margin-left: -40px; text-align: left;"></li>
+					        	<li class="divider" "></li>
 				            </ul>
 			            </div>
 			            <div class="col-lg-2 col-xs-6">
 				            <ul class="multi-column-dropdown " >	
-					            <li style="margin-left: -40px; text-align: left;">
+					            <li ">
 					            			<a href="" style="overflow: hidden;
     										white-space: nowrap;" >
 					            				 เที่ยวโซนเอเชีย
@@ -192,7 +192,7 @@
 					            </li>
 					        @foreach($countries as $country)
 					        	@if ($country->region === "เอเชีย")
-					            <li style="margin-left: -40px; text-align: left;">
+					            <li ">
 					            			<a href="/program?query=&country={{$country->country}}" style="overflow: hidden;
     										white-space: nowrap;" >
 					            				<img style="width: 40px;" src="{{$country->pic_url}}" alt=""> ทัวร์{{$country->country}}
@@ -200,7 +200,7 @@
 					            </li>
 					            @endif
 					        @endforeach
-					            <li class="divider" style="margin-left: -40px; text-align: left;"></li>
+					            <li class="divider" "></li>
 				            </ul>
 			            </div>
 	            </ul>
