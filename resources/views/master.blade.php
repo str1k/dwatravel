@@ -37,7 +37,6 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
     <link rel="stylesheet" href="css/bootstrap-datetimepicker.css" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Taviraj" rel="stylesheet">
     <!-- Favicon -->
     <link rel="shortcut icon" href="images/icon/favicon.png">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/icon/apple-touch-icon-144-precomposed.png">

@@ -39,7 +39,7 @@
 /* 2. BASIC STYLES */
 	html *
 	{
-   		font-family: arial, helvetica, sans-serif !important;
+   		font-family: arial, helvetica, sans-serif ;
 	}
 
 	html, body {
