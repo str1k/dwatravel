@@ -13,6 +13,8 @@ use App\country;
 use App\programs;
 use App\aboutUs;
 use App\contact_bar;
+use App\locate;
+
 
 class aboutUsController extends Controller
 {
@@ -25,7 +27,8 @@ class aboutUsController extends Controller
     public function form(){
     $aboutUs = aboutUs::all();
     $tmp_aboutUs = new aboutUs;
-    return view('pages.admin_about-us',array('aboutUs'=>$aboutUs,'tmp_aboutUs'=>$tmp_aboutUs));
+    $locate_bars = locate::all();
+    return view('pages.admin_about-us',array('aboutUs'=>$aboutUs,'tmp_aboutUs'=>$tmp_aboutUs,'locate_bars'=>$locate_bars));
     }
     public function updateForm(Request $request){
     	$rules = array('content'=> 'bail|required','ceo_name'=>'required');
