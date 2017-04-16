@@ -21,14 +21,15 @@ class aboutUsController extends Controller
     public function show(){
     $countries = country::all();
     $aboutUs = aboutUs::all();
+    
+    $locate_bars = locate::all();
     $contact_bar = contact_bar::where('id','=','1')->get()->first();
-    return view('pages.about-us',array('aboutUs'=>$aboutUs,'countries'=>$countries,'contact_bar'=>$contact_bar));
+    return view('pages.about-us',array('aboutUs'=>$aboutUs,'countries'=>$countries,'contact_bar'=>$contact_bar,'locate_bars'=>$locate_bars));
     }
     public function form(){
     $aboutUs = aboutUs::all();
     $tmp_aboutUs = new aboutUs;
-    $locate_bars = locate::all();
-    return view('pages.admin_about-us',array('aboutUs'=>$aboutUs,'tmp_aboutUs'=>$tmp_aboutUs,'locate_bars'=>$locate_bars));
+    return view('pages.admin_about-us',array('aboutUs'=>$aboutUs,'tmp_aboutUs'=>$tmp_aboutUs));
     }
     public function updateForm(Request $request){
     	$rules = array('content'=> 'bail|required','ceo_name'=>'required');
