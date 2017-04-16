@@ -18,6 +18,7 @@ class CreateCountriesTable extends Migration
             $table->string('country', 50);
             $table->string('pic_url', 90);
             $table->string('href_url', 90)->nullable();
+            $table->longText('content')->nullable();
             $table->string('region', 90);
             $table->timestamps();
         });

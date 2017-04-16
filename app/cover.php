@@ -4,16 +4,16 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class country extends Model
+class cover extends Model
 {
   protected $connection = 'mysql';
   protected $primaryKey = 'id';
-  protected $table = 'countries';
+  protected $table = 'covers';
   protected $fillable = array(
-        'country',
-        'content',
+        'page',
         'pic_url',
-        'region'
+        'href_url',
+        'order'
   );
 
   public $timestamps = true;

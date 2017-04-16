@@ -17,6 +17,7 @@ use App\country;
 use App\Task;
 use App\programs;
 use App\locate;
+use App\cover;
 
 Route::get('/', 'homePageController@show');
 
@@ -116,6 +117,7 @@ Route::post('/countries',function(Request $request){
             'country' => $request->input('country'),
             'region' => $request->input('region'),
             'pic_url' => $request->input('pic_url'),
+            'content' => $request->input('content'),
             ]);
     return Response::json($country);
 })
@@ -126,6 +128,7 @@ Route::put('/countries/{country_id?}',function(Request $request,$country_id){
     $country->country = $request->country;
     $country->region = $request->region;
     $country->pic_url = $request->pic_url;
+    $country->content = $request->content;
 
     $country->save();
 
@@ -134,6 +137,7 @@ Route::put('/countries/{country_id?}',function(Request $request,$country_id){
 
 //locate routing
 Route::get('/admin_locate','locateController@insertform');
+
 Route::get('/locates/{locate_id?}',function($locate_id){
     $locate = locate::find($locate_id);
     return Response::json($locate);
@@ -161,4 +165,33 @@ Route::put('/locates/{locate_id?}',function(Request $request,$locate_id){
 Route::delete('/locates/{locate_id?}',function($locate_id){
    $locate = locate::destroy($locate_id);
     return Response::json($locate);
+});
+
+//Cover routing
+Route::get('/admin_cover','coverController@insertform');
+Route::post('/covers',function(Request $request){
+    $cover = cover::create([
+            'page' => $request->input('page'),
+            'href_url' => $request->input('href_url'),
+            'pic_url' => $request->input('pic_url'),
+            'order' => $request->input('order'),
+            ]);
+    return Response::json($cover);
+});
+Route::get('/covers/{cover_id?}',function($cover_id){
+    $cover = cover::find($cover_id);
+    return Response::json($cover);
+});
+Route::put('/covers/{cover_id?}',function(Request $request,$cover_id){
+    $cover = cover::find($cover_id);
+    $cover->page = $request->page;
+    $cover->href_url = $request->href_url;
+    $cover->pic_url = $request->pic_url;
+    $cover->order = $request->order;
+    $cover->save();
+    return Response::json($cover);
+});
+Route::delete('/covers/{cover_id?}',function($cover_id){
+   $cover = cover::destroy($cover_id);
+    return Response::json($cover);
 });

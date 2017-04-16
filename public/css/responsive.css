@@ -14,6 +14,9 @@
 	#home-carousel  .item {
 		height: 400px;
 	}	
+	.country-promotion {
+		height: 400px;
+	}
 
 }
 
@@ -21,6 +24,10 @@
 @media (min-width: 992px) and (max-width: 1199px) {
 
 	#home-carousel  .item {
+		height: 350px;
+	}
+
+	.country-promotion {
 		height: 350px;
 	}
 
@@ -56,6 +63,10 @@
 	}
 
 	#home-carousel .item {
+		height: 300px;
+	}
+
+	.country-promotion {
 		height: 300px;
 	}
 
@@ -118,6 +129,10 @@
 /* xs */
 @media (max-width: 767px) {
 	#home-carousel .item {
+		height: 130px;
+	}
+
+	.country-promotion {
 		height: 130px;
 	}
 

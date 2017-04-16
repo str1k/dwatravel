@@ -1350,3 +1350,9 @@
 	margin-top: 10px ;
 	background-color: #e6e9ef;
 	}
+.country-promotion {
+		background-position: center top;
+		background-size:cover;
+		width:100%;
+		height: 500px;
+	}

@@ -12,6 +12,7 @@ class locate extends Model
   protected $fillable = array(
         'country',
         'locate',
+        'content',
         'pic_url'
   );
 

@@ -118,6 +118,9 @@
                         <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> หน้าแรก</a>
                     </li>
                     <li>
+                        <a href="/admin_cover"><i class="fa fa-fw fa-file"></i> จัดการ Slider</a>
+                    </li>
+                    <li>
                         <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> จองทัวร์และชำระเงิน</a>
                     </li>
                     <li>
@@ -155,6 +158,7 @@
                             <li>
                                 <a href="/admin_locate">แก้ไขสถานที่</a>
                             </li>
+                            
                         </ul>
                     </li>
                     

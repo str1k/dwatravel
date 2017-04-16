@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
 	
-	var url = "/countries";
+	var url = "/covers";
     
     $('.pic-country').on('change', function() {
     var file = this.files[0];
@@ -11,6 +11,25 @@ $(document).ready(function(){
 
     console.log("it work");
 });
+    $('#selected-page').on('change', function() {
+        console.log($('#selected-page').val());
+        var array = $('#selected-page').val().split(",");
+        var img_url = $('#pageImage' + array[0]).val(); 
+        var selected = $('#pageName' + array[0]).val();
+        console.log(selected);
+        $('#page-img').attr('src', img_url);
+        $('.table > tbody  > tr').each(function() {
+            $this = $(this)
+            var value = $this.find("td.td_page").html();
+            console.log(value);
+            if (value == selected) {
+                $this.show();
+            }
+            else {
+            $this.hide();
+            }
+        });
+    });
     
     $('.upload-pic').on('click', function() {
     var pic_url = '';
@@ -52,8 +71,8 @@ $(document).ready(function(){
         success: function (data) {
                 pic_url = data;
                 console.log(pic_url);
-                $('#country-img').attr('src', pic_url);
-                $('#country-img-input').val(pic_url);
+                $('#page-img').attr('src', pic_url);
+                $('#page-img-input').val(pic_url);
             },
     });
 });
@@ -61,35 +80,25 @@ $(document).ready(function(){
     $('#btn-add-countries').click(function(){
         $('#btn-save').val("add");
         $('#frmTasks').trigger("reset");
-        $("#region").find('option')
-                        .remove()
-                        .end()
-                        .append($('<option>', {value:"ทัวร์เอเชีย", text:"ทัวร์เอเชีย"}));
-        $('#region').append($('<option>', {value:"ทัวร์ยุโรป , อเมริกา , แอฟริกาใต้", text:"ทัวร์ยุโรป , อเมริกา , แอฟริกาใต้"}));
+        var array = $('#selected-page').val().split(",");
+        var page_name = $('#pageName' + array[0]).val(); 
+        $('#page-f').val(page_name);
         $('#myModal').modal('show');
     });
 
     //display modal form for country editing
-    $('.open-modal-countries').click(function(){
-        var country_id = $(this).val();
+    $('.open-modal-covers').click(function(){
+        var cover_id = $(this).val();
 
-        $.get(url + '/' + country_id, function (data) {
+        $.get(url + '/' + cover_id, function (data) {
             //success data
             console.log(data);
-            $('#country_id').val(data.id);
-            $('#country-form').val(data.country);
-            
-            $("#region").find('option')
-                        .remove()
-                        .end()
-                        .append($('<option>', {value:"ทัวร์เอเชีย", text:"ทัวร์เอเชีย"}));
-            $('#region').append($('<option>', {value:"ทัวร์ยุโรป , อเมริกา , แอฟริกาใต้", text:"ทัวร์ยุโรป , อเมริกา , แอฟริกาใต้"}));
-            $("#region").val(data.region);
-            $('#country-img').attr('src', data.pic_url);
-            $('#country-img-input').val(data.pic_url);
-            $(tinymce.get('country_content').getBody()).html(data.content);
-            tinyMCE.triggerSave();
-            console.log($('#country_content').val());
+            $('#page_id').val(data.id);
+            $('#page-f').val(data.page);
+            $("#href-url").val(data.href_url);
+            $("#order").val(data.order);
+            $('#page-img').attr('src', data.pic_url);
+            $('#page-img-input').val(data.pic_url);
             $('#btn-save').val("update");
 
             $('#myModal').modal('show');
@@ -98,22 +107,22 @@ $(document).ready(function(){
 
 	//admin program script
 	//delete program and remove it from list
-    $('.delete-country').click(function(){
+    $('.delete-cover').click(function(){
     	$.ajaxSetup({
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
             }
         })
-        var country_id = $(this).val();
-        console.log(url+'/'+country_id);
+        var cover_id = $(this).val();
+        console.log(url+'/'+cover_id);
         $.ajax({
 
             type: "DELETE",
-            url: url + '/' + country_id,
+            url: url + '/' + cover_id,
             success: function (data) {
                 console.log(data);
 
-                $("#country" + country_id).remove();
+                $("#page" + cover_id).remove();
             },
             error: function (data) {
                 console.log('Error:', data);
@@ -130,24 +139,23 @@ $(document).ready(function(){
         })
 
         e.preventDefault(); 
-        tinyMCE.triggerSave();
         var formData = {
-            country: $('#country-form').val(),
-            region: $("#region").val(),
-            pic_url: $('#country-img-input').val(),
-            content: $('#country_content').val(),
+            page: $('#page-f').val(),
+            href_url: $("#href-url").val(),
+            pic_url: $('#page-img-input').val(),
+            order: $('#order').val(),
         }
 
         //used to determine the http verb to use [add=POST], [update=PUT]
         var state = $('#btn-save').val();
 
         var type = "POST"; //for creating new resource
-        var country_id = $('#country_id').val();;
+        var page_id = $('#page_id').val();;
         var my_url = url;
 
         if (state == "update"){
             type = "PUT"; //for updating existing resource
-            my_url += '/' + country_id;
+            my_url += '/' + page_id;
         }
 
         console.log(formData);
@@ -161,15 +169,15 @@ $(document).ready(function(){
             success: function (data) {
                 console.log(data);
 
-                var country = '<tr id="country' + data.id + '"><td>' + data.id + '</td><td>' + data.country + '</td><td>' + "<img style=\"width: 40px;\" src=\"" + data.pic_url + "\" alt=\"\">" + '</td><td>'+  data.region + '</td><td>' + data.created_at + '</td>';
-                country += '<td><button class="btn btn-warning btn-xs btn-detail open-modal-countries" value="' + data.id + '">Edit</button>';
-                country += '<button class="btn btn-danger btn-xs btn-delete delete-country" value="' + data.id + '">Delete</button></td></tr>';
+                var cover = '<tr id="page' + data.id + '"><td>' + data.id + '</td><td>' + data.page + '</td><td>' + "<img style=\"width: 40px;\" src=\"" + data.pic_url + "\" alt=\"\">" + '</td><td>' + data.href_url + '</td><td>'+  data.order + '</td><td>' + data.created_at + '</td>';
+                cover += '<td><button class="btn btn-warning btn-xs btn-detail open-modal-covers" value="' + data.id + '">Edit</button>';
+                cover += '<button class="btn btn-danger btn-xs btn-delete delete-cover" value="' + data.id + '">Delete</button></td></tr>';
 
                 if (state == "add"){ //if user added a new record
-                    $('#countries-list').append(country);
+                    $('#pages-list').append(cover);
                 }else{ //if user updated an existing record
 
-                    $("#country" + country_id).replaceWith( country );
+                    $("#page" + page_id).replaceWith( cover );
                 }
 
                 $('#frmTasks').trigger("reset");

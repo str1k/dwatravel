@@ -18,6 +18,10 @@ class countryController extends Controller
       $countries = country::all();
       return view('pages.admin.country',array('countries'=>$countries));      
    }
+   public function desc(){
+      $countries = country::all();
+      return view('pages.admin.country_desc',array('countries'=>$countries));      
+   }
    public function getCountryByRegion(Request $request){
    	$region = $request->input('region');
    	$clauses = [['region','=',$region]];
