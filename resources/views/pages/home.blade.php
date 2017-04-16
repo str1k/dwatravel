@@ -13,7 +13,7 @@
 					</div>
 				</div>
 				@foreach($countries as $country)
-				@if ($country->region === "ทัวร์เอเชีย")
+				@if ($country->region === "เอเชีย")
 				<div class="col-sm-4 col-md-3 col-xs-4">
 					<div  class="flag-container flag-hov">
 						<div class="flag-image col-lg-4 col-xs-12">
@@ -39,7 +39,7 @@
 					</div>
 				</div>
 				@foreach($countries as $country)
-				@if ($country->region === "ทัวร์ยุโรป , อเมริกา , แอฟริกาใต้")
+				@if ( ($country->region === "ยุโรป") || ($country->region === "อเมริกา") || ($country->region === "แอฟริกา") || ($country->region === "ออสเตรเลีย") )
 				<div class="col-sm-4 col-md-3 col-xs-4">
 					<div  class="flag-container flag-hov">
 						<div class="flag-image col-lg-4 col-xs-12">

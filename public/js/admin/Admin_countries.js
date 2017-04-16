@@ -82,8 +82,11 @@ $(document).ready(function(){
             $("#region").find('option')
                         .remove()
                         .end()
-                        .append($('<option>', {value:"ทัวร์เอเชีย", text:"ทัวร์เอเชีย"}));
-            $('#region').append($('<option>', {value:"ทัวร์ยุโรป , อเมริกา , แอฟริกาใต้", text:"ทัวร์ยุโรป , อเมริกา , แอฟริกาใต้"}));
+                        .append($('<option>', {value:"เอเชีย", text:"เอเชีย"}));
+            $('#region').append($('<option>', {value:"ยุโรป", text:"ยุโรป"}));
+            $('#region').append($('<option>', {value:"อเมริกา", text:"อเมริกา"}));
+            $('#region').append($('<option>', {value:"แอฟริกา", text:"แอฟริกา"}));
+            $('#region').append($('<option>', {value:"ออสเตรเลีย", text:"ออสเตรเลีย"}));
             $("#region").val(data.region);
             $('#country-img').attr('src', data.pic_url);
             $('#country-img-input').val(data.pic_url);

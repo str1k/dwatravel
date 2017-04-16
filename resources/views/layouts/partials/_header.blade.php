@@ -19,50 +19,190 @@
 				    	<li><a href="/">หน้าหลัก</a></li>
 				    	<li class="dropdown">
 	            <a href="#" class="dropdown-toggle" data-toggle="dropdown">ทัวร์ต่างประเทศ<b class="caret"></b></a>
-	            <ul class="dropdown-menu multi-column columns-2 scrollable-menu">
+	            <ul class="dropdown-menu multi-column columns-6 scrollable-menu">
 	            	
-		            <div class="row">
+		            <div class="row" align="center">
 
-			            <div class="col-lg-6">
-				            <ul class="multi-column-dropdown ">	@foreach($countries as $country)
-					            @if ($country->id%2 === 1)
-					            <li>
-					            	<div class="row" style="height: 40px;">
-					            		<div class="col-lg-12" >
-					            			<a href="/program?query=&country={{$country->country}}" >
-					            				<img style="width: 40px;" src="{{$country->pic_url}}" alt=""> {{$country->country}}
+			            <div class="col-lg-2 col-xs-6">
+				            <ul class="multi-column-dropdown ">
+				            	@foreach($countries as $country)
+					            @if ($country->country === "ญี่ปุ่น")
+					            <li style="margin-left: -40px; text-align: left;">
+					            		
+					            			<a href="/program?query=&country={{$country->country}}" style="overflow: hidden;
+    										white-space: nowrap;" >
+					            				<img style="width: 40px;" src="{{$country->pic_url}}" alt=""> ทัวร์{{$country->country}}
 					            			</a>
-					            		</div>
-					            	
-					            	</div>
+					            							            	
 					            </li>
 					            @endif
-					            @endforeach
-					            <li class="divider"></li>
+					        @endforeach
+					        @foreach($locate_bars as $locate_bar)
+					        	@if ($locate_bar->country === "ญี่ปุ่น")
+					            <li style="margin-left: -40px; text-align: left;">
+					            		
+					            			<a href="/program?query=&locate={{$locate_bar->locate}}" style="overflow: hidden;
+    										white-space: nowrap;" >
+					            				<img style="width: 40px;" src="{{$locate_bar->pic_url}}" alt=""> ทัวร์{{$locate_bar->locate}}
+					            			</a>
+					            		
+					            </li>
+					            @endif
+					        @endforeach
+					            <li class="divider" style="margin-left: -40px; text-align: left;"></li>
 				            </ul>
 			            </div>
 			           
-			            <div class="col-lg-6">
-				            <ul class="multi-column-dropdown">
-				            	@foreach($countries as $country)
-					            @if ($country->id%2 === 0)
-					            <li>
-					            	<div class="row" style="height: 40px;">
-					            		<div class="col-lg-12" >
-					            			<a href="/program?query=&country={{$country->country}}" >
-					            				<img style="width: 40px;" src="{{$country->pic_url}}" alt=""> {{$country->country}}
+			            <div class="col-lg-2 col-xs-6">
+				            <ul class="multi-column-dropdown " >	@foreach($countries as $country)
+					            @if ($country->country === "เกาหลี")
+					            <li style="margin-left: -40px; text-align: left;">
+					            		
+					            			<a href="/program?query=&country={{$country->country}}" style="overflow: hidden;
+    										white-space: nowrap;" >
+					            				<img style="width: 40px;" src="{{$country->pic_url}}" alt=""> ทัวร์{{$country->country}}
 					            			</a>
-					            		</div>
-					            	
-					            	</div>
+					            		
 					            </li>
 					            @endif
-					            @endforeach
-					            <li class="divider"></li>
+					        @endforeach
+					        @foreach($locate_bars as $locate_bar)
+					        	@if ($locate_bar->country === "เกาหลี")
+					            <li style="margin-left: -40px; text-align: left;">
+					            			<a href="/program?query=&locate={{$locate_bar->locate}}" style="overflow: hidden;
+    										white-space: nowrap;" >
+					            				<img style="width: 40px;" src="{{$locate_bar->pic_url}}" alt=""> ทัวร์{{$locate_bar->locate}}
+					            			</a>
+					            </li>
+					            @endif
+					        @endforeach
+					            <li class="divider" style="margin-left: -40px; text-align: left;"></li>
 				            </ul>
 			            </div>
-		            </div>
-		            
+		            	
+		            	<div class="col-lg-2 col-xs-6">
+				            <ul class="multi-column-dropdown " >	@foreach($countries as $country)
+					            @if ($country->country === "จีน")
+					            <li style="margin-left: -40px; text-align: left;">
+					            		
+					            			<a href="/program?query=&country={{$country->country}}" style="overflow: hidden;
+    										white-space: nowrap;" >
+					            				<img style="width: 40px;" src="{{$country->pic_url}}" alt=""> ทัวร์{{$country->country}}
+					            			</a>
+					            		
+					            </li>
+					            @endif
+					        @endforeach
+					        @foreach($locate_bars as $locate_bar)
+					        	@if ($locate_bar->country === "จีน")
+					            <li style="margin-left: -40px; text-align: left;">
+					            			<a href="/program?query=&locate={{$locate_bar->locate}}" style="overflow: hidden;
+    										white-space: nowrap;" >
+					            				<img style="width: 40px;" src="{{$locate_bar->pic_url}}" alt=""> ทัวร์{{$locate_bar->locate}}
+					            			</a>
+					            </li>
+					            @endif
+					        @endforeach
+					            <li class="divider" style="margin-left: -40px; text-align: left;"></li>
+				            </ul>
+			            </div>
+			            <div class="col-lg-2 col-xs-6">
+				            <ul class="multi-column-dropdown " >	
+					            <li style="margin-left: -40px; text-align: left;">
+					            			<a href="" style="overflow: hidden;
+    										white-space: nowrap;" >
+					            				 เที่ยวโซนยุโรป
+					            			</a>	
+					            </li>
+					        @foreach($countries as $country)
+					        	@if ($country->region === "ยุโรป")
+					            <li style="margin-left: -40px; text-align: left;">
+					            			<a href="/program?query=&country={{$country->country}}" style="overflow: hidden;
+    										white-space: nowrap;" >
+					            				<img style="width: 40px;" src="{{$locate_bar->pic_url}}" alt=""> ทัวร์{{$country->country}}
+					            			</a>
+					            </li>
+					            @endif
+					        @endforeach
+					            <li class="divider" style="margin-left: -40px; text-align: left;"></li>
+				            </ul>
+			            </div>
+			            <div class="col-lg-2 col-xs-6">
+				            <ul class="multi-column-dropdown " >	
+					            <li style="margin-left: -40px; text-align: left;">
+					            			<a href="" style="overflow: hidden;
+    										white-space: nowrap;" >
+					            				เที่ยวโซนอเมริกา
+					            			</a>	
+					            </li>
+					        @foreach($countries as $country)
+					        	@if ($country->region === "ยุโรป")
+					            <li style="margin-left: -40px; text-align: left;">
+					            			<a href="/program?query=&country={{$country->country}}" style="overflow: hidden;
+    										white-space: nowrap;" >
+					            				<img style="width: 40px;" src="{{$country->pic_url}}" alt=""> ทัวร์{{$country->country}}
+					            			</a>
+					            </li>
+					            @endif
+					        @endforeach
+					            <li class="divider" style="margin-left: -40px; text-align: left;"></li>
+					            <li style="margin-left: -40px; text-align: left;">
+					            			<a href="" style="overflow: hidden;
+    										white-space: nowrap;" >
+					            				เที่ยวโซนแอฟริกา
+					            			</a>	
+					            </li>
+					            @foreach($countries as $country)
+					        	@if ($country->region === "แอฟริกา")
+					            <li style="margin-left: -40px; text-align: left;">
+					            			<a href="/program?query=&country={{$country->country}}" style="overflow: hidden;
+    										white-space: nowrap;" >
+					            				<img style="width: 40px;" src="{{$locate_bar->pic_url}}" alt=""> ทัวร์{{$country->country}}
+					            			</a>
+					            </li>
+					            @endif
+					        @endforeach
+					        	<li class="divider" style="margin-left: -40px; text-align: left;"></li>
+					            <li style="margin-left: -40px; text-align: left;">
+					            			<a href="" style="overflow: hidden;
+    										white-space: nowrap;" >
+					            				เที่ยวโซนออสเตรเลีย
+					            			</a>	
+					            </li>
+					        @foreach($countries as $country)
+					        	@if ($country->region === "ออสเตรเลีย")
+					            <li style="margin-left: -40px; text-align: left;">
+					            			<a href="/program?query=&country={{$country->country}}" style="overflow: hidden;
+    										white-space: nowrap;" >
+					            				<img style="width: 40px;" src="{{$locate_bar->pic_url}}" alt=""> ทัวร์{{$country->country}}
+					            			</a>
+					            </li>
+					            @endif
+					        @endforeach
+					        	<li class="divider" style="margin-left: -40px; text-align: left;"></li>
+				            </ul>
+			            </div>
+			            <div class="col-lg-2 col-xs-6">
+				            <ul class="multi-column-dropdown " >	
+					            <li style="margin-left: -40px; text-align: left;">
+					            			<a href="" style="overflow: hidden;
+    										white-space: nowrap;" >
+					            				 เที่ยวโซนเอเชีย
+					            			</a>	
+					            </li>
+					        @foreach($countries as $country)
+					        	@if ($country->region === "เอเชีย")
+					            <li style="margin-left: -40px; text-align: left;">
+					            			<a href="/program?query=&country={{$country->country}}" style="overflow: hidden;
+    										white-space: nowrap;" >
+					            				<img style="width: 40px;" src="{{$country->pic_url}}" alt=""> ทัวร์{{$country->country}}
+					            			</a>
+					            </li>
+					            @endif
+					        @endforeach
+					            <li class="divider" style="margin-left: -40px; text-align: left;"></li>
+				            </ul>
+			            </div>
 	            </ul>
 	        </li>
 				    	<li><a href="#our-works">ล่องเรือสำราญ</a></li>

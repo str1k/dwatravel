@@ -45,10 +45,11 @@ class displayTourController extends Controller
    $programs = programs::where($clauses)->whereDate('show_until', '>=', \Carbon\Carbon::now())->get();
    $found_count = programs::where($clauses)->whereDate('show_until', '>=', \Carbon\Carbon::now())->count();
    $contact_bar = contact_bar::where('id','=','1')->get()->first();
+   $locate_bars = locate::all();
 
    //print_r($clauses);
    //echo $schedules;
-   return view('pages.tours',array('locates'=>$locates,'countries'=>$countries,'programs'=>$programs,'contact_bar'=>$contact_bar,'content_query'=>$content_query,'found_count'=>$found_count,'query_by'=>$query_by,'covers'=>$covers));
+   return view('pages.tours',array('locates'=>$locates,'countries'=>$countries,'programs'=>$programs,'contact_bar'=>$contact_bar,'content_query'=>$content_query,'found_count'=>$found_count,'query_by'=>$query_by,'covers'=>$covers,'locate_bars'=>$locate_bars));
 
    }
 }

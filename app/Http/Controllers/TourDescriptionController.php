@@ -7,6 +7,7 @@ use App\schedule;
 use App\programs;
 use App\country;
 use App\contact_bar;
+use App\locate;
 
 class TourDescriptionController extends Controller
 {
@@ -22,7 +23,8 @@ class TourDescriptionController extends Controller
    //print_r($clauses);
    //echo $schedules;
    $contact_bar = contact_bar::where('id','=','1')->get()->first();
-   return view('pages.detail',array('countries'=>$countries,'programs'=>$programs,'contact_bar'=>$contact_bar));
+   $locate_bars = locate::all();
+   return view('pages.detail',array('countries'=>$countries,'programs'=>$programs,'contact_bar'=>$contact_bar,'locate_bars'=>$locate_bars));
 
    }
    public function book(Request $request){
