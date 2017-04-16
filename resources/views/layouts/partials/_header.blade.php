@@ -43,7 +43,7 @@
 					            		
 					            			<a href="/program?query=&locate={{$locate_bar->locate}}" style="overflow: hidden;
     										white-space: nowrap;" >
-					            				<img style="width: 40px;" src="{{$locate_bar->pic_url}}" alt=""> ทัวร์{{$locate_bar->locate}}
+					            				<img style="width: 40px;" src="{{$locate_bar->pic_url}}" alt=""> {{$locate_bar->locate}}
 					            			</a>
 					            		
 					            </li>
