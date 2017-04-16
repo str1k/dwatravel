@@ -71,7 +71,7 @@
 					            <li style="margin-left: -40px; text-align: left;">
 					            			<a href="/program?query=&locate={{$locate_bar->locate}}" style="overflow: hidden;
     										white-space: nowrap;" >
-					            				<img style="width: 40px;" src="{{$locate_bar->pic_url}}" alt=""> ทัวร์{{$locate_bar->locate}}
+					            				<img style="width: 40px;" src="{{$locate_bar->pic_url}}" alt=""> {{$locate_bar->locate}}
 					            			</a>
 					            </li>
 					            @endif
@@ -98,7 +98,7 @@
 					            <li style="margin-left: -40px; text-align: left;">
 					            			<a href="/program?query=&locate={{$locate_bar->locate}}" style="overflow: hidden;
     										white-space: nowrap;" >
-					            				<img style="width: 40px;" src="{{$locate_bar->pic_url}}" alt=""> ทัวร์{{$locate_bar->locate}}
+					            				<img style="width: 40px;" src="{{$locate_bar->pic_url}}" alt=""> {{$locate_bar->locate}}
 					            			</a>
 					            </li>
 					            @endif
@@ -119,7 +119,7 @@
 					            <li style="margin-left: -40px; text-align: left;">
 					            			<a href="/program?query=&country={{$country->country}}" style="overflow: hidden;
     										white-space: nowrap;" >
-					            				<img style="width: 40px;" src="{{$locate_bar->pic_url}}" alt=""> ทัวร์{{$country->country}}
+					            				<img style="width: 40px;" src="{{$country->pic_url}}" alt=""> ทัวร์{{$country->country}}
 					            			</a>
 					            </li>
 					            @endif
@@ -157,7 +157,7 @@
 					            <li style="margin-left: -40px; text-align: left;">
 					            			<a href="/program?query=&country={{$country->country}}" style="overflow: hidden;
     										white-space: nowrap;" >
-					            				<img style="width: 40px;" src="{{$locate_bar->pic_url}}" alt=""> ทัวร์{{$country->country}}
+					            				<img style="width: 40px;" src="{{$country->pic_url}}" alt=""> ทัวร์{{$country->country}}
 					            			</a>
 					            </li>
 					            @endif
@@ -174,7 +174,7 @@
 					            <li style="margin-left: -40px; text-align: left;">
 					            			<a href="/program?query=&country={{$country->country}}" style="overflow: hidden;
     										white-space: nowrap;" >
-					            				<img style="width: 40px;" src="{{$locate_bar->pic_url}}" alt=""> ทัวร์{{$country->country}}
+					            				<img style="width: 40px;" src="{{$country->pic_url}}" alt=""> ทัวร์{{$country->country}}
 					            			</a>
 					            </li>
 					            @endif
