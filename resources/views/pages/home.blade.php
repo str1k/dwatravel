@@ -156,7 +156,7 @@
 									<a href="detail?query=&program_id={{$program->id}}" ><h5>ราคาเริ่มต้น: {{$program->starting_price}} บาท</h5></a>
 									<a href="detail?query=&program_id={{$program->id}}" ><i class="fa fa-camera-retro"></i> รายละเอียด คลิก</a>
 								</div>
-								<a href="detail?query=&program_id={{$program->id}}" style="color: red;text-align: right;" ><h3>เริ่มต้น {{$program->starting_price}} บาท</h3></a>
+								<a href="detail?query=&program_id={{$program->id}}" style="color: red;text-align: right;" ><h3>เริ่มต้น {{number_format($program->starting_price)}} บาท</h3></a>
 
 							</div>	
 						</div>
