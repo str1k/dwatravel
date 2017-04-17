@@ -1,9 +1,10 @@
-@media ( (min-width: 1601px) {
+@media ( (min-width: 1600px) {
 	.sidebar-nav {
     padding: 9px 0;
-    #home-carousel  .item {
+    
+}
+#home-carousel  .item {
 		height: 600px;
-	}
 }
 
 .dropdown-menu .sub-menu {
@@ -47,10 +48,11 @@
 @media ( (min-width: 1441px) and (max-width: 1600px){
 	.sidebar-nav {
     padding: 9px 0;
-    #home-carousel  .item {
+    
+}
+#home-carousel  .item {
 		height: 500px;
 	}
-}
 
 .dropdown-menu .sub-menu {
     left: 100%;
