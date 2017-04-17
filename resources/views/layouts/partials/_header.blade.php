@@ -136,7 +136,7 @@
 					            			</a>	
 					            </li>
 					        @foreach($countries as $country)
-					        	@if ($country->region === "ยุโรป")
+					        	@if ($country->region === "อเมริกา")
 					            <li ">
 					            			<a href="/program?query=&country={{$country->country}}" style="overflow: hidden;
     										white-space: nowrap;" >
