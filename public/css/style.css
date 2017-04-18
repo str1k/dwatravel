@@ -1370,3 +1370,12 @@
 	margin-left: -40px; 
 	text-align: left;
 }
+
+.fix-tour-h {
+	height: 111px;
+}
+
+.text-intour {
+display:flex; 
+margin-top: 20px;
+}

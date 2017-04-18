@@ -340,7 +340,12 @@
 		text-align: center;
 	}
 
-
+	.fix-tour-h {
+		height: 50px;
+	}
+	.text-intour{
+		margin-top: 0px;
+	}
 }
 
 /* XS Portrait */

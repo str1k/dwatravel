@@ -60,16 +60,58 @@
 			@endforeach
 			</div>
 			@foreach($programs as $program)
-			<div class="row" style="border: 1px solid black; background-color:white; margin-bottom: 20px; ">
-			 	<div class="col-lg-12">
-					<div class="tour-display" style="">
-						<h3 style="">{{$program->name}}</h3>
+			<div class="row" style="border: 1px solid #DDDDDD; background-color:white; margin-bottom: 20px; ">
+			 	<div class="col-lg-3 col-xs-12">
+			 		<img class="img-responsive" src="{{$program->tour_pic}}" alt="" style="margin-left: -15px; ">
+			 	</div>
+			 	<div class="col-lg-9 col-xs-12">
+					<div class="row" style="">
+						
 						<div class="row">
-							<div class="col-lg-10 col-xs-10">
-								<a><img class="img-responsive" src="{{$program->tour_pic}}" alt=""></a>
+							<div class="col-lg-12 col-xs-12">
+								<div class="col-lg-9 col-xs-12">
+									<h3 style="color: #0896D6;">{{$program->name}}</h3>
+								</div>
+								<div class="col-lg-3 col-xs-12" align="right" style="">
+									<a href="detail?query=&program_id={{$program->id}}" style="color: red;text-align: right;" ><h3>฿ {{number_format($program->starting_price)}}</h3></a>
+								</div>	
+							</div>
+							<div class="col-lg-12 col-xs-12 fix-tour-h" style="padding: 40px;">
+								<div class="row">
+									<div class="col-lg-3 col-xs-3 fix-tour-h" style="border-top: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD;  padding: 8px; ">
+										<img class="img-responsive" src="{{$program->tour_pic}}" alt="" style="max-height: 300px;">
+									</div>
+									<div class="col-lg-3 col-xs-5 fix-tour-h" style="padding: 0px; border: 1px solid #DDDDDD;  ">
+										<div class="col-lg-12 col-xs-12 text-intour"  style="">
+										<span class="glyphicon glyphicon-time" style="color: #FF983E;"> </span>
+										<p style="color: #0896D6;"> ระยะเวลา</p>	
+										</div>
+										<div class="col-lg-12 col-xs-12" style="display:flex; margin-top: -5px; margin-left: 10px;">
+										<p style="color: #929292;">{{$program->day_count}} วัน {{$program->night_count}} คืน</p>	
+										</div>
+										
+										
+								
+									</div>
+									<div class="col-lg-6 col-xs-4 fix-tour-h" style="padding: 0px; border-top: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD;  ">
+										<div class="col-lg-12 col-xs-12 text-intour"  style="">
+										<span class="glyphicon glyphicon-map-marker" style="color: #FF983E;"> </span>
+										<p style="color: #0896D6;"> ประเทศ</p>	
+										</div>
+										<div class="col-lg-12 col-xs-12" style="display:flex; margin-top: -5px; margin-left: 10px;">
+										<p style="color: #929292;">{{$program->country}}</p>	
+										</div>
+								
+									</div>	
+								</div>
+								
 							</div>
 						</div>
 						<br></br>
+						<div class="col-lg-12 col-xs-12" style="display:flex; margin-top: -5px; margin-left: 10px;">
+							<p style="color: #AFCB67;">รหัสทัวร์ : {{$program->tour_id}}</p>	
+						</div>
+						
 						<?php echo $program->content ?>
 						<br></br>
 						<div class="row">
@@ -82,8 +124,8 @@
 							
 						</div>
 					</div>	
-				
 			 	</div>
+
 			</div>
 			@endforeach
 		</div>
