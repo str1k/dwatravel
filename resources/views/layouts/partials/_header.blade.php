@@ -41,7 +41,7 @@
 					        	@if ($locate_bar->country === "ญี่ปุ่น")
 					            <li ">
 					            		
-					            			<a href="/program?query=&locate={{$locate_bar->locate}}" style="overflow: hidden;
+					            			<a href="/program?query=&locate_query={{$locate_bar->locate}}" style="overflow: hidden;
     										white-space: nowrap;" >
 					            				<img style="width: 40px;" src="{{$locate_bar->pic_url}}" alt=""> {{$locate_bar->locate}}
 					            			</a>
@@ -69,7 +69,7 @@
 					        @foreach($locate_bars as $locate_bar)
 					        	@if ($locate_bar->country === "เกาหลี")
 					            <li ">
-					            			<a href="/program?query=&locate={{$locate_bar->locate}}" style="overflow: hidden;
+					            			<a href="/program?query=&locate_query={{$locate_bar->locate}}" style="overflow: hidden;
     										white-space: nowrap;" >
 					            				<img style="width: 40px;" src="{{$locate_bar->pic_url}}" alt=""> {{$locate_bar->locate}}
 					            			</a>
@@ -96,7 +96,7 @@
 					        @foreach($locate_bars as $locate_bar)
 					        	@if ($locate_bar->country === "จีน")
 					            <li ">
-					            			<a href="/program?query=&locate={{$locate_bar->locate}}" style="overflow: hidden;
+					            			<a href="/program?query=&locate_query={{$locate_bar->locate}}" style="overflow: hidden;
     										white-space: nowrap;" >
 					            				<img style="width: 40px;" src="{{$locate_bar->pic_url}}" alt=""> {{$locate_bar->locate}}
 					            			</a>
