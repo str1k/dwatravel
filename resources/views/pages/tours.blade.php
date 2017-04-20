@@ -3,7 +3,7 @@
 @include('layouts.partials._cover')
 <div class="container-fluid" style="background-color: #EEEEEE;">
 	<div class="row">
-		<div class="col-xs-12 col-xs-12" style="background-color: #0896D6; ">
+		<div class="col-xs-12 col-xs-12" style="background-color: #0896D6 ; ">
 			<div class="row">
 				<div class="col-lg-1 col-xs-1">
 					

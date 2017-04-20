@@ -94,7 +94,8 @@ $(document).ready(function(){
             $('#locate-img').attr('src', data.pic_url);
             $('#locate-img-input').val(data.pic_url);
             $('#btn-save').val("update");
-
+            $(tinymce.get('locate_content').getBody()).html(data.content);
+            tinyMCE.triggerSave();
             $('#myModal').modal('show');
         }) 
     });
@@ -133,11 +134,12 @@ $(document).ready(function(){
         })
 
         e.preventDefault(); 
-
+        tinyMCE.triggerSave();
         var formData = {
             locate: $('#locate-form').val(),
             country: $("#country-f").val(),
             pic_url: $('#locate-img-input').val(),
+            content: $('#locate_content').val(),
         }
 
         //used to determine the http verb to use [add=POST], [update=PUT]

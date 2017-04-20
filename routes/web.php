@@ -147,6 +147,7 @@ Route::post('/locates',function(Request $request){
             'country' => $request->input('country'),
             'locate' => $request->input('locate'),
             'pic_url' => $request->input('pic_url'),
+            'content' => $request->input('content'),
             ]);
     return Response::json($locate);
 })
@@ -157,6 +158,7 @@ Route::put('/locates/{locate_id?}',function(Request $request,$locate_id){
     $locate->locate = $request->locate;
     $locate->country = $request->country;
     $locate->pic_url = $request->pic_url;
+    $locate->content = $request->content;
 
     $locate->save();
 
