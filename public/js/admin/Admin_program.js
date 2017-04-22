@@ -162,7 +162,12 @@ $('.pdf_upload-but').on('click', function() {
 
         $.get(url + '/' + locate_id, function (data) {
             //success data
-            console.log(data);
+            console.log(data.pdf_mode);
+            if (data.pdf_mode == 1){
+                $('#pdf_mode').attr('checked', true);
+            } else{
+                $('#pdf_mode').attr('checked', false);
+            }
             $('#locate_id').val(data.id);
             $('#locate-form').val(data.name);
             $('#price-form').val(data.starting_price);
