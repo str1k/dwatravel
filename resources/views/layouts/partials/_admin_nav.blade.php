@@ -150,7 +150,7 @@
                         </ul>
                     </li>
                     <li class="active">
-                        <a href="javascript:;" data-toggle="collapse" data-target="#editCountry"><i class="fa fa-fw fa-arrows-v"></i>จัดการประเทศ สถานที่ และ แท็ก<i class="fa fa-fw fa-caret-down"></i></a>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#editCountry"><i class="fa fa-fw fa-arrows-v"></i>จัดการประเทศ สถานที่ สายการบิน และ แท็ก<i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="editCountry" class="collapse">
                             <li>
                                 <a href="/admin_country">แก้ไขประเทศ</a>
@@ -158,7 +158,9 @@
                             <li>
                                 <a href="/admin_locate">แก้ไขสถานที่</a>
                             </li>
-                            
+                            <li>
+                                <a href="/admin_airline">แก้ไขสายการบิน</a>
+                            </li>
                         </ul>
                     </li>
                     

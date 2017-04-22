@@ -63,6 +63,15 @@
     </script>
     <script type="text/javascript">
       $(document).ready(function() {
+      $('#select-airline').multiselect({
+        enableFiltering: true,
+        filterBehavior: 'value',
+        maxHeight: 200
+        });
+      });
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function() {
       $('#locate').multiselect({
         enableFiltering: true,
         filterBehavior: 'value',

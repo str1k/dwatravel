@@ -5,13 +5,19 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\programs;
+use App\country;
+use App\locate;
+use App\airline;
 
 class adminAllTourController extends Controller
 {
      public function index()
     {
         $programs = programs::all();
-        return view('pages.admin_all_tour',array('programs'=>$programs));   
+        $countries = country::all();
+        $locates = locate::all();
+        $airlines = airline::all();
+        return view('pages.admin_all_tour',array('programs'=>$programs,'countries'=>$countries,'locates'=>$locates,'airlines'=>$airlines));   
     }
 
     public function create()

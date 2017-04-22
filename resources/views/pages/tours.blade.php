@@ -79,7 +79,7 @@
 							<div class="col-lg-12 col-xs-12 fix-tour-h" style="padding: 40px;">
 								<div class="row">
 									<div class="col-lg-3 col-xs-3 fix-tour-h" style="border-top: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD;  padding: 8px; ">
-										<img class="img-responsive" src="/images/home/Airline-1508270729400001.jpg" alt="" style="max-height: 300px;">
+										<img class="img-responsive" src="{{$program->airline_pic}}" alt="" style="max-height: 300px;">
 									</div>
 									<div class="col-lg-3 col-xs-5 fix-tour-h" style="padding: 0px; border: 1px solid #DDDDDD;  ">
 										<div class="col-lg-12 col-xs-12 text-intour"  style="">

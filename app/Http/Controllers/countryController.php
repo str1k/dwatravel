@@ -63,4 +63,39 @@ class countryController extends Controller
          }
 
    }
+   public function uploadPDF(Request $request){
+      if (!empty(Input::file('pdf_upload'))){
+
+            if(Input::file('pdf_upload')->isValid()){
+            $destinationPath = 'uploads/pdf'; // upload path
+            $extension = Input::file('pdf_upload')->getClientOriginalExtension(); // getting image extension
+            
+            $actual_name = rand(0,999999);
+            $original_name = $actual_name;
+            $fileName = $actual_name.".".$extension;
+            $i = 1;
+            while(file_exists($destinationPath.'/'.$actual_name.".".$extension))
+            {           
+            $actual_name = (string)$original_name.$i;
+            $fileName = $actual_name.".".$extension;
+            $i++;
+            }
+
+
+
+            Input::file('pdf_upload')->move($destinationPath, $fileName); // uploading file to given path
+            // sending back with message
+            }
+            else {
+            // sending back with error message.
+            Session::flash('error', 'uploaded file is not valid');
+            return Redirect::back()->withInput(Input::all());
+            }
+         }
+
+         if (!empty(Input::file('pdf_upload'))){
+            return $destinationPath.'/'.$fileName;
+         }
+
+   }
 }

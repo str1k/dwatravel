@@ -18,6 +18,7 @@ use App\Task;
 use App\programs;
 use App\locate;
 use App\cover;
+use App\airline;
 
 Route::get('/', 'homePageController@show');
 
@@ -86,7 +87,7 @@ Route::get('/testing', function () {
 });
 
 
-
+//program
 Route::get('/admin_all_tour','adminAllTourController@index');
 
 Route::get('/programs/{program_id?}',function($program_id){
@@ -98,7 +99,27 @@ Route::delete('/programs/{program_id?}',function($program_id){
    $program = programs::destroy($program_id);
     return Response::json($program);
 });
-
+Route::post('/upload_pdf','countryController@uploadPDF');
+Route::post('/programs',function(Request $request){
+    $program = programs::create([
+            'name' => $request->input('name'),
+            'starting_price' => $request->input('starting_price'),
+            'day_count' => $request->input('day_count'),
+            'night_count' => $request->input('night_count'),
+            'content' => $request->input('content'),
+            'country' => $request->input('country'),
+            'airline_name' => $request->input('airline_name'),
+            'airline_pic' => $request->input('airline_pic'),
+            'tour_pic' => $request->input('tour_pic'),
+            'pdf' => $request->input('pdf'),
+            'pdf_mode' => $request->input('pdf_mode'),
+            'show_until' => $request->input('show_until'),
+            'locate_list' => $request->input('locate_list'),
+            'program_start' => $request->input('program_end'),
+            'description' => $request->input('description'),
+            ]);
+    return Response::json($program);
+});
 
 //Country routing
 Route::get('/admin_country','countryController@insertform');
@@ -120,8 +141,7 @@ Route::post('/countries',function(Request $request){
             'content' => $request->input('content'),
             ]);
     return Response::json($country);
-})
-;
+});
 Route::put('/countries/{country_id?}',function(Request $request,$country_id){
     $country = country::find($country_id);
 
@@ -196,4 +216,22 @@ Route::put('/covers/{cover_id?}',function(Request $request,$cover_id){
 Route::delete('/covers/{cover_id?}',function($cover_id){
    $cover = cover::destroy($cover_id);
     return Response::json($cover);
+});
+
+//airline routing
+Route::get('/admin_airline','airlineController@insertform');
+Route::post('/airlines',function(Request $request){
+    $airline = airline::create([
+            'airline_name' => $request->input('airline_name'),
+            'pic_url' => $request->input('pic_url'),
+            ]);
+    return Response::json($airline);
+});
+Route::get('/airlines/{airline_id?}',function($airline_id){
+    $airline = airline::find($airline_id);
+    return Response::json($airline);
+});
+Route::delete('/airlines/{airline_id?}',function($airline_id){
+   $airline = airline::destroy($airline_id);
+    return Response::json($airline);
 });

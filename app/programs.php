@@ -17,6 +17,7 @@ class programs extends Model
         'content',
         'country',
         'tag_list',
+        'airline_name',
         'airline_pic',
         'tour_pic',
         'pdf',
