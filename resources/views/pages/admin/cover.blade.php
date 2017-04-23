@@ -13,6 +13,8 @@
 <div id="page-wrapper">
     <div class="container-fluid">
     	<h2>จัดการ Slider</h2>
+        <div class="row">
+        <div class="col-sm-12">
         <div class="col-sm-3">
         <button id="btn-add-countries" name="btn-add-countries" class="btn btn-primary">เพิ่ม Slider ใหม่</button>
         </div>
@@ -39,6 +41,8 @@
             @endforeach
                 <input type="hidden" id="pageImageHome1" name="locate_id" value="">
                 <input type="hidden" id="pageNameHome1" name="locate_id" value="หน้าหลัก">
+        </div>
+        </div>
         </div>
         <div class="table-responsive">
             <table class="table">
@@ -72,7 +76,7 @@
             </table>  
             <!-- Modal (Pop up when detail button clicked) -->
             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
-                <div class="modal-dialog modal-admin">
+                <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
