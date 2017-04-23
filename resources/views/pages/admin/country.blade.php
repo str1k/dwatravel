@@ -32,7 +32,7 @@
     <div class="container-fluid">
     	<h2>จัดการประเทศ</h2>
         <button id="btn-add-countries" name="btn-add-countries" class="btn btn-primary btn-xs">เพิ่มประเทศใหม่</button>
-        <div>
+        <div class="table-responsive">
             <table class="table">
                 <thead>
                     <tr>
@@ -62,7 +62,7 @@
             </table>  
             <!-- Modal (Pop up when detail button clicked) -->
             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
-                <div class="modal-dialog" style="width: 800px;">
+                <div class="modal-dialog modal-admin" >
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>

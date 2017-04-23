@@ -58,7 +58,7 @@
 
             
             
-            <div>
+            <div class="table-responsive">
                 <table class="table">
                     <thead>
                         <tr>
@@ -89,8 +89,8 @@
                     </tbody>
                 </table>
                 <!-- Modal (Pop up when detail button clicked) -->
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog" style="width: 1200px;">
+            <div class="modal fade dwamodal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog" >
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>

@@ -129,26 +129,17 @@
                     <li>
                         <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> ติดต่อเรา</a>
                     </li>
-                    <li class="active">
+                    <li>
+                        <a href="/admin_all_tour">โปรแกรมท่องเที่ยวทั้งหมด</a>
+                    </li>
+                    <!--<li class="active">
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i>จัดการโปรแกรมท่องเที่ยว<i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
                             <li>
                                 <a href="/admin_all_tour">โปรแกรมท่องเที่ยวทั้งหมด</a>
                             </li>
-                            <li>
-                                <a href="/admin_new_tour">สร้างโปรแกรมทัวร์ใหม่</a>
-                            </li>
-                            <!--<li >
-                                <a href="/admin_all_schedule">โปรแกรมท่องเที่ยวตามช่วงเวลาทั้งหมด</a>
-                            </li>
-                            <li >
-                                <a href="/admin_add_schedule">เพิ่มโปรแกรมท่องเที่ยวตามช่วงเวลา</a>
-                            </li>
-                            <li>
-                                <a href="/admin_test">test</a>
-                            </li>-->
                         </ul>
-                    </li>
+                    </li>-->
                     <li class="active">
                         <a href="javascript:;" data-toggle="collapse" data-target="#editCountry"><i class="fa fa-fw fa-arrows-v"></i>จัดการประเทศ สถานที่ สายการบิน และ แท็ก<i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="editCountry" class="collapse">

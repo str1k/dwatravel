@@ -55,6 +55,9 @@
 }
 /* lg */ 
 @media (min-width: 1200px) and (max-width: 1440px) {
+	.dwamodal {
+		width: 1200px;
+	}
 	.portfolio-items .fixed-name {
 		height: 60px;
 	}
@@ -153,6 +156,7 @@
 
 /* sm */
 @media (min-width: 768px) and (max-width: 991px) {
+	
 
 	.st-navbar ul li a{
 		margin-left: 13px;
@@ -225,6 +229,11 @@
 
 /* xs */
 @media (max-width: 767px) {
+	
+	.modal-dialog{
+		width:600px;
+		margin:30px auto
+	}
 	.dropdown-menu li {
 	margin-left: 0px; 
 	text-align: left;
