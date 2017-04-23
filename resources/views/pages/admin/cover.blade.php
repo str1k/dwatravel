@@ -130,6 +130,7 @@
                             </form>
                         </div>
                         <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">Cancel</button>
                             <button type="button" class="btn btn-primary" id="btn-save" value="add">Save changes</button>
                             <input type="hidden" id="page_id" name="page_id" value="0">
                         </div>

@@ -123,6 +123,7 @@
                             </form>
                         </div>
                         <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">Cancel</button>
                             <button type="button" class="btn btn-primary" id="btn-save" value="add">Save changes</button>
                             <input type="hidden" id="country_id" name="country_id" value="0">
                         </div>
