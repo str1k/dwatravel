@@ -37,22 +37,22 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li>
-                        <a href="/admin_home"><i class="fa fa-fw fa-file"></i> หน้าแรก</a>
+                        <a href="/admin_home"><i class="fa fa-fw fa-home"></i>จัดการ หน้าแรก</a>
                     </li>
                     <li>
-                        <a href="/admin_cover"><i class="fa fa-fw fa-file"></i> จัดการ Slider</a>
+                        <a href="/admin_cover"><i class="fa fa-fw fa-sliders"></i> จัดการ Slider</a>
                     </li>
                     <li>
-                        <a href="/admin_booking"><i class="fa fa-fw fa-file"></i> จองทัวร์และชำระเงิน</a>
+                        <a href="/admin_booking"><i class="fa fa-fw fa-credit-card"></i> จองทัวร์และชำระเงิน</a>
                     </li>
                     <li>
-                        <a href="/admin_about-us"><i class="fa fa-fw fa-file"></i> เกี่ยวกับเรา</a>
+                        <a href="/admin_about-us"><i class="fa fa-fw fa-user"></i> เกี่ยวกับเรา</a>
                     </li>
                     <li>
-                        <a href="/admin_contact-us"><i class="fa fa-fw fa-file"></i> ติดต่อเรา</a>
+                        <a href="/admin_contact-us"><i class="fa fa-fw fa-phone"></i> ติดต่อเรา</a>
                     </li>
                     <li>
-                        <a href="/admin_all_tour"><i class="fa fa-fw fa-file"></i>โปรแกรมท่องเที่ยวทั้งหมด</a>
+                        <a href="/admin_all_tour"><i class="fa fa-fw fa-fighter-jet"></i>โปรแกรมท่องเที่ยวทั้งหมด</a>
                     </li>
                     <!--<li class="active">
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i>จัดการโปรแกรมท่องเที่ยว<i class="fa fa-fw fa-caret-down"></i></a>
@@ -66,13 +66,13 @@
                         <a href="javascript:;" data-toggle="collapse" data-target="#editCountry"><i class="fa fa-fw fa-arrows-v"></i>จัดการประเทศ สถานที่ สายการบิน และ แท็ก<i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="editCountry" class="collapse">
                             <li>
-                                <a href="/admin_country">แก้ไขประเทศ</a>
+                                <a href="/admin_country"><i class="fa fa-fw fa-globe"></i>แก้ไขประเทศ</a>
                             </li>
                             <li>
-                                <a href="/admin_locate">แก้ไขสถานที่</a>
+                                <a href="/admin_locate"><i class="fa fa-fw fa-location-arrow"></i>แก้ไขสถานที่</a>
                             </li>
                             <li>
-                                <a href="/admin_airline">แก้ไขสายการบิน</a>
+                                <a href="/admin_airline"><i class="fa fa-fw fa-plane"></i>แก้ไขสายการบิน</a>
                             </li>
                         </ul>
                     </li>
