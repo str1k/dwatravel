@@ -235,3 +235,6 @@ Route::delete('/airlines/{airline_id?}',function($airline_id){
    $airline = airline::destroy($airline_id);
     return Response::json($airline);
 });
+
+//booking routing
+Route::get('/booking','bookingController@insertform')

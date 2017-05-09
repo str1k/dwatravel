@@ -15,7 +15,7 @@
                 
               
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Dwatravel <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
                             <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
@@ -37,22 +37,25 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li>
-                        <a href="/admin_home"><i class="fa fa-fw fa-home"></i>จัดการ หน้าแรก</a>
+                        <a href="/admin_home"><i class="fa fa-fw fa-home"></i>แก้ไข หน้าแรก</a>
                     </li>
                     <li>
-                        <a href="/admin_cover"><i class="fa fa-fw fa-sliders"></i> จัดการ Slider</a>
+                        <a href="/admin_cover"><i class="fa fa-fw fa-sliders"></i>แก้ไข Slider</a>
                     </li>
                     <li>
-                        <a href="/admin_booking"><i class="fa fa-fw fa-credit-card"></i> จองทัวร์และชำระเงิน</a>
+                        <a href="/admin_booking"><i class="fa fa-fw fa-credit-card"></i>แก้ไข จองทัวร์และชำระเงิน</a>
                     </li>
                     <li>
-                        <a href="/admin_about-us"><i class="fa fa-fw fa-user"></i> เกี่ยวกับเรา</a>
+                        <a href="/admin_about-us"><i class="fa fa-fw fa-user"></i>แก้ไข เกี่ยวกับเรา</a>
                     </li>
                     <li>
-                        <a href="/admin_contact-us"><i class="fa fa-fw fa-phone"></i> ติดต่อเรา</a>
+                        <a href="/admin_contact-us"><i class="fa fa-fw fa-phone"></i>แก้ไข ติดต่อเรา</a>
                     </li>
                     <li>
-                        <a href="/admin_all_tour"><i class="fa fa-fw fa-fighter-jet"></i>โปรแกรมท่องเที่ยวทั้งหมด</a>
+                        <a href="/admin_all_tour"><i class="fa fa-fw fa-fighter-jet"></i>จัดการ โปรแกรมท่องเที่ยวทั้งหมด</a>
+                    </li>
+                    <li>
+                        <a href="/admin_booking"><i class="fa fa-fw fa-sliders"></i>จัดการ การจอง</a>
                     </li>
                     <!--<li class="active">
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i>จัดการโปรแกรมท่องเที่ยว<i class="fa fa-fw fa-caret-down"></i></a>
