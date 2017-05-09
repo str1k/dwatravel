@@ -119,7 +119,7 @@
 							<a href="/detail?query=&program_id={{$program->id}}#description"  class="btn btn-primary">ดูรายละเอียดโปรแกรมทัวร์</a>
 							</div>
 							<div class="col-lg-3 col-xs-12" align="center" style="margin-bottom: 10px;">
-							<a href="detail?query=&program_id={{$program->id}}#book" class="btn btn-success">จองทัวร์คลิก</a>
+							<a href="booking?query=&program_id={{$program->id}}#book" class="btn btn-success">จองทัวร์คลิก</a>
 							</div>
 							
 						</div>

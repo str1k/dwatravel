@@ -237,4 +237,4 @@ Route::delete('/airlines/{airline_id?}',function($airline_id){
 });
 
 //booking routing
-Route::get('/booking','bookingController@insertform')
+Route::get('/booking','bookingController@insertform');
