@@ -19,6 +19,7 @@ use App\programs;
 use App\locate;
 use App\cover;
 use App\airline;
+use App\booking;
 
 Route::get('/', 'homePageController@show');
 
@@ -115,9 +116,34 @@ Route::post('/programs',function(Request $request){
             'pdf_mode' => $request->input('pdf_mode'),
             'show_until' => $request->input('show_until'),
             'locate_list' => $request->input('locate_list'),
-            'program_start' => $request->input('program_end'),
+            'program_start' => $request->input('program_start'),
+            'program_end' => $request->input('program_end'),
             'description' => $request->input('description'),
             ]);
+    return Response::json($program);
+});
+Route::put('/programs/{program_id?}',function(Request $request,$program_id){
+    $program = programs::find($program_id);
+
+    $program->name = $request->name;
+    $program->starting_price = $request->starting_price;
+    $program->day_count = $request->day_count;
+    $program->night_count = $request->night_count;
+    $program->content = $request->content;
+    $program->country = $request->country;
+    $program->airline_name = $request->airline_name;
+    $program->airline_pic = $request->airline_pic;
+    $program->tour_pic = $request->tour_pic;
+    $program->pdf = $request->pdf;
+    $program->pdf_mode = $request->pdf_mode;
+    $program->show_until = $request->show_until;
+    $program->locate_list = $request->locate_list;
+    $program->program_start = $request->program_start;
+    $program->program_end = $request->program_end;
+    $program->description = $request->description;
+
+    $program->save();
+
     return Response::json($program);
 });
 
@@ -238,3 +264,22 @@ Route::delete('/airlines/{airline_id?}',function($airline_id){
 
 //booking routing
 Route::get('/booking','bookingController@insertform');
+Route::get('/admin_booking','bookingController@allform');
+Route::post('/booking',function(Request $request){
+    $booking = booking::create([
+            'program_id' => $request->input('program_id'),
+            'departure' => $request->input('departure'),
+            'adult' => $request->input('adult'),
+            'children_bed' => $request->input('children_bed'),
+            'children_no_bed' => $request->input('children_no_bed'),
+            'infant' => $request->input('infant'),
+            'single_room' => $request->input('single_room'),
+            'join_land' => $request->input('join_land'),
+            'customer_name' => $request->input('customer_name'),
+            'customer_tel' => $request->input('customer_tel'),
+            'customer_email' => $request->input('customer_email'),
+            'customer_more' => $request->input('customer_more'),
+            'customer_passport' => $request->input('customer_passport'),
+            ]);
+    return Response::json($booking);
+});

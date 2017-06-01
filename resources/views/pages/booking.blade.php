@@ -10,17 +10,19 @@
 				<div class="col-lg-12">
 					<section id="book">
 							<div class="row" >
+								<form id="frmTasks" name="frmTasks" class="form-horizontal" novalidate="" enctype="multipart/form-data">
 								<div class="col-lg-12">
 									<br></br>
 									<h2 >จองทัวร์</h2>
 								</div>
+
 								<div class="col-lg-12">
 									<div class="row">
 										<div class="col-lg-3">
 											<h4 style="color: #e0881d;" for="disabledSelect">รหัสโปรแกรมทัวร์</h4>
 										</div>
 										<div class="col-lg-3">
-											<input class="form-control" id="disabledInput" type="text" value="{{$program->id}}" name="program_ID" disabled>
+											<input class="form-control" id="program_ID" type="text" value="{{$program->id}}" name="program_ID" disabled>
 										</div>
 									</div>
 								</div>
@@ -30,7 +32,7 @@
 											<h4 style="color: #e0881d;" for="disabledSelect">ชื่อโปรแกรมทัวร์</h4>
 										</div>
 										<div class="col-lg-9">
-											<input class="form-control" id="disabledInput" type="text" value="{{$program->name}}" name="program_name" disabled>
+											<input class="form-control" id="program_name" type="text" value="{{$program->name}}" name="program_name" disabled>
 										</div>
 									</div>
 								</div>
@@ -40,7 +42,7 @@
 											<h4 style="color: #e0881d;" for="disabledSelect">สายการบิน</h4>
 										</div>
 										<div class="col-lg-3">
-											<input class="form-control" id="disabledInput" type="text" value="{{$program->airline_image}}" name="airline" disabled>
+											<input class="form-control" id="airline_name" type="text" value="{{$program->airline_name}}" name="airline" disabled>
 										</div>
 									</div>
 								</div>
@@ -63,7 +65,7 @@
 									<div class="row">
 										<div class="col-lg-3">
 											<h4 for="disabledSelect">ผู้ใหญ่</h4>
-											<select class="form-control" name="adult">
+											<select class="form-control" id="adult" name="adult">
 												@for ($i = 0; $i <= 10; $i++)
         											<option value="{{ $i }}">{{ $i }}</option>
     											@endfor
@@ -71,7 +73,7 @@
 										</div>
 										<div class="col-lg-3">
 											<h4 for="disabledSelect">เด็กมีเตียง</h4>
-											<select class="form-control" name="children_bed">
+											<select class="form-control" id='children_bed' name="children_bed">
 												@for ($i = 0; $i <= 10; $i++)
         											<option value="{{ $i }}">{{ $i }}</option>
     											@endfor
@@ -79,7 +81,7 @@
 										</div>
 										<div class="col-lg-3">
 											<h4 for="disabledSelect">เด็กไม่มีเตียง</h4>
-											<select class="form-control" name="children_no_bed">
+											<select class="form-control" id='children_no_bed' name="children_no_bed">
 												@for ($i = 0; $i <= 10; $i++)
         											<option value="{{ $i }}">{{ $i }}</option>
     											@endfor
@@ -87,7 +89,7 @@
 										</div>
 										<div class="col-lg-3">
 											<h4 for="disabledSelect">เด็กทารก</h4>
-											<select class="form-control" name="infant">
+											<select class="form-control" id='infant' name="infant">
 												@for ($i = 0; $i <= 10; $i++)
         											<option value="{{ $i }}">{{ $i }}</option>
     											@endfor
@@ -95,7 +97,7 @@
 										</div>
 										<div class="col-lg-3">
 											<h4 for="disabledSelect">พักเดี่ยว</h4>
-											<select class="form-control" name="single_room">
+											<select class="form-control" id="single_room" name="single_room">
 												@for ($i = 0; $i <= 10; $i++)
         											<option value="{{ $i }}">{{ $i }}</option>
     											@endfor
@@ -103,7 +105,7 @@
 										</div>
 										<div class="col-lg-3">
 											<h4 for="disabledSelect">จอยแลนด์</h4>
-											<select class="form-control" name="join_land">
+											<select class="form-control" id="join_land" name="join_land">
 												@for ($i = 0; $i <= 10; $i++)
         											<option value="{{ $i }}">{{ $i }}</option>
     											@endfor
@@ -119,31 +121,39 @@
 										<div class="col-lg-12">
 											<div class="col-lg-6">
 												<h4>ชื่อนาม-สกุล*</h4>
-												<input class="form-control" placeholder="ชื่อนาม-สกุล" name='customer_name' value="{{ old('customer_name') }}">
+												<input class="form-control" placeholder="ชื่อนาม-สกุล" id="customer_name" name='customer_name' ">
 											</div>
 											<div class="col-lg-6">
 												<h4>เบอร์โทรศัพท์*</h4>
-												<input class="form-control" placeholder="เบอร์โทรสำหรับติดต่อกลับ" name='customer_tel' value="{{ old('customer_tel') }}">
+												<input class="form-control" placeholder="เบอร์โทรสำหรับติดต่อกลับ" id="customer_tel" name='customer_tel' value="{{ old('customer_tel') }}">
 											</div>
 											<div class="col-lg-6">
 												<h4>อีเมล*</h4>
-												<input class="form-control" placeholder="เกรุณาใส่มีอีเมล" name='customer_email' value="{{ old('customer_email') }}">
+												<input class="form-control" placeholder="กรุณาใส่มีอีเมล" id="customer_email" name='customer_email' value="{{ old('customer_email') }}">
 											</div>
 											<div class="col-lg-6">
 												<h4>สำเนาพาสปอร์ตผู้จองอย่างน้อย 1 ท่าน</h4>
-												{!! Form::file('customer_passport') !!}
+												<input class="pic-country" id="pic-country" name="pic-country" type="file" />
+												<input class="upload-pic" type="button" value="Upload" />
+												<input type="text" class="form-control has-error" id="country-img-input" name="country-img-input" placeholder="ลิ้งรูปภาพ" value="" disabled="">
+												
 											</div>
 											<div class="col-lg-12">
 												<h4>หมายเหตุเพิ่มเติม</h4>
-												<textarea class="form-control" name="customer_more" placeholder="การแพ้อาหาร โรคประจำตัว หรือคำขออื่นๆ"></textarea>
+												<textarea class="form-control" id="customer_more" name="customer_more" placeholder="การแพ้อาหาร โรคประจำตัว หรือคำขออื่นๆ"></textarea>
 											</div>
-											<div class="col-lg-12" style="margin-bottom: 10px;" align="center">
-												<br></br>
-												{!! Form::submit('ส่งแบบฟอร์มการจอง', array('class'=>'btn btn-success')) !!}
-											</div>
+
+											
 										</div>
 									</div>
 
+								</div>
+								</form>
+								<div class="col-lg-12">
+									<div class="col-lg-12" style="margin-bottom: 10px;" align="center">
+										<br></br>
+										<button type="button" class="btn btn-success" id="btn-booking" value="add"> ส่งแบบฟอร์มการจอง </button>
+									</div>
 								</div>
 								
                         	</div>
@@ -177,4 +187,5 @@
 				</div>
 			</div>
 		</div>
+	<script src="{{asset('js/admin/Admin_booking.js')}}"></script>
 @stop

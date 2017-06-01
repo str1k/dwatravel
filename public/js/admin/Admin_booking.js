@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
-	
-	var url = "/countries";
+    
+    var url = "/booking";
     
     $('.pic-country').on('change', function() {
     var file = this.files[0];
@@ -58,14 +58,9 @@ $(document).ready(function(){
     });
 });
     //display modal form for creating new task
-    $('#btn-add-countries').click(function(){
+    $('#btn-add-airlines').click(function(){
         $('#btn-save').val("add");
         $('#frmTasks').trigger("reset");
-        $("#region").find('option')
-                        .remove()
-                        .end()
-                        .append($('<option>', {value:"ทัวร์เอเชีย", text:"ทัวร์เอเชีย"}));
-        $('#region').append($('<option>', {value:"ทัวร์ยุโรป , อเมริกา , แอฟริกาใต้", text:"ทัวร์ยุโรป , อเมริกา , แอฟริกาใต้"}));
         $('#myModal').modal('show');
     });
 
@@ -77,32 +72,19 @@ $(document).ready(function(){
             //success data
             console.log(data);
             $('#country_id').val(data.id);
-            $('#country-form').val(data.country);
-            
-            $("#region").find('option')
-                        .remove()
-                        .end()
-                        .append($('<option>', {value:"เอเชีย", text:"เอเชีย"}));
-            $('#region').append($('<option>', {value:"ยุโรป", text:"ยุโรป"}));
-            $('#region').append($('<option>', {value:"อเมริกา", text:"อเมริกา"}));
-            $('#region').append($('<option>', {value:"แอฟริกา", text:"แอฟริกา"}));
-            $('#region').append($('<option>', {value:"ออสเตรเลีย", text:"ออสเตรเลีย"}));
-            $("#region").val(data.region);
+            $('#airline-form').val(data.airline_name);
             $('#country-img').attr('src', data.pic_url);
             $('#country-img-input').val(data.pic_url);
-            $(tinymce.get('country_content').getBody()).html(data.content);
-            tinyMCE.triggerSave();
-            console.log($('#country_content').val());
             $('#btn-save').val("update");
 
             $('#myModal').modal('show');
         }) 
     });
 
-	//admin program script
-	//delete program and remove it from list
+    //admin program script
+    //delete program and remove it from list
     $('.delete-country').click(function(){
-    	$.ajaxSetup({
+        $.ajaxSetup({
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
             }
@@ -133,19 +115,18 @@ $(document).ready(function(){
         })
 
         e.preventDefault(); 
-        tinyMCE.triggerSave();
+        console.log($('#airline-form').val());
+        console.log($('#country-img-input').val());
         var formData = {
-            country: $('#country-form').val(),
-            region: $("#region").val(),
+            airline_name: $('#airline-form').val(),
             pic_url: $('#country-img-input').val(),
-            content: $('#country_content').val(),
         }
 
         //used to determine the http verb to use [add=POST], [update=PUT]
         var state = $('#btn-save').val();
 
         var type = "POST"; //for creating new resource
-        var country_id = $('#country_id').val();
+        var country_id = $('#country_id').val();;
         var my_url = url;
 
         if (state == "update"){
@@ -164,7 +145,79 @@ $(document).ready(function(){
             success: function (data) {
                 console.log(data);
 
-                var country = '<tr id="country' + data.id + '"><td>' + data.id + '</td><td>' + data.country + '</td><td>' + "<img style=\"width: 40px;\" src=\"" + data.pic_url + "\" alt=\"\">" + '</td><td>'+  data.region + '</td><td>' + data.created_at + '</td>';
+                var country = '<tr id="country' + data.id + '"><td>' + data.id + '</td><td>' + data.airline_name + '</td><td>' + "<img style=\"width: 40px;\" src=\"" + data.pic_url + "\" alt=\"\">" + '</td><td>' + data.created_at + '</td>';
+                country += '<td><button class="btn btn-warning btn-xs btn-detail open-modal-countries" value="' + data.id + '">Edit</button>';
+                country += '<button class="btn btn-danger btn-xs btn-delete delete-country" value="' + data.id + '">Delete</button></td></tr>';
+
+                if (state == "add"){ //if user added a new record
+                    $('#countries-list').append(country);
+                }else{ //if user updated an existing record
+
+                    $("#country" + country_id).replaceWith( country );
+                }
+
+                $('#frmTasks').trigger("reset");
+
+                $('#myModal').modal('hide')
+            },
+            error: function (data) {
+                console.log('Error:', data);
+            }
+        });
+    });
+    //จองทัวร์ 
+    $("#btn-booking").click(function (e) {
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+            }
+        })
+
+        e.preventDefault(); 
+        console.log($('#program_ID').val());
+        console.log($('#adult').val());
+        console.log($('#departure').find("input").val());
+        var formData = {
+            program_id: $('#program_ID').val(),
+            departure: $('#departure').find("input").val(),
+            children_bed: $('#children_bed').val(),
+            children_no_bed: $('#children_no_bed').val(),
+            infant: $('#infant').val(),
+            single_room: $('#single_room').val(),
+            join_land: $('#join_land').val(),
+            customer_name: $('#customer_name').val(),
+            customer_tel: $('#customer_tel').val(),
+            customer_email: $('#customer_email').val(),
+            customer_passport: $('#country-img-input').val(),
+            customer_more: $('#customer_more').val(),
+            confirm: 0,
+            cancel: 0,
+        }
+
+        //used to determine the http verb to use [add=POST], [update=PUT]
+        var state = $('#btn-save').val();
+
+        var type = "POST"; //for creating new resource
+        var country_id = $('#country_id').val();;
+        var my_url = url;
+
+        if (state == "update"){
+            type = "PUT"; //for updating existing resource
+            my_url += '/' + country_id;
+        }
+
+        console.log(formData);
+
+        $.ajax({
+
+            type: type,
+            url: my_url,
+            data: formData,
+            dataType: 'json',
+            success: function (data) {
+                console.log(data);
+
+                var country = '<tr id="country' + data.id + '"><td>' + data.id + '</td><td>' + data.airline_name + '</td><td>' + "<img style=\"width: 40px;\" src=\"" + data.pic_url + "\" alt=\"\">" + '</td><td>' + data.created_at + '</td>';
                 country += '<td><button class="btn btn-warning btn-xs btn-detail open-modal-countries" value="' + data.id + '">Edit</button>';
                 country += '<button class="btn btn-danger btn-xs btn-delete delete-country" value="' + data.id + '">Delete</button></td></tr>';
 

@@ -8,6 +8,7 @@ use App\programs;
 use App\country;
 use App\contact_bar;
 use App\locate;
+use App\booking;
 
 class bookingController extends Controller
 {
@@ -26,5 +27,10 @@ class bookingController extends Controller
    $locate_bars = locate::all();
    return view('pages.booking',array('countries'=>$countries,'programs'=>$programs,'contact_bar'=>$contact_bar,'locate_bars'=>$locate_bars));
 
+   }
+   public function allform(){
+      $bookings = booking::all();
+      $programs = programs::all();
+      return view('pages.admin.booking',array('bookings'=>$bookings,'programs'=>$programs));      
    }
 }

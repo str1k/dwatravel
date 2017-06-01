@@ -34,6 +34,8 @@ class CreateBookingsTable extends Migration
             $table->integer('infant_price')->nullable();
             $table->integer('single_room_price')->nullable();
             $table->integer('join_land_price')->nullable();
+            $table->boolean('confirm')->nullable();
+            $table->boolean('cancel')->nullable();
             $table->integer('discount')->nullable();
             $table->timestamps();
         });
