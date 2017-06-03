@@ -33,14 +33,8 @@
 		</div>
 		<div class="col-xs-12 col-xs-12" style="background: white; padding-top: 20px; padding-bottom: 10px;">
 			<div class="row">
-				<div class="col-lg-1 col-xs-1">
-					
-				</div>
-				<div class="col-lg-10 col-xs-10">
+				<div class="col-lg-12 col-xs-12">
 					<?php echo $content_query->content;?>
-				</div>
-				<div class="col-lg-1 col-xs-1">
-					
 				</div>
 			</div>
 			
