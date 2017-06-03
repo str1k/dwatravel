@@ -1,4 +1,4 @@
-@extends('master')
+@extends('master2')
 @section('content')
 @include('layouts.partials._cover')
 <div class="container-fluid" style="background-color: #EEEEEE;">
