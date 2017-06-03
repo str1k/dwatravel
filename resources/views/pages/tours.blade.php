@@ -1,4 +1,4 @@
-@extends('master')
+
 @section('content')
 @include('layouts.partials._cover')
 <div class="container-fluid" style="background-color: #EEEEEE;">
@@ -132,4 +132,3 @@
 		</div>
 	</div>
 </div>
-@stop
