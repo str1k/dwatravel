@@ -27,6 +27,11 @@
     '//www.tinymce.com/css/codepen.min.css'
   ]
  });</script>
+  <script type="text/javascript">$(document).on('focusin', function(e) {
+    if ($(event.target).closest(".mce-window").length) {
+        e.stopImmediatePropagation();
+    }
+});</script>
 
 <div id="page-wrapper">
     <div class="container-fluid">

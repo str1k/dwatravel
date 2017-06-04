@@ -43,8 +43,9 @@
                         <a href="/admin_cover"><i class="fa fa-fw fa-sliders"></i>แก้ไข Slider</a>
                     </li>
                     <li>
-                        <a href="/admin_booking"><i class="fa fa-fw fa-credit-card"></i>แก้ไข จองทัวร์และชำระเงิน</a>
+                        <a href="/admin_payment"><i class="fa fa-fw fa-credit-card"></i>แก้ไข จองทัวร์และชำระเงิน</a>
                     </li>
+                    
                     <li>
                         <a href="/admin_about-us"><i class="fa fa-fw fa-user"></i>แก้ไข เกี่ยวกับเรา</a>
                     </li>
@@ -53,6 +54,9 @@
                     </li>
                     <li>
                         <a href="/admin_all_tour"><i class="fa fa-fw fa-fighter-jet"></i>จัดการ โปรแกรมท่องเที่ยวทั้งหมด</a>
+                    </li>
+                    <li>
+                        <a href="/admin_booking"><i class="fa fa-fw fa-credit-card"></i>จัดการ Booking</a>
                     </li>
                     <li>
                         <a href="/admin_booking"><i class="fa fa-fw fa-sliders"></i>จัดการ การจอง</a>
